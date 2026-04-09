@@ -6,7 +6,7 @@ export default function SiteHeader({ dark, onToggleTheme }) {
   return (
     <Header aria-label="Reflexive practice">
       <HeaderName href="#" prefix="">
-        Reflexive practice data visualisation
+        Coded research journal
       </HeaderName>
 
       <HeaderGlobalBar>

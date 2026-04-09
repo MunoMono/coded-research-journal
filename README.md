@@ -1,4 +1,4 @@
-# Reflexive practice data visualisation
+# Coded research journal
 
 Starter project: Vite + React + IBM Carbon + d3
 
@@ -21,4 +21,4 @@ This project includes a Carbon UI shell header, a theme toggle and a simple d3 p
 Live demo
 
 - Intent: a minimal landing page and interactive Sankey demo for reflexive practice data visualisation.
-- Live: https://munomono.github.io/reflexive-practice/  (deployed to GitHub Pages)
+- Live: https://munomono.github.io/coded-research-journal/  (deployed to GitHub Pages)

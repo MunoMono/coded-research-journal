@@ -30,7 +30,7 @@ export default function App() {
       <SiteHeader dark={dark} onToggleTheme={toggleTheme} />
       <main className="main-content">
         <div className="hero">
-          <h1>Reflexive practice data visualisation</h1>
+          <h1>Coded research journal</h1>
           <p>Landing page built with Carbon, Vite, React and d3.</p>
         </div>
 
