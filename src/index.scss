@@ -1,0 +1,67 @@
+@use '@carbon/react';
+
+:root {
+  --bg: #ffffff;
+  --text: #161616;
+}
+
+:root.dark {
+  /* Carbon G90 background and text tokens */
+  --bg: #262626; /* g90 */
+  --text: #f4f4f4; /* text on g90 */
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+.hero {
+  margin-top: 4rem;
+}
+
+/* Header theming when dark class is set on <html> */
+html.dark .cds--header {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+html.dark .cds--header .cds--header__name {
+  color: inherit !important;
+}
+
+.hero h1 {
+  margin: 0 0 0.25rem 0;
+}
+
+.viz {
+  margin-top: 2rem;
+}
+
+.sankey-wrapper {
+  width: 100%;
+  max-width: 960px;
+}
+
+.sankey-chart {
+  width: 100%;
+  height: auto;
+}
+
+.sankey-tooltip {
+  background: rgba(22,22,22,0.95);
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
