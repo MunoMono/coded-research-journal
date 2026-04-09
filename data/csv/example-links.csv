@@ -1,0 +1,5 @@
+source,target,value
+Source A,Intermediate,10
+Source B,Intermediate,6
+Intermediate,Sink 1,8
+Intermediate,Sink 2,8

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "seed": "node scripts/csv-to-json.js"
   },
   "dependencies": {
     "react": "^18.2.0",
