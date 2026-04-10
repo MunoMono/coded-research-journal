@@ -3,12 +3,30 @@
 :root {
   --bg: #ffffff;
   --text: #161616;
+  --sankey-keyline: rgba(22,22,22,0.06);
+  --sankey-bg: transparent;
+}
+
+/* Force Carbon grid to 12 columns across breakpoints */
+:root {
+  --cds-grid-columns: 12;
+}
+@media (min-width: 42rem) {
+  :root { --cds-grid-columns: 12; }
+}
+@media (min-width: 66rem) {
+  :root { --cds-grid-columns: 12; }
+}
+@media (min-width: 99rem) {
+  :root { --cds-grid-columns: 12; }
 }
 
 :root.dark {
   /* Carbon G90 background and text tokens */
   --bg: #262626; /* g90 */
   --text: #f4f4f4; /* text on g90 */
+  --sankey-keyline: rgba(255,255,255,0.06);
+  --sankey-bg: var(--bg);
 }
 
 html, body, #root {
@@ -25,6 +43,10 @@ html, body, #root {
 
 .hero {
   margin-top: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  position: relative;
+  overflow: visible;
 }
 
 /* Header theming when dark class is set on <html> */
@@ -38,22 +60,82 @@ html.dark .cds--header .cds--header__name {
   color: inherit !important;
 }
 
+html.dark .cds--header__menu-item,
+html.dark .cds--header__menu-title[aria-current='page'] {
+  color: var(--text) !important;
+}
+
 .hero h1 {
   margin: 0 0 0.25rem 0;
+  font-size: clamp(30px, 4.9vw, 90px);
+  line-height: 1.02;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  max-inline-size: 90%;
+}
+
+/* Quiet animated outline around the hero for a subtle focus */
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.03);
+  pointer-events: none;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  animation: hero-outline 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes hero-outline {
+  0% { box-shadow: 0 0 0 0 rgba(13,110,253,0.00); border-color: rgba(0,0,0,0.02); }
+  40% { box-shadow: 0 22px 44px -20px rgba(13,110,253,0.035); border-color: rgba(0,0,0,0.035); }
+  100% { box-shadow: 0 0 0 0 rgba(13,110,253,0.00); border-color: rgba(0,0,0,0.02); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::after { animation: none; }
 }
 
 .viz {
   margin-top: 2rem;
 }
 
+.about-page {
+  margin-top: 2rem;
+}
+
+.about-copy {
+  margin: 0 0 4rem;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
 .sankey-wrapper {
   width: 100%;
-  max-width: 960px;
+  max-width: none;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  /* subtle theme-aware keyline + background (transparent by default) */
+  border: 1px solid var(--sankey-keyline);
+  border-radius: 6px;
+  background: var(--sankey-bg, transparent);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .sankey-chart {
   width: 100%;
   height: auto;
+}
+
+.sankey-node-label {
+  fill: var(--text);
 }
 
 .sankey-tooltip {
@@ -64,4 +146,51 @@ html.dark .cds--header .cds--header__name {
   font-size: 13px;
   pointer-events: none;
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.export-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.filter-action-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filter-action-spacer {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  min-height: 1rem;
+  margin-bottom: 0.5rem;
+  visibility: hidden;
+}
+
+.filter-reset-button {
+  min-height: 2.5rem;
+}
+
+.export-action-button.cds--btn {
+  min-width: 11rem;
+  justify-content: space-between;
+  padding-inline: 1.25rem 1rem;
+}
+
+.export-action-button .cds--btn__icon {
+  margin-left: 1.25rem;
+}
+
+@media (max-width: 42rem) {
+  .export-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .export-action-button.cds--btn {
+    width: 100%;
+  }
 }

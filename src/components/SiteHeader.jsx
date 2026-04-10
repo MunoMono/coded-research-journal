@@ -1,25 +1,48 @@
 import React from 'react'
-import { Header, HeaderName, HeaderGlobalBar, HeaderGlobalAction } from '@carbon/react'
-import { Sun, Moon } from '@carbon/react/icons'
+import { Header, HeaderName, HeaderGlobalBar, HeaderGlobalAction, HeaderNavigation, HeaderMenuItem } from '@carbon/react'
+import { Moon, Sun } from '@carbon/icons-react'
 
-export default function SiteHeader({ dark, onToggleTheme }) {
+export default function SiteHeader({ dark, onToggleTheme, activePage, onNavigate }) {
+  const isDark = !!dark
+
   return (
-    <Header aria-label="Reflexive practice" style={{ background: '#161616' }}>
+    <Header aria-label="Reference Library">
       <HeaderName href="#" prefix="">
-        <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
-          <span style={{ fontWeight: 400, fontSize: '1rem' }}>Graham Newman</span>
-          <span style={{ fontWeight: 700, fontSize: '1.125rem' }}>RCA PhD coded research journal</span>
-        </div>
+        Graham Newman RCA PhD
       </HeaderName>
+
+      <HeaderNavigation aria-label="Primary navigation">
+        <HeaderMenuItem
+          href="#visualisation"
+          isCurrentPage={activePage === 'visualisation'}
+          aria-current={activePage === 'visualisation' ? 'page' : undefined}
+          onClick={event => {
+            event.preventDefault()
+            onNavigate('visualisation')
+          }}
+        >
+          Visualisation
+        </HeaderMenuItem>
+        <HeaderMenuItem
+          href="#about"
+          isCurrentPage={activePage === 'about'}
+          aria-current={activePage === 'about' ? 'page' : undefined}
+          onClick={event => {
+            event.preventDefault()
+            onNavigate('about')
+          }}
+        >
+          About
+        </HeaderMenuItem>
+      </HeaderNavigation>
 
       <HeaderGlobalBar>
         <HeaderGlobalAction
-          aria-label={dark ? 'Switch to light theme' : 'Switch to dark theme'}
-          aria-pressed={dark}
+          aria-label="Toggle theme"
           onClick={onToggleTheme}
           tooltipAlignment="end"
         >
-          {dark ? <Sun size={20} /> : <Moon size={20} />}
+          {isDark ? <Sun size={20} /> : <Moon size={20} />}
         </HeaderGlobalAction>
       </HeaderGlobalBar>
     </Header>
