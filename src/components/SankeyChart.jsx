@@ -42,7 +42,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     const load = async () => {
       try {
         const [eventsMod, lookupsMod] = await Promise.all([
-          import('../../data/csv/practice_events_dummy_sept25_may26.csv?raw'),
+          import('../../data/csv/practice_events_sept25_may26_populated.csv?raw'),
           import('../../data/csv/lookups_dummy_sept25_may26.csv?raw').catch(() => null),
         ])
         const raw = eventsMod.default || eventsMod
@@ -97,8 +97,16 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       // build aggregated links
       const linkCounts = new Map()
       const eventsByLink = new Map()
+      const linkSeparator = '>>>>'
+      const makeNodeId = (stage, label) => `${stage}|||${label}`
+      const getNodeLabel = nodeId => {
+        const [, label = nodeId] = nodeId.split('|||')
+        return label
+      }
+      const makeLinkKey = (source, target) => `${source}${linkSeparator}${target}`
+      const parseLinkKey = key => key.split(linkSeparator)
       const addLink = (s, t, ev) => {
-        const key = `${s}|||${t}`
+        const key = makeLinkKey(s, t)
         linkCounts.set(key, (linkCounts.get(key) || 0) + 1)
         const arr = eventsByLink.get(key) || []
         arr.push(ev)
@@ -106,9 +114,9 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       }
 
       filtered.forEach(r => {
-        const src = (r.source_type && r.source_type.trim()) || (r.source_label && r.source_label.trim()) || 'Unknown'
-        const act = (r.practice_action && r.practice_action.trim()) || 'unknown_action'
-        const out = (r.outcome_type && r.outcome_type.trim()) || 'unknown_outcome'
+        const src = makeNodeId('source', (r.source_type && r.source_type.trim()) || (r.source_label && r.source_label.trim()) || 'Unknown')
+        const act = makeNodeId('action', (r.practice_action && r.practice_action.trim()) || 'unknown_action')
+        const out = makeNodeId('outcome', (r.outcome_type && r.outcome_type.trim()) || 'unknown_outcome')
         addLink(src, act, r)
         addLink(act, out, r)
       })
@@ -116,34 +124,43 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       const threshold = 2
       const counts = new Map()
       Array.from(linkCounts.entries()).forEach(([k, v]) => {
-        const [s, t] = k.split('|||')
+        const [s, t] = parseLinkKey(k)
         counts.set(s, (counts.get(s) || 0) + v)
         counts.set(t, (counts.get(t) || 0) + v)
       })
 
       const collapseMap = new Map()
-      counts.forEach((v, k) => { if (v < threshold) collapseMap.set(k, 'Other') })
+      counts.forEach((v, k) => {
+        if (v < threshold) {
+          const [stage = 'other'] = k.split('|||')
+          collapseMap.set(k, makeNodeId(stage, 'Other'))
+        }
+      })
 
       const finalLinks = new Map()
+      const finalEventsByLink = new Map()
       Array.from(linkCounts.entries()).forEach(([k, v]) => {
-        const [s0, t0] = k.split('|||')
+        const [s0, t0] = parseLinkKey(k)
         const s = collapseMap.get(s0) || s0
         const t = collapseMap.get(t0) || t0
-        const key = `${s}|||${t}`
+        const key = makeLinkKey(s, t)
         finalLinks.set(key, (finalLinks.get(key) || 0) + v)
+        const arr = finalEventsByLink.get(key) || []
+        arr.push(...(eventsByLink.get(k) || []))
+        finalEventsByLink.set(key, arr)
       })
 
       const finalNodes = new Set()
       finalLinks.forEach((v, k) => {
-        const [s, t] = k.split('|||')
+        const [s, t] = parseLinkKey(k)
         finalNodes.add(s)
         finalNodes.add(t)
       })
 
-      const nodes = Array.from(finalNodes).map(id => ({ id }))
+      const nodes = Array.from(finalNodes).map(id => ({ id, label: getNodeLabel(id) }))
       const links = Array.from(finalLinks.entries()).map(([k, v]) => {
-        const [s, t] = k.split('|||')
-        const events = eventsByLink.get(`${s}|||${t}`) || []
+        const [s, t] = parseLinkKey(k)
+        const events = finalEventsByLink.get(k) || []
         return { source: s, target: t, value: v, events }
       })
 
@@ -203,7 +220,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         .attr('y', d => (d.y1 + d.y0) / 2)
         .attr('dy', '0.35em')
         .attr('text-anchor', 'end')
-        .text(d => trim(d.id))
+        .text(d => trim(d.label))
         .attr('font-family', 'Inter, Arial, Helvetica, sans-serif')
         .attr('font-size', 12)
         .filter(d => d.x0 < renderWidth / 2)
@@ -221,7 +238,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
           const ev = withNote || d.events[0]
           note = withNote ? withNote.reflexive_note : (ev.reflexive_note || `Event ${ev.id}`)
         }
-        tt.style('opacity', 1).html(`<strong>${d.source.id} → ${d.target.id}</strong><br/>Value: ${d.value}<br/>${note}`)
+        tt.style('opacity', 1).html(`<strong>${d.source.label} → ${d.target.label}</strong><br/>Value: ${d.value}<br/>${note}`)
         const [x, y] = d3.pointer(event, ref.current)
         tt.style('left', `${x + 20}px`).style('top', `${y + 20}px`)
       }).on('mousemove', (event) => {

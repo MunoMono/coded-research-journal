@@ -44,9 +44,17 @@ export default function App() {
                 <section className="about-page">
                   <Grid style={{ marginTop: '2rem' }}>
                     <Column lg={8} md={8} sm={4}>
-                      <h4 className="about-copy">
-                        This early-stage Sankey diagram is being developed as a reflexive visualisation of my coded research journal during the first year of PhD practice. Rather than simply recording events, it begins to trace how inputs, actions, and outcomes move through my research process, showing how reading, making, testing, reflection, and feedback inform one another over time. At this stage, the project is provisional and exploratory: the visual structure is being tested alongside the dataset itself, allowing both the categories and the representation to evolve together as the journal is further populated and refined.
-                      </h4>
+                      <div className="about-copy">
+                        <p>
+                          This early-stage Sankey diagram is being developed as a reflexive visualisation of my coded research journal during the first year of PhD practice, and will continue throughout the PhD. Rather than simply listing events or activities, it starts to show how different parts of the research process connect over time. The diagram is organised in three parts: the categories on the left represent the <strong>inputs</strong> that feed the work, such as reading, supervision, conversation, making, archival investigation, or coding; the categories in the middle represent the <strong>forms of action</strong> these inputs lead into, such as documenting, mapping, testing, prototyping, or reframing; and the categories on the right represent the <strong>outcomes or effects</strong> that emerge, including insight, clarification, confidence, redirection, or further questions. In this sense, the visualisation traces not just what happened, but how research activity moves through the project.
+                        </p>
+                        <p>
+                          The purpose of the diagram is not to claim that research happens in a neat or linear way. It does not. On the contrary, it is intended to make visible the fact that practice-based research develops through overlap, repetition, adjustment, and feedback. In this sense, the diagram acts as a reflective and reflexive tool: it helps me see where energy has been concentrated, which activities have been most productive, and how particular strands of work have influenced the direction of the project. It also offers a way of recognising parts of the research process that can be easy to overlook when writing retrospectively, such as periods of uncertainty, experimentation, dead ends, or slow conceptual shifts.
+                        </p>
+                        <p>
+                          At this stage, both the dataset and the visual model remain provisional. The categories are still being tested and refined, and the diagram is being used not only to represent the journal but also to think with it. As more entries are added and edited, the visualisation will continue to evolve alongside the research itself. Its value lies less in producing a final map than in providing a way to reflect on how the project has been shaped in practice during the first year.
+                        </p>
+                      </div>
                     </Column>
                   </Grid>
                 </section>

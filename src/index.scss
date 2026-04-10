@@ -115,6 +115,14 @@ html.dark .cds--header__menu-title[aria-current='page'] {
   font-weight: 400;
 }
 
+.about-copy p {
+  margin: 0 0 1.5rem;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
 .sankey-wrapper {
   width: 100%;
   max-width: none;
