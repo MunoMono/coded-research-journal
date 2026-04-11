@@ -3,12 +3,29 @@ import { Theme, Grid, Column } from '@carbon/react'
 import SiteHeader from './components/SiteHeader'
 import SankeyChart from './components/SankeyChart'
 
+const THEME_STORAGE_KEY = 'coded-research-journal-theme'
+
 export default function App() {
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(() => {
+    if (typeof window === 'undefined') return true
+    try {
+      const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY)
+      if (storedTheme === 'light') return false
+      if (storedTheme === 'dark') return true
+    } catch {
+      // Ignore storage access issues and fall back to dark mode.
+    }
+    return true
+  })
   const [activePage, setActivePage] = useState('visualisation')
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', dark)
+    try {
+      window.localStorage.setItem(THEME_STORAGE_KEY, dark ? 'dark' : 'light')
+    } catch {
+      // Ignore storage access issues and keep the in-memory theme state.
+    }
   }, [dark])
 
   const theme = useMemo(() => (dark ? 'g90' : 'g10'), [dark])
