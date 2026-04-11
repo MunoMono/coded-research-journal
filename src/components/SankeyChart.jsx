@@ -9,11 +9,28 @@ export default function SankeyChart({ width = 900, height = 360 }) {
   const ref = useRef(null)
   const tooltipRef = useRef(null)
   const wrapperRef = useRef(null)
+  const colorScaleRef = useRef(d3.scaleOrdinal(d3.schemeTableau10))
   const [data, setData] = useState(null)
   const [rawRows, setRawRows] = useState(null)
   const [lookupsMap, setLookupsMap] = useState(() => new Map())
-  const [choices, setChoices] = useState({ period: [], theme: [], medium: [], affect: [] })
-  const [filters, setFilters] = useState({ period: '', theme: '', medium: '', affect: '' })
+  const [choices, setChoices] = useState({
+    input: [],
+    action: [],
+    outcome: [],
+    period: [],
+    theme: [],
+    medium: [],
+    affect: [],
+  })
+  const [filters, setFilters] = useState({
+    input: '',
+    action: '',
+    outcome: '',
+    period: '',
+    theme: '',
+    medium: '',
+    affect: '',
+  })
   const [pinned, setPinned] = useState(null)
   const [containerWidth, setContainerWidth] = useState(width)
 
@@ -37,6 +54,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     return sourceMap.get(buildLookupKey(normalizedField, normalizedValue)) || createLookupMeta(normalizedField, normalizedValue)
   }
   const isEmptyRow = row => !Object.values(row || {}).some(value => normalizeLookupText(value))
+  const getInputValue = row => normalizeLookupText(row.source_type) || normalizeLookupText(row.source_label)
   const buildFilterChoices = (rows, field, sourceMap = lookupsMap) => Array.from(
     new Set(rows.map(row => normalizeLookupText(row[field])).filter(Boolean))
   )
@@ -48,6 +66,22 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       if (labelCompare !== 0) return labelCompare
       return (left.value || '').localeCompare(right.value || '')
     })
+
+  const buildInputChoices = (rows, sourceMap = lookupsMap) => Array.from(
+    new Set(rows.map(row => getInputValue(row)).filter(Boolean))
+  )
+    .map(value => getLookupMeta('source_type', value, sourceMap))
+    .sort((left, right) => left.label.localeCompare(right.label))
+  const rowMatchesFilters = row => {
+    if (filters.input && getInputValue(row) !== filters.input) return false
+    if (filters.action && normalizeLookupText(row.practice_action) !== filters.action) return false
+    if (filters.outcome && normalizeLookupText(row.outcome_type) !== filters.outcome) return false
+    if (filters.period && normalizeLookupText(row.period) !== filters.period) return false
+    if (filters.theme && normalizeLookupText(row.theme) !== filters.theme) return false
+    if (filters.medium && normalizeLookupText(row.medium) !== filters.medium) return false
+    if (filters.affect && normalizeLookupText(row.affect) !== filters.affect) return false
+    return true
+  }
 
   // keep container width in sync using ResizeObserver for responsive rendering
   useEffect(() => {
@@ -68,7 +102,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
   useEffect(() => {
     const container = ref.current
     const svg = d3.select(container)
-    svg.selectAll('*').remove()
+    svg.selectAll('*').interrupt()
 
     // load raw CSVs on first mount
     const load = async () => {
@@ -97,6 +131,9 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         setLookupsMap(lookups)
 
         setChoices({
+          input: buildInputChoices(rows, lookups),
+          action: buildFilterChoices(rows, 'practice_action', lookups),
+          outcome: buildFilterChoices(rows, 'outcome_type', lookups),
           period: buildFilterChoices(rows, 'period', lookups),
           theme: buildFilterChoices(rows, 'theme', lookups),
           medium: buildFilterChoices(rows, 'medium', lookups),
@@ -122,13 +159,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       }
 
       // apply filters to rows
-      const filtered = (rowsToUse || []).filter(r => {
-        if (filters.period && r.period !== filters.period) return false
-        if (filters.theme && r.theme !== filters.theme) return false
-        if (filters.medium && r.medium !== filters.medium) return false
-        if (filters.affect && r.affect !== filters.affect) return false
-        return true
-      })
+      const filtered = (rowsToUse || []).filter(rowMatchesFilters)
 
       // build aggregated links
       const linkCounts = new Map()
@@ -220,7 +251,10 @@ export default function SankeyChart({ width = 900, height = 360 }) {
 
       // render sankey
       const renderWidth = Math.max(300, containerWidth || width)
-      const color = d3.scaleOrdinal(d3.schemeTableau10)
+      const color = colorScaleRef.current
+      const trim = (s, n = 28) => (s && s.length > n ? s.slice(0, n - 1) + '…' : s)
+      const getLabelX = d => (d.x0 < renderWidth / 2 ? d.x1 + 6 : d.x0 - 6)
+      const getLabelAnchor = d => (d.x0 < renderWidth / 2 ? 'start' : 'end')
 
       const sankeyGen = d3sankey()
         .nodeId(d => d.id)
@@ -231,63 +265,120 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       const graph = sankeyGen({ nodes: nodes.map(d => Object.assign({}, d)), links: links.map(d => Object.assign({}, d)) })
 
       svg.attr('viewBox', `0 0 ${renderWidth} ${height}`).attr('preserveAspectRatio', 'xMidYMid meet')
-      svg.selectAll('.sankey-content').remove()
-      const content = svg.append('g').attr('class', 'sankey-content')
+      const content = svg.selectAll('.sankey-content').data([null]).join('g').attr('class', 'sankey-content')
+      const linkLayer = content.selectAll('.sankey-links').data([null]).join('g').attr('class', 'sankey-links').attr('fill', 'none').attr('stroke-opacity', 0.6)
+      const nodeLayer = content.selectAll('.sankey-nodes').data([null]).join('g').attr('class', 'sankey-nodes')
+      const labelLayer = content.selectAll('.sankey-labels').data([null]).join('g').attr('class', 'sankey-labels')
+      const layoutTransition = svg.transition().duration(700).ease(d3.easeCubicInOut)
       const zoom = d3.zoom().scaleExtent([0.5, 4]).on('zoom', (event) => { content.attr('transform', event.transform) })
       d3.select(ref.current).call(zoom)
 
-      // LINKS with enter/update/exit and transition
-      const linkSel = content.append('g').attr('fill', 'none').attr('stroke-opacity', 0.6)
-        .selectAll('path').data(graph.links, d => `${d.source.id}|||${d.target.id}`)
+      const linkSel = linkLayer.selectAll('path').data(graph.links, d => `${d.source.id}|||${d.target.id}`)
+      const linkEnter = linkSel.enter()
+        .append('path')
+        .attr('class', 'sankey-link')
+        .attr('d', sankeyLinkHorizontal())
+        .attr('stroke', d => color(d.source.id))
+        .attr('stroke-linecap', 'butt')
+        .attr('stroke-width', 0)
+        .attr('opacity', 0)
 
-      linkSel.join(
-        enter => enter.append('path')
-          .attr('d', sankeyLinkHorizontal())
-          .attr('stroke', d => color(d.source.index))
-          .attr('stroke-width', d => Math.max(2, d.width))
-          .attr('opacity', 0)
-          .call(enter => enter.transition().duration(600).attr('opacity', 0.7)),
-        update => update.call(u => u.transition().duration(600).attr('d', sankeyLinkHorizontal()).attr('opacity', 0.7).attr('stroke-width', d => Math.max(2, d.width))),
-        exit => exit.call(e => e.transition().duration(400).attr('opacity', 0).remove())
-      )
+      linkEnter.merge(linkSel)
+        .transition(layoutTransition)
+        .delay(d => Math.min(220, d.source.x0 * 0.35))
+        .attr('d', sankeyLinkHorizontal())
+        .attr('stroke', d => color(d.source.id))
+        .attr('stroke-width', d => Math.max(2, d.width))
+        .attr('opacity', 0.72)
 
-      // NODES
-      const node = content.append('g').selectAll('g').data(graph.nodes, d => d.id).join('g')
+      linkSel.exit()
+        .transition()
+        .duration(320)
+        .ease(d3.easeCubicIn)
+        .attr('stroke-width', 0)
+        .attr('opacity', 0)
+        .remove()
 
-      node.append('rect')
-        .attr('x', d => d.x0)
-        .attr('y', d => d.y0)
-        .attr('height', d => Math.max(1, d.y1 - d.y0))
+      const nodeSel = nodeLayer.selectAll('g').data(graph.nodes, d => d.id)
+      const nodeEnter = nodeSel.enter()
+        .append('g')
+        .attr('class', 'sankey-node')
+        .attr('transform', d => `translate(${d.x0},${(d.y0 + d.y1) / 2})`)
+        .attr('opacity', 0)
+
+      nodeEnter.append('rect')
         .attr('width', d => Math.max(1, d.x1 - d.x0))
-        .attr('fill', (d, i) => color(i))
+        .attr('height', 0)
+        .attr('fill', d => color(d.id))
         .attr('stroke', '#000')
         .attr('stroke-opacity', 0.08)
-        .attr('opacity', 0)
-        .transition().duration(600).attr('opacity', 1)
-        .on('end', () => {})
+        .attr('rx', 1.5)
+        .attr('ry', 1.5)
 
-      const trim = (s, n = 28) => (s && s.length > n ? s.slice(0, n - 1) + '…' : s)
+      nodeEnter.append('title')
 
-      node.append('title')
+      const nodeMerge = nodeEnter.merge(nodeSel)
+
+      nodeMerge.select('title')
         .text(d => [d.label, d.group, d.description].filter(Boolean).join('\n'))
 
-      node.append('text')
+      nodeMerge
+        .transition(layoutTransition)
+        .delay(d => Math.min(260, d.x0 * 0.45))
+        .attr('transform', d => `translate(${d.x0},${d.y0})`)
+        .attr('opacity', 1)
+
+      nodeMerge.select('rect')
+        .transition(layoutTransition)
+        .delay(d => Math.min(260, d.x0 * 0.45))
+        .attr('width', d => Math.max(1, d.x1 - d.x0))
+        .attr('height', d => Math.max(1, d.y1 - d.y0))
+        .attr('fill', d => color(d.id))
+        .attr('opacity', 1)
+
+      nodeSel.exit()
+        .transition()
+        .duration(320)
+        .ease(d3.easeCubicIn)
+        .attr('opacity', 0)
+        .remove()
+
+      nodeSel.exit().select('rect')
+        .transition()
+        .duration(320)
+        .ease(d3.easeCubicIn)
+        .attr('height', 0)
+
+      const labelSel = labelLayer.selectAll('text').data(graph.nodes, d => d.id)
+      const labelEnter = labelSel.enter()
+        .append('text')
         .attr('class', 'sankey-node-label')
-        .attr('x', d => d.x0 - 6)
-        .attr('y', d => (d.y1 + d.y0) / 2)
+        .attr('x', d => getLabelX(d))
+        .attr('y', d => (d.y1 + d.y0) / 2 + 10)
         .attr('dy', '0.35em')
-        .attr('text-anchor', 'end')
-        .text(d => trim(d.label))
+        .attr('text-anchor', d => getLabelAnchor(d))
         .attr('font-family', 'Inter, Arial, Helvetica, sans-serif')
         .attr('font-size', 12)
-        .filter(d => d.x0 < renderWidth / 2)
-        .attr('x', d => d.x1 + 6)
-        .attr('text-anchor', 'start')
         .attr('opacity', 0)
-        .transition().duration(600).attr('opacity', 1)
+
+      labelEnter.merge(labelSel)
+        .text(d => trim(d.label))
+        .transition(layoutTransition)
+        .delay(d => 120 + Math.min(220, d.x0 * 0.35))
+        .attr('x', d => getLabelX(d))
+        .attr('y', d => (d.y1 + d.y0) / 2)
+        .attr('text-anchor', d => getLabelAnchor(d))
+        .attr('opacity', 1)
+
+      labelSel.exit()
+        .transition()
+        .duration(220)
+        .ease(d3.easeCubicIn)
+        .attr('opacity', 0)
+        .remove()
 
       // interactions (tooltips + click/pin)
-      content.selectAll('path').on('mouseover', (event, d) => {
+      linkLayer.selectAll('path').on('mouseover', (event, d) => {
         const tt = d3.select(tooltipRef.current)
         let note = ''
         if (d.events && d.events.length) {
@@ -316,7 +407,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
 
     renderFromRows()
 
-    return () => { svg.selectAll('*').remove() }
+    return () => { svg.selectAll('*').interrupt() }
   }, [width, height, rawRows, filters, containerWidth, data, lookupsMap])
 
   const downloadBlob = (blob, filename) => {
@@ -332,13 +423,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
 
   const getFilteredRows = () => {
     if (!rawRows) return []
-    return rawRows.filter(r => {
-      if (filters.period && r.period !== filters.period) return false
-      if (filters.theme && r.theme !== filters.theme) return false
-      if (filters.medium && r.medium !== filters.medium) return false
-      if (filters.affect && r.affect !== filters.affect) return false
-      return true
-    })
+    return rawRows.filter(rowMatchesFilters)
   }
 
   const serializeSvg = () => {
@@ -435,6 +520,27 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         <>
         <Grid style={{ marginTop: 12, marginBottom: 8 }}>
           <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
+            <Select id="select-input" labelText="Input" value={filters.input} onChange={e => setFilters(f => ({ ...f, input: e.target.value }))}>
+              <SelectItem value="" text="All inputs" />
+              {choices.input.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
+            </Select>
+          </Column>
+
+          <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
+            <Select id="select-action" labelText="Action" value={filters.action} onChange={e => setFilters(f => ({ ...f, action: e.target.value }))}>
+              <SelectItem value="" text="All actions" />
+              {choices.action.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
+            </Select>
+          </Column>
+
+          <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
+            <Select id="select-outcome" labelText="Outcome" value={filters.outcome} onChange={e => setFilters(f => ({ ...f, outcome: e.target.value }))}>
+              <SelectItem value="" text="All outcomes" />
+              {choices.outcome.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
+            </Select>
+          </Column>
+
+          <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
             <Select id="select-period" labelText="Period" value={filters.period} onChange={e => setFilters(f => ({ ...f, period: e.target.value }))}>
               <SelectItem value="" text="All periods" />
               {choices.period.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
@@ -464,7 +570,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
 
           <Column lg={2} md={4} sm={4} className="filter-action-column">
             <div className="filter-action-spacer" aria-hidden="true">Reset</div>
-            <Button className="filter-reset-button" size="sm" kind="secondary" onClick={() => setFilters({ period: '', theme: '', medium: '', affect: '' })}>Reset</Button>
+            <Button className="filter-reset-button" size="sm" kind="secondary" onClick={() => setFilters({ input: '', action: '', outcome: '', period: '', theme: '', medium: '', affect: '' })}>Reset</Button>
           </Column>
         </Grid>
 
