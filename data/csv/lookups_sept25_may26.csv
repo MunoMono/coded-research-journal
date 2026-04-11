@@ -1,0 +1,66 @@
+﻿field,value,label,group,description
+period,Year 1 / Term 1,Year 1 / Term 1,time,Time period used in the coded research journal timeline (Year 1 / Term 1)
+period,Year 1 / Term 2,Year 1 / Term 2,time,Time period used in the coded research journal timeline (Year 1 / Term 2)
+source_type,archival research,Archival Research,input,Input category for archival research in the research process
+source_type,coding,Coding,input,Input category for coding in the research process
+source_type,conversation,Conversation,input,Input category for conversation in the research process
+source_type,critique,Critique,input,Input category for critique in the research process
+source_type,data science,Data Science,input,Input category for data science in the research process
+source_type,documenting,Documenting,input,Input category for documenting in the research process
+source_type,graphic design,Graphic Design,input,Input category for graphic design in the research process
+source_type,machine learning,Machine Learning,input,Input category for machine learning in the research process
+source_type,making,Making,input,Input category for making in the research process
+source_type,mapping,Mapping,input,Input category for mapping in the research process
+source_type,prototyping,Prototyping,input,Input category for prototyping in the research process
+source_type,reading,Reading,input,Books papers essays theory texts
+source_type,supervision,Supervision,input,Supervisor meeting or feedback
+source_type,workshop,Workshop,input,Workshop lecture or seminar
+practice_action,coding,Coding,action,Writing or adapting code
+practice_action,documenting,Documenting,action,Action category representing documenting in practice
+practice_action,mapping,Mapping,action,Mapping ideas systems relations or categories
+practice_action,prototyping,Prototyping,action,Building an interactive or visual prototype
+practice_action,reframing,Reframing,action,Changing the research question focus or interpretive frame
+practice_action,testing,Testing,action,Testing interaction method or analytical output
+outcome_type,clarification,Clarification,output,Outcome category representing clarification as a research effect
+outcome_type,confidence,Confidence,output,Increased confidence in method or direction
+outcome_type,dead end,Dead End,output,Outcome category representing dead end as a research effect
+outcome_type,insight,Insight,output,Clear conceptual or methodological insight
+outcome_type,question,Question,output,New research question or unresolved issue
+outcome_type,redirection,Redirection,output,Shift in research direction or approach
+theme,archive,Archive,theme,Thematic category for archive in the coded journal
+theme,data science,Data Science,theme,Thematic category for data science in the coded journal
+theme,ethics,Ethics,theme,Ethical concerns around data representation and interpretation
+theme,graphic design,Graphic Design,theme,Thematic category for graphic design in the coded journal
+theme,interaction,Interaction,theme,Thematic category for interaction in the coded journal
+theme,machine learning,Machine Learning,theme,Thematic category for machine learning in the coded journal
+theme,method,Method,theme,Thematic category for method in the coded journal
+theme,participation,Participation,theme,Thematic category for participation in the coded journal
+theme,reflexivity,Reflexivity,theme,Thematic category for reflexivity in the coded journal
+theme,visualisation,Visualisation,theme,Thematic category for visualisation in the coded journal
+medium,code,Code,medium,Scripts notebooks or app components
+medium,conversation,Conversation,medium,Medium category for conversation material or output
+medium,image,Image,medium,Scanned document image screenshot photograph
+medium,presentation,Presentation,medium,Medium category for presentation material or output
+medium,prototype,Prototype,medium,Medium category for prototype material or output
+medium,sketch,Sketch,medium,Medium category for sketch material or output
+medium,text,Text,medium,Written notes papers annotations
+intensity,1,1,scale,Very low intensity
+intensity,2,2,scale,Low intensity
+intensity,3,3,scale,Moderate intensity
+intensity,4,4,scale,High intensity
+intensity,5,5,scale,Very high intensity
+confidence,2,2,scale,Low confidence
+confidence,3,3,scale,Moderate confidence
+confidence,4,4,scale,High confidence
+confidence,5,5,scale,Very high confidence
+affect,curious,Curious,affect,Open exploratory interest
+affect,energised,Energised,affect,High momentum curiosity or motivation
+affect,excited,Excited,affect,Strong positive anticipation
+affect,frustrated,Frustrated,affect,Blocked annoyed or constrained
+affect,reflective,Reflective,affect,Thoughtful evaluative critical stance
+affect,uncertain,Uncertain,affect,Doubt ambiguity or instability
+affect,unsettled,Unsettled,affect,Affective category describing an unsettled research state
+influence_on_direction,disrupted,Disrupted,direction,Interrupted assumptions or workflow
+influence_on_direction,opened,Opened,direction,Created a new possible direction
+influence_on_direction,shifted,Shifted,direction,Changed direction or emphasis
+influence_on_direction,strengthened,Strengthened,direction,Confirmed current direction

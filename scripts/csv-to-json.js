@@ -18,7 +18,7 @@ function parseCSV(content) {
     const obj = {}
     headers.forEach((h, i) => { obj[h] = cols[i] })
     return obj
-  })
+  }).filter(row => Object.values(row).some(value => String(value || '').trim()))
 }
 
 function aggregateLinks(links) {

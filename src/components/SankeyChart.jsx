@@ -11,11 +11,43 @@ export default function SankeyChart({ width = 900, height = 360 }) {
   const wrapperRef = useRef(null)
   const [data, setData] = useState(null)
   const [rawRows, setRawRows] = useState(null)
-  const [lookupsMap, setLookupsMap] = useState(null)
+  const [lookupsMap, setLookupsMap] = useState(() => new Map())
   const [choices, setChoices] = useState({ period: [], theme: [], medium: [], affect: [] })
   const [filters, setFilters] = useState({ period: '', theme: '', medium: '', affect: '' })
   const [pinned, setPinned] = useState(null)
   const [containerWidth, setContainerWidth] = useState(width)
+
+  const normalizeLookupText = value => (value == null ? '' : String(value).trim())
+  const buildLookupKey = (field, value) => `${normalizeLookupText(field)}|||${normalizeLookupText(value)}`
+  const createLookupMeta = (field, value, row = {}) => {
+    const normalizedField = normalizeLookupText(field)
+    const normalizedValue = normalizeLookupText(value)
+
+    return {
+      field: normalizedField,
+      value: normalizedValue,
+      label: normalizeLookupText(row.label) || normalizedValue,
+      group: normalizeLookupText(row.group),
+      description: normalizeLookupText(row.description),
+    }
+  }
+  const getLookupMeta = (field, value, sourceMap = lookupsMap) => {
+    const normalizedField = normalizeLookupText(field)
+    const normalizedValue = normalizeLookupText(value)
+    return sourceMap.get(buildLookupKey(normalizedField, normalizedValue)) || createLookupMeta(normalizedField, normalizedValue)
+  }
+  const isEmptyRow = row => !Object.values(row || {}).some(value => normalizeLookupText(value))
+  const buildFilterChoices = (rows, field, sourceMap = lookupsMap) => Array.from(
+    new Set(rows.map(row => normalizeLookupText(row[field])).filter(Boolean))
+  )
+    .map(value => getLookupMeta(field, value, sourceMap))
+    .sort((left, right) => {
+      const groupCompare = (left.group || '').localeCompare(right.group || '')
+      if (groupCompare !== 0) return groupCompare
+      const labelCompare = (left.label || '').localeCompare(right.label || '')
+      if (labelCompare !== 0) return labelCompare
+      return (left.value || '').localeCompare(right.value || '')
+    })
 
   // keep container width in sync using ResizeObserver for responsive rendering
   useEffect(() => {
@@ -42,19 +74,22 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     const load = async () => {
       try {
         const [eventsMod, lookupsMod] = await Promise.all([
-          import('../../data/csv/practice_events_sept25_may26_populated.csv?raw'),
-          import('../../data/csv/lookups_dummy_sept25_may26.csv?raw').catch(() => null),
+          import('../../data/csv/practice_events_sept25_may26.csv?raw'),
+          import('../../data/csv/lookups_sept25_may26.csv?raw').catch(() => null),
         ])
         const raw = eventsMod.default || eventsMod
-        const rows = d3.csvParse(raw)
+        const rows = d3.csvParse(raw).filter(row => !isEmptyRow(row))
         if (!rows || rows.length === 0) throw new Error('empty csv')
 
         const lookupRaw = lookupsMod ? (lookupsMod.default || lookupsMod) : null
         const lookups = new Map()
         if (lookupRaw) {
           d3.csvParse(lookupRaw).forEach(l => {
-            const key = `${l.field}|||${l.value}`
-            lookups.set(key, l.group || '')
+            const field = normalizeLookupText(l.field)
+            const value = normalizeLookupText(l.value)
+            if (!field || !value) return
+            const key = buildLookupKey(field, value)
+            lookups.set(key, createLookupMeta(field, value, l))
           })
         }
 
@@ -62,14 +97,15 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         setLookupsMap(lookups)
 
         setChoices({
-          period: Array.from(new Set(rows.map(r => r.period).filter(Boolean))).sort(),
-          theme: Array.from(new Set(rows.map(r => r.theme).filter(Boolean))).sort(),
-          medium: Array.from(new Set(rows.map(r => r.medium).filter(Boolean))).sort(),
-          affect: Array.from(new Set(rows.map(r => r.affect).filter(Boolean))).sort(),
+          period: buildFilterChoices(rows, 'period', lookups),
+          theme: buildFilterChoices(rows, 'theme', lookups),
+          medium: buildFilterChoices(rows, 'medium', lookups),
+          affect: buildFilterChoices(rows, 'affect', lookups),
         })
       } catch (e) {
         // fallback to prebuilt sankey JSON: extract filters if possible
         setRawRows(null)
+        setLookupsMap(new Map())
         setData(sankeyData)
       }
     }
@@ -98,10 +134,21 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       const linkCounts = new Map()
       const eventsByLink = new Map()
       const linkSeparator = '>>>>'
-      const makeNodeId = (stage, label) => `${stage}|||${label}`
-      const getNodeLabel = nodeId => {
-        const [, label = nodeId] = nodeId.split('|||')
-        return label
+      const makeNodeId = (stage, field, value) => `${stage}|||${field}|||${value}`
+      const parseNodeId = nodeId => {
+        const [stage = '', field = '', ...valueParts] = nodeId.split('|||')
+        return {
+          stage,
+          field,
+          value: valueParts.join('|||'),
+        }
+      }
+      const getNodeMeta = nodeId => {
+        const { stage, field, value } = parseNodeId(nodeId)
+        return {
+          stage,
+          ...getLookupMeta(field, value),
+        }
       }
       const makeLinkKey = (source, target) => `${source}${linkSeparator}${target}`
       const parseLinkKey = key => key.split(linkSeparator)
@@ -114,9 +161,16 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       }
 
       filtered.forEach(r => {
-        const src = makeNodeId('source', (r.source_type && r.source_type.trim()) || (r.source_label && r.source_label.trim()) || 'Unknown')
-        const act = makeNodeId('action', (r.practice_action && r.practice_action.trim()) || 'unknown_action')
-        const out = makeNodeId('outcome', (r.outcome_type && r.outcome_type.trim()) || 'unknown_outcome')
+        const sourceType = normalizeLookupText(r.source_type)
+        const sourceLabel = normalizeLookupText(r.source_label)
+        const sourceField = sourceType ? 'source_type' : 'source_label'
+        const sourceValue = sourceType || sourceLabel || 'Unknown'
+        const actionValue = normalizeLookupText(r.practice_action) || 'unknown_action'
+        const outcomeValue = normalizeLookupText(r.outcome_type) || 'unknown_outcome'
+
+        const src = makeNodeId('source', sourceField, sourceValue)
+        const act = makeNodeId('action', 'practice_action', actionValue)
+        const out = makeNodeId('outcome', 'outcome_type', outcomeValue)
         addLink(src, act, r)
         addLink(act, out, r)
       })
@@ -132,8 +186,8 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       const collapseMap = new Map()
       counts.forEach((v, k) => {
         if (v < threshold) {
-          const [stage = 'other'] = k.split('|||')
-          collapseMap.set(k, makeNodeId(stage, 'Other'))
+          const { stage = 'other', field = '' } = parseNodeId(k)
+          collapseMap.set(k, makeNodeId(stage, field, 'Other'))
         }
       })
 
@@ -157,7 +211,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         finalNodes.add(t)
       })
 
-      const nodes = Array.from(finalNodes).map(id => ({ id, label: getNodeLabel(id) }))
+      const nodes = Array.from(finalNodes).map(id => ({ id, ...getNodeMeta(id) }))
       const links = Array.from(finalLinks.entries()).map(([k, v]) => {
         const [s, t] = parseLinkKey(k)
         const events = finalEventsByLink.get(k) || []
@@ -214,6 +268,9 @@ export default function SankeyChart({ width = 900, height = 360 }) {
 
       const trim = (s, n = 28) => (s && s.length > n ? s.slice(0, n - 1) + '…' : s)
 
+      node.append('title')
+        .text(d => [d.label, d.group, d.description].filter(Boolean).join('\n'))
+
       node.append('text')
         .attr('class', 'sankey-node-label')
         .attr('x', d => d.x0 - 6)
@@ -238,7 +295,15 @@ export default function SankeyChart({ width = 900, height = 360 }) {
           const ev = withNote || d.events[0]
           note = withNote ? withNote.reflexive_note : (ev.reflexive_note || `Event ${ev.id}`)
         }
-        tt.style('opacity', 1).html(`<strong>${d.source.label} → ${d.target.label}</strong><br/>Value: ${d.value}<br/>${note}`)
+        const sourceMeta = [d.source.group, d.source.description].filter(Boolean).join(' · ')
+        const targetMeta = [d.target.group, d.target.description].filter(Boolean).join(' · ')
+        tt.style('opacity', 1).html([
+          `<strong>${d.source.label} → ${d.target.label}</strong>`,
+          `Value: ${d.value}`,
+          sourceMeta ? `${d.source.label}: ${sourceMeta}` : '',
+          targetMeta ? `${d.target.label}: ${targetMeta}` : '',
+          note,
+        ].filter(Boolean).join('<br/>'))
         const [x, y] = d3.pointer(event, ref.current)
         tt.style('left', `${x + 20}px`).style('top', `${y + 20}px`)
       }).on('mousemove', (event) => {
@@ -252,7 +317,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     renderFromRows()
 
     return () => { svg.selectAll('*').remove() }
-  }, [width, height, rawRows, filters, containerWidth, data])
+  }, [width, height, rawRows, filters, containerWidth, data, lookupsMap])
 
   const downloadBlob = (blob, filename) => {
     const url = URL.createObjectURL(blob)
@@ -356,10 +421,10 @@ export default function SankeyChart({ width = 900, height = 360 }) {
             </div>
             <div style={{ marginTop: 8 }}>
               <div><strong>ID:</strong> {pinned.id}</div>
-              <div><strong>Period:</strong> {pinned.period}</div>
-              <div><strong>Theme:</strong> {pinned.theme}</div>
-              <div><strong>Medium:</strong> {pinned.medium}</div>
-              <div><strong>Affect:</strong> {pinned.affect}</div>
+              <div><strong>Period:</strong> {getLookupMeta('period', pinned.period).label}</div>
+              <div><strong>Theme:</strong> {getLookupMeta('theme', pinned.theme).label}</div>
+              <div><strong>Medium:</strong> {getLookupMeta('medium', pinned.medium).label}</div>
+              <div><strong>Affect:</strong> {getLookupMeta('affect', pinned.affect).label}</div>
               <div style={{ marginTop: 8 }}><strong>Reflexive note</strong><div style={{ whiteSpace: 'pre-wrap' }}>{pinned.reflexive_note || '—'}</div></div>
             </div>
           </Tile>
@@ -372,28 +437,28 @@ export default function SankeyChart({ width = 900, height = 360 }) {
           <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
             <Select id="select-period" labelText="Period" value={filters.period} onChange={e => setFilters(f => ({ ...f, period: e.target.value }))}>
               <SelectItem value="" text="All periods" />
-              {choices.period.map(p => <SelectItem key={p} value={p} text={p} />)}
+              {choices.period.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
             </Select>
           </Column>
 
           <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
             <Select id="select-theme" labelText="Theme" value={filters.theme} onChange={e => setFilters(f => ({ ...f, theme: e.target.value }))}>
               <SelectItem value="" text="All themes" />
-              {choices.theme.map(p => <SelectItem key={p} value={p} text={p} />)}
+              {choices.theme.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
             </Select>
           </Column>
 
           <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
             <Select id="select-medium" labelText="Medium" value={filters.medium} onChange={e => setFilters(f => ({ ...f, medium: e.target.value }))}>
               <SelectItem value="" text="All media" />
-              {choices.medium.map(p => <SelectItem key={p} value={p} text={p} />)}
+              {choices.medium.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
             </Select>
           </Column>
 
           <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
             <Select id="select-affect" labelText="Affect" value={filters.affect} onChange={e => setFilters(f => ({ ...f, affect: e.target.value }))}>
               <SelectItem value="" text="All affect" />
-              {choices.affect.map(p => <SelectItem key={p} value={p} text={p} />)}
+              {choices.affect.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
             </Select>
           </Column>
 
