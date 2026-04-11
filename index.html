@@ -3,8 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <title>Coded research journal</title>
-    <script type="module" crossorigin src="/coded-research-journal/assets/index-CMdFTweo.js"></script>
+    <script>
+      (function() {
+        try {
+          var storedTheme = window.localStorage.getItem('coded-research-journal-theme');
+          var useDark = storedTheme !== 'light';
+          document.documentElement.classList.toggle('dark', useDark);
+        } catch (error) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/coded-research-journal/assets/index-Bq3KU9UN.js"></script>
     <link rel="stylesheet" crossorigin href="/coded-research-journal/assets/index-ghgXDzHJ.css">
   </head>
   <body>
