@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { csvParse } from 'd3'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -10,14 +11,13 @@ const OUT_FILE = path.join(__dirname, '..', 'src', 'data', 'sankey.json')
 
 // Very small CSV parser - for robust parsing swap to a CSV library
 function parseCSV(content) {
-  const lines = content.split(/\r?\n/).filter(Boolean)
-  if (lines.length === 0) return []
-  const headers = lines[0].split(',').map(h => h.trim())
-  return lines.slice(1).map(line => {
-    const cols = line.split(',').map(c => c.trim())
-    const obj = {}
-    headers.forEach((h, i) => { obj[h] = cols[i] })
-    return obj
+  const normalizedContent = content.replace(/^\uFEFF/, '')
+  return csvParse(normalizedContent, row => {
+    const normalizedRow = {}
+    Object.entries(row).forEach(([key, value]) => {
+      normalizedRow[String(key).trim()] = typeof value === 'string' ? value.trim() : value
+    })
+    return normalizedRow
   }).filter(row => Object.values(row).some(value => String(value || '').trim()))
 }
 
@@ -86,6 +86,8 @@ function main() {
       medium: r['medium'] || '',
       affect: r['affect'] || '',
       reflexive_note: r['reflexive_note'] || r['note'] || '',
+      evidence_link: r['evidence_link'] || '',
+      tags: r['tags'] || '',
       source_type: sourceType,
       source_label: sourceLabel,
       practice_action: action,

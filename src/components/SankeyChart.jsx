@@ -55,6 +55,11 @@ export default function SankeyChart({ width = 900, height = 360 }) {
   }
   const isEmptyRow = row => !Object.values(row || {}).some(value => normalizeLookupText(value))
   const getInputValue = row => normalizeLookupText(row.source_type) || normalizeLookupText(row.source_label)
+  const formatTags = value => normalizeLookupText(value)
+    .split(';')
+    .map(tag => tag.trim())
+    .filter(Boolean)
+    .join(', ')
   const buildFilterChoices = (rows, field, sourceMap = lookupsMap) => Array.from(
     new Set(rows.map(row => normalizeLookupText(row[field])).filter(Boolean))
   )
@@ -206,7 +211,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         addLink(act, out, r)
       })
 
-      const threshold = 2
+      const threshold = 1
       const counts = new Map()
       Array.from(linkCounts.entries()).forEach(([k, v]) => {
         const [s, t] = parseLinkKey(k)
@@ -380,20 +385,24 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       // interactions (tooltips + click/pin)
       linkLayer.selectAll('path').on('mouseover', (event, d) => {
         const tt = d3.select(tooltipRef.current)
+        let activeEvent = null
         let note = ''
+        let evidenceLink = ''
+        let tags = ''
         if (d.events && d.events.length) {
           const withNote = d.events.find(e => e.reflexive_note && e.reflexive_note.trim())
-          const ev = withNote || d.events[0]
-          note = withNote ? withNote.reflexive_note : (ev.reflexive_note || `Event ${ev.id}`)
+          activeEvent = withNote || d.events[0]
+          note = withNote ? withNote.reflexive_note : (activeEvent.reflexive_note || `Event ${activeEvent.id}`)
+          evidenceLink = normalizeLookupText(activeEvent.evidence_link)
+          tags = formatTags(activeEvent.tags)
         }
-        const sourceMeta = [d.source.group, d.source.description].filter(Boolean).join(' · ')
-        const targetMeta = [d.target.group, d.target.description].filter(Boolean).join(' · ')
         tt.style('opacity', 1).html([
           `<strong>${d.source.label} → ${d.target.label}</strong>`,
           `Value: ${d.value}`,
-          sourceMeta ? `${d.source.label}: ${sourceMeta}` : '',
-          targetMeta ? `${d.target.label}: ${targetMeta}` : '',
-          note,
+          activeEvent?.source_label ? `Source label: ${activeEvent.source_label}` : '',
+          note ? `Reflexive note: ${note}` : '',
+          evidenceLink ? `Evidence: ${evidenceLink}` : '',
+          tags ? `Tags: ${tags}` : '',
         ].filter(Boolean).join('<br/>'))
         const [x, y] = d3.pointer(event, ref.current)
         tt.style('left', `${x + 20}px`).style('top', `${y + 20}px`)
@@ -510,6 +519,8 @@ export default function SankeyChart({ width = 900, height = 360 }) {
               <div><strong>Theme:</strong> {getLookupMeta('theme', pinned.theme).label}</div>
               <div><strong>Medium:</strong> {getLookupMeta('medium', pinned.medium).label}</div>
               <div><strong>Affect:</strong> {getLookupMeta('affect', pinned.affect).label}</div>
+              <div><strong>Evidence:</strong> {pinned.evidence_link || '—'}</div>
+              <div><strong>Tags:</strong> {formatTags(pinned.tags) || '—'}</div>
               <div style={{ marginTop: 8 }}><strong>Reflexive note</strong><div style={{ whiteSpace: 'pre-wrap' }}>{pinned.reflexive_note || '—'}</div></div>
             </div>
           </Tile>
