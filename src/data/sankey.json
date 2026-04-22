@@ -313,6 +313,9 @@
       "id": "reading:Text on practice-based research methods"
     },
     {
+      "id": "conversation:V&A Research Review Committee approval email"
+    },
+    {
       "id": "machine learning:Active learning idea for assisted tagging"
     },
     {
@@ -2956,7 +2959,7 @@
     {
       "source": "documenting",
       "target": "confidence",
-      "value": 3,
+      "value": 4,
       "events": [
         {
           "id": "Y1-032",
@@ -2983,6 +2986,20 @@
           "tags": "demo video; apr; communication",
           "source_type": "graphic design",
           "source_label": "API demo video for APR",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-P035",
+          "period": "Year 1 / Term 2",
+          "theme": "archive",
+          "medium": "text",
+          "affect": "excited",
+          "reflexive_note": "After months of negotiation, the V&A formally endorsed the project as innovative and useful, while clarifying that access to uncatalogued material would depend on a light-touch data agreement around copyright, data usage, and practical handling. The message felt like a major institutional green light: it strengthened the direction of the research and made clear that access, governance, and collaboration were part of the method rather than just administrative hurdles.",
+          "evidence_link": "Email from Matti Watton 13 Apr 2026; V&A Research Review Committee feedback",
+          "tags": "v&a; archive; access; approval; data agreement; uncatalogued material",
+          "source_type": "conversation",
+          "source_label": "V&A Research Review Committee approval email",
           "practice_action": "documenting",
           "outcome_type": "confidence"
         },
@@ -3923,6 +3940,27 @@
           "source_label": "Text on practice-based research methods",
           "practice_action": "reframing",
           "outcome_type": "insight"
+        }
+      ]
+    },
+    {
+      "source": "conversation:V&A Research Review Committee approval email",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-P035",
+          "period": "Year 1 / Term 2",
+          "theme": "archive",
+          "medium": "text",
+          "affect": "excited",
+          "reflexive_note": "After months of negotiation, the V&A formally endorsed the project as innovative and useful, while clarifying that access to uncatalogued material would depend on a light-touch data agreement around copyright, data usage, and practical handling. The message felt like a major institutional green light: it strengthened the direction of the research and made clear that access, governance, and collaboration were part of the method rather than just administrative hurdles.",
+          "evidence_link": "Email from Matti Watton 13 Apr 2026; V&A Research Review Committee feedback",
+          "tags": "v&a; archive; access; approval; data agreement; uncatalogued material",
+          "source_type": "conversation",
+          "source_label": "V&A Research Review Committee approval email",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
         }
       ]
     },
@@ -5566,6 +5604,20 @@
       "source_label": "Text on practice-based research methods",
       "practice_action": "reframing",
       "outcome_type": "insight"
+    },
+    {
+      "id": "Y1-P035",
+      "period": "Year 1 / Term 2",
+      "theme": "archive",
+      "medium": "text",
+      "affect": "excited",
+      "reflexive_note": "After months of negotiation, the V&A formally endorsed the project as innovative and useful, while clarifying that access to uncatalogued material would depend on a light-touch data agreement around copyright, data usage, and practical handling. The message felt like a major institutional green light: it strengthened the direction of the research and made clear that access, governance, and collaboration were part of the method rather than just administrative hurdles.",
+      "evidence_link": "Email from Matti Watton 13 Apr 2026; V&A Research Review Committee feedback",
+      "tags": "v&a; archive; access; approval; data agreement; uncatalogued material",
+      "source_type": "conversation",
+      "source_label": "V&A Research Review Committee approval email",
+      "practice_action": "documenting",
+      "outcome_type": "confidence"
     },
     {
       "id": "Y1-060",
