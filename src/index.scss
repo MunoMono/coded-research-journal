@@ -43,6 +43,7 @@ body {
 
 .app-root,
 .main-content,
+.page-shell,
 .viz,
 .viz-shell {
   min-width: 0;
@@ -50,6 +51,10 @@ body {
 
 .main-content {
   padding: 2rem;
+}
+
+.page-shell {
+  width: 100%;
 }
 
 .hero-title {
@@ -150,10 +155,13 @@ html.dark .cds--side-nav__submenu-title:hover {
 
 .about-page {
   margin-top: 2rem;
+  width: 100%;
 }
 
 .about-copy {
   margin: 0 0 4rem;
+  max-width: 58rem;
+  width: 100%;
   font-size: 20px;
   line-height: 1.6;
   font-weight: 400;
@@ -245,6 +253,10 @@ html.dark .cds--side-nav__submenu-title:hover {
     padding: 1rem;
   }
 
+  .page-shell {
+    width: 100%;
+  }
+
   .viz {
     margin-top: 1rem;
   }
@@ -261,6 +273,17 @@ html.dark .cds--side-nav__submenu-title:hover {
 
   .hero-title {
     margin-left: 0;
+  }
+
+  .about-page {
+    margin-top: 1rem;
+  }
+
+  .about-copy {
+    margin-bottom: 2rem;
+    max-width: none;
+    font-size: 1.125rem;
+    line-height: 1.55;
   }
 
   .hero::after {
