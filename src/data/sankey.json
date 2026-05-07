@@ -365,8 +365,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-001",
+          "id": "Y1-J001",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "curious",
@@ -386,8 +387,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-001",
+          "id": "Y1-J001",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "curious",
@@ -407,8 +409,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-002",
+          "id": "Y1-J002",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "method",
           "medium": "conversation",
           "affect": "energised",
@@ -428,8 +431,9 @@
       "value": 11,
       "events": [
         {
-          "id": "Y1-002",
+          "id": "Y1-J002",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "method",
           "medium": "conversation",
           "affect": "energised",
@@ -442,8 +446,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-006",
+          "id": "Y1-J006",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "method",
           "medium": "text",
           "affect": "unsettled",
@@ -456,8 +461,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-011",
+          "id": "Y1-J011",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "method",
           "medium": "text",
           "affect": "unsettled",
@@ -472,6 +478,7 @@
         {
           "id": "Y1-P004",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "graphic design",
           "medium": "text",
           "affect": "curious",
@@ -486,6 +493,7 @@
         {
           "id": "Y1-P006",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "method",
           "medium": "text",
           "affect": "reflective",
@@ -500,6 +508,7 @@
         {
           "id": "Y1-P013",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "archive",
           "medium": "text",
           "affect": "reflective",
@@ -512,8 +521,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-024",
+          "id": "Y1-J024",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "text",
           "affect": "curious",
@@ -528,6 +538,7 @@
         {
           "id": "Y1-P019",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "method",
           "medium": "text",
           "affect": "reflective",
@@ -540,8 +551,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-036",
+          "id": "Y1-J036",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "method",
           "medium": "conversation",
           "affect": "curious",
@@ -554,8 +566,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-057",
+          "id": "Y1-J057",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "text",
           "affect": "energised",
@@ -568,8 +581,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-063",
+          "id": "Y1-J063",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "ethics",
           "medium": "text",
           "affect": "unsettled",
@@ -589,8 +603,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-003",
+          "id": "Y1-J003",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "sketch",
           "affect": "excited",
@@ -610,8 +625,9 @@
       "value": 11,
       "events": [
         {
-          "id": "Y1-003",
+          "id": "Y1-J003",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "sketch",
           "affect": "excited",
@@ -624,8 +640,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-028",
+          "id": "Y1-J028",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "curious",
@@ -638,8 +655,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-030",
+          "id": "Y1-J030",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "image",
           "affect": "reflective",
@@ -654,6 +672,7 @@
         {
           "id": "Y1-P018",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "visualisation",
           "medium": "image",
           "affect": "energised",
@@ -668,6 +687,7 @@
         {
           "id": "Y1-P021",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "visualisation",
           "medium": "prototype",
           "affect": "excited",
@@ -680,8 +700,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-045",
+          "id": "Y1-J045",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "curious",
@@ -696,6 +717,7 @@
         {
           "id": "Y1-P031",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "reflexivity",
           "medium": "text",
           "affect": "excited",
@@ -710,6 +732,7 @@
         {
           "id": "Y1-P033",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "visualisation",
           "medium": "code",
           "affect": "energised",
@@ -722,8 +745,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-061",
+          "id": "Y1-J061",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "curious",
@@ -736,8 +760,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-065",
+          "id": "Y1-J065",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "text",
           "affect": "reflective",
@@ -750,8 +775,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-072",
+          "id": "Y1-J072",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "image",
           "affect": "reflective",
@@ -771,8 +797,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-004",
+          "id": "Y1-J004",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "text",
           "affect": "energised",
@@ -792,8 +819,9 @@
       "value": 11,
       "events": [
         {
-          "id": "Y1-004",
+          "id": "Y1-J004",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "text",
           "affect": "energised",
@@ -806,8 +834,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-008",
+          "id": "Y1-J008",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "participation",
           "medium": "text",
           "affect": "energised",
@@ -820,8 +849,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-023",
+          "id": "Y1-J023",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "archive",
           "medium": "conversation",
           "affect": "energised",
@@ -836,6 +866,7 @@
         {
           "id": "Y1-P010",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "method",
           "medium": "text",
           "affect": "energised",
@@ -850,6 +881,7 @@
         {
           "id": "Y1-P015",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "method",
           "medium": "text",
           "affect": "energised",
@@ -862,8 +894,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-039",
+          "id": "Y1-J039",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "ethics",
           "medium": "text",
           "affect": "unsettled",
@@ -876,8 +909,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-044",
+          "id": "Y1-J044",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "conversation",
           "affect": "energised",
@@ -892,6 +926,7 @@
         {
           "id": "Y1-P027",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "ethics",
           "medium": "text",
           "affect": "unsettled",
@@ -904,8 +939,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-048",
+          "id": "Y1-J048",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "energised",
@@ -920,6 +956,7 @@
         {
           "id": "Y1-P029",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "reflexivity",
           "medium": "text",
           "affect": "reflective",
@@ -932,8 +969,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-059",
+          "id": "Y1-J059",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "method",
           "medium": "text",
           "affect": "energised",
@@ -953,8 +991,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-005",
+          "id": "Y1-J005",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "curious",
@@ -974,8 +1013,9 @@
       "value": 7,
       "events": [
         {
-          "id": "Y1-005",
+          "id": "Y1-J005",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "curious",
@@ -990,6 +1030,7 @@
         {
           "id": "Y1-P008",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "archive",
           "medium": "code",
           "affect": "curious",
@@ -1004,6 +1045,7 @@
         {
           "id": "Y1-P017",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "machine learning",
           "medium": "code",
           "affect": "curious",
@@ -1016,8 +1058,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-034",
+          "id": "Y1-J034",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "prototype",
           "affect": "curious",
@@ -1032,6 +1075,7 @@
         {
           "id": "Y1-P022",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "archive",
           "medium": "conversation",
           "affect": "unsettled",
@@ -1044,8 +1088,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-041",
+          "id": "Y1-J041",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "curious",
@@ -1058,8 +1103,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-049",
+          "id": "Y1-J049",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "prototype",
           "affect": "curious",
@@ -1079,8 +1125,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-006",
+          "id": "Y1-J006",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "method",
           "medium": "text",
           "affect": "unsettled",
@@ -1100,8 +1147,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-007",
+          "id": "Y1-J007",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "archive",
           "medium": "image",
           "affect": "curious",
@@ -1121,8 +1169,9 @@
       "value": 5,
       "events": [
         {
-          "id": "Y1-007",
+          "id": "Y1-J007",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "archive",
           "medium": "image",
           "affect": "curious",
@@ -1135,8 +1184,9 @@
           "outcome_type": "question"
         },
         {
-          "id": "Y1-013",
+          "id": "Y1-J013",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "data science",
           "medium": "text",
           "affect": "curious",
@@ -1151,6 +1201,7 @@
         {
           "id": "Y1-P012",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "participation",
           "medium": "text",
           "affect": "unsettled",
@@ -1165,6 +1216,7 @@
         {
           "id": "Y1-P026",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "ethics",
           "medium": "conversation",
           "affect": "unsettled",
@@ -1177,8 +1229,9 @@
           "outcome_type": "question"
         },
         {
-          "id": "Y1-046",
+          "id": "Y1-J046",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "method",
           "medium": "text",
           "affect": "unsettled",
@@ -1198,8 +1251,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-008",
+          "id": "Y1-J008",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "participation",
           "medium": "text",
           "affect": "energised",
@@ -1221,6 +1275,7 @@
         {
           "id": "Y1-P001",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "archive",
           "medium": "prototype",
           "affect": "energised",
@@ -1242,6 +1297,7 @@
         {
           "id": "Y1-P001",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "archive",
           "medium": "prototype",
           "affect": "energised",
@@ -1254,8 +1310,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-016",
+          "id": "Y1-J016",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "excited",
@@ -1268,8 +1325,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-027",
+          "id": "Y1-J027",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "prototype",
           "affect": "energised",
@@ -1282,8 +1340,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-042",
+          "id": "Y1-J042",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "prototype",
           "affect": "energised",
@@ -1298,6 +1357,7 @@
         {
           "id": "Y1-P028",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "machine learning",
           "medium": "code",
           "affect": "curious",
@@ -1312,6 +1372,7 @@
         {
           "id": "Y1-P032",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "archive",
           "medium": "code",
           "affect": "reflective",
@@ -1333,6 +1394,7 @@
         {
           "id": "Y1-P002",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "method",
           "medium": "text",
           "affect": "reflective",
@@ -1354,6 +1416,7 @@
         {
           "id": "Y1-P002",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "method",
           "medium": "text",
           "affect": "reflective",
@@ -1366,8 +1429,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-031",
+          "id": "Y1-J031",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "text",
           "affect": "curious",
@@ -1382,6 +1446,7 @@
         {
           "id": "Y1-P025",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "method",
           "medium": "text",
           "affect": "reflective",
@@ -1394,8 +1459,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-052",
+          "id": "Y1-J052",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "presentation",
           "affect": "unsettled",
@@ -1410,6 +1476,7 @@
         {
           "id": "Y1-P034",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "machine learning",
           "medium": "text",
           "affect": "reflective",
@@ -1422,8 +1489,9 @@
           "outcome_type": "clarification"
         },
         {
-          "id": "Y1-070",
+          "id": "Y1-J070",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "method",
           "medium": "presentation",
           "affect": "unsettled",
@@ -1443,8 +1511,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-009",
+          "id": "Y1-J009",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "image",
           "affect": "excited",
@@ -1464,8 +1533,9 @@
       "value": 2,
       "events": [
         {
-          "id": "Y1-009",
+          "id": "Y1-J009",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "image",
           "affect": "excited",
@@ -1478,8 +1548,9 @@
           "outcome_type": "confidence"
         },
         {
-          "id": "Y1-050",
+          "id": "Y1-J050",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "energised",
@@ -1499,8 +1570,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-010",
+          "id": "Y1-J010",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "frustrated",
@@ -1520,8 +1592,9 @@
       "value": 4,
       "events": [
         {
-          "id": "Y1-010",
+          "id": "Y1-J010",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "frustrated",
@@ -1534,8 +1607,9 @@
           "outcome_type": "dead end"
         },
         {
-          "id": "Y1-035",
+          "id": "Y1-J035",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "frustrated",
@@ -1550,6 +1624,7 @@
         {
           "id": "Y1-P024",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "machine learning",
           "medium": "code",
           "affect": "frustrated",
@@ -1562,8 +1637,9 @@
           "outcome_type": "dead end"
         },
         {
-          "id": "Y1-068",
+          "id": "Y1-J068",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "frustrated",
@@ -1583,8 +1659,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-011",
+          "id": "Y1-J011",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "method",
           "medium": "text",
           "affect": "unsettled",
@@ -1604,8 +1681,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-012",
+          "id": "Y1-J012",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "image",
           "affect": "energised",
@@ -1625,8 +1703,9 @@
       "value": 5,
       "events": [
         {
-          "id": "Y1-012",
+          "id": "Y1-J012",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "image",
           "affect": "energised",
@@ -1639,8 +1718,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-017",
+          "id": "Y1-J017",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "curious",
@@ -1653,8 +1733,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-038",
+          "id": "Y1-J038",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "energised",
@@ -1667,8 +1748,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-053",
+          "id": "Y1-J053",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "archive",
           "medium": "image",
           "affect": "energised",
@@ -1681,8 +1763,9 @@
           "outcome_type": "insight"
         },
         {
-          "id": "Y1-069",
+          "id": "Y1-J069",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "archive",
           "medium": "image",
           "affect": "energised",
@@ -1704,6 +1787,7 @@
         {
           "id": "Y1-P003",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "data science",
           "medium": "code",
           "affect": "energised",
@@ -1725,6 +1809,7 @@
         {
           "id": "Y1-P003",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "data science",
           "medium": "code",
           "affect": "energised",
@@ -1746,6 +1831,7 @@
         {
           "id": "Y1-P004",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "graphic design",
           "medium": "text",
           "affect": "curious",
@@ -1765,8 +1851,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-013",
+          "id": "Y1-J013",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "data science",
           "medium": "text",
           "affect": "curious",
@@ -1788,6 +1875,7 @@
         {
           "id": "Y1-P005",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "archive",
           "medium": "code",
           "affect": "curious",
@@ -1809,6 +1897,7 @@
         {
           "id": "Y1-P005",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "archive",
           "medium": "code",
           "affect": "curious",
@@ -1823,6 +1912,7 @@
         {
           "id": "Y1-P023",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "archive",
           "medium": "code",
           "affect": "energised",
@@ -1842,8 +1932,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-023",
+          "id": "Y1-J023",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "archive",
           "medium": "conversation",
           "affect": "energised",
@@ -1863,8 +1954,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-014",
+          "id": "Y1-J014",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "conversation",
           "affect": "curious",
@@ -1884,8 +1976,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-014",
+          "id": "Y1-J014",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "conversation",
           "affect": "curious",
@@ -1905,8 +1998,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-015",
+          "id": "Y1-J015",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "interaction",
           "medium": "prototype",
           "affect": "frustrated",
@@ -1926,8 +2020,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-015",
+          "id": "Y1-J015",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "interaction",
           "medium": "prototype",
           "affect": "frustrated",
@@ -1949,6 +2044,7 @@
         {
           "id": "Y1-P006",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "method",
           "medium": "text",
           "affect": "reflective",
@@ -1968,8 +2064,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-016",
+          "id": "Y1-J016",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "excited",
@@ -1989,8 +2086,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-017",
+          "id": "Y1-J017",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "curious",
@@ -2010,8 +2108,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-018",
+          "id": "Y1-J018",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "prototype",
           "affect": "excited",
@@ -2031,8 +2130,9 @@
       "value": 3,
       "events": [
         {
-          "id": "Y1-018",
+          "id": "Y1-J018",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "prototype",
           "affect": "excited",
@@ -2045,8 +2145,9 @@
           "outcome_type": "confidence"
         },
         {
-          "id": "Y1-029",
+          "id": "Y1-J029",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "conversation",
           "affect": "excited",
@@ -2059,8 +2160,9 @@
           "outcome_type": "confidence"
         },
         {
-          "id": "Y1-056",
+          "id": "Y1-J056",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "excited",
@@ -2082,6 +2184,7 @@
         {
           "id": "Y1-P007",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "archive",
           "medium": "conversation",
           "affect": "excited",
@@ -2103,6 +2206,7 @@
         {
           "id": "Y1-P007",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "archive",
           "medium": "conversation",
           "affect": "excited",
@@ -2124,6 +2228,7 @@
         {
           "id": "Y1-P008",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "archive",
           "medium": "code",
           "affect": "curious",
@@ -2143,8 +2248,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-019",
+          "id": "Y1-J019",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "text",
           "affect": "uncertain",
@@ -2164,8 +2270,9 @@
       "value": 4,
       "events": [
         {
-          "id": "Y1-019",
+          "id": "Y1-J019",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "text",
           "affect": "uncertain",
@@ -2178,8 +2285,9 @@
           "outcome_type": "question"
         },
         {
-          "id": "Y1-033",
+          "id": "Y1-J033",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "presentation",
           "affect": "uncertain",
@@ -2194,6 +2302,7 @@
         {
           "id": "Y1-P020",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "archive",
           "medium": "conversation",
           "affect": "curious",
@@ -2206,8 +2315,9 @@
           "outcome_type": "question"
         },
         {
-          "id": "Y1-055",
+          "id": "Y1-J055",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "conversation",
           "affect": "curious",
@@ -2229,6 +2339,7 @@
         {
           "id": "Y1-P009",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "data science",
           "medium": "code",
           "affect": "reflective",
@@ -2250,6 +2361,7 @@
         {
           "id": "Y1-P009",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "data science",
           "medium": "code",
           "affect": "reflective",
@@ -2269,8 +2381,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-020",
+          "id": "Y1-J020",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "curious",
@@ -2290,8 +2403,9 @@
       "value": 4,
       "events": [
         {
-          "id": "Y1-020",
+          "id": "Y1-J020",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "curious",
@@ -2304,8 +2418,9 @@
           "outcome_type": "redirection"
         },
         {
-          "id": "Y1-021",
+          "id": "Y1-J021",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "method",
           "medium": "conversation",
           "affect": "curious",
@@ -2318,8 +2433,9 @@
           "outcome_type": "redirection"
         },
         {
-          "id": "Y1-051",
+          "id": "Y1-J051",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "curious",
@@ -2332,8 +2448,9 @@
           "outcome_type": "redirection"
         },
         {
-          "id": "Y1-062",
+          "id": "Y1-J062",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "curious",
@@ -2355,6 +2472,7 @@
         {
           "id": "Y1-P010",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "method",
           "medium": "text",
           "affect": "energised",
@@ -2374,8 +2492,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-021",
+          "id": "Y1-J021",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "method",
           "medium": "conversation",
           "affect": "curious",
@@ -2395,8 +2514,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-022",
+          "id": "Y1-J022",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "code",
           "affect": "excited",
@@ -2416,8 +2536,9 @@
       "value": 10,
       "events": [
         {
-          "id": "Y1-022",
+          "id": "Y1-J022",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "code",
           "affect": "excited",
@@ -2432,6 +2553,7 @@
         {
           "id": "Y1-P011",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "data science",
           "medium": "code",
           "affect": "excited",
@@ -2444,8 +2566,9 @@
           "outcome_type": "confidence"
         },
         {
-          "id": "Y1-025",
+          "id": "Y1-J025",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "excited",
@@ -2460,6 +2583,7 @@
         {
           "id": "Y1-P016",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "archive",
           "medium": "code",
           "affect": "excited",
@@ -2472,8 +2596,9 @@
           "outcome_type": "confidence"
         },
         {
-          "id": "Y1-037",
+          "id": "Y1-J037",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "excited",
@@ -2486,8 +2611,9 @@
           "outcome_type": "confidence"
         },
         {
-          "id": "Y1-040",
+          "id": "Y1-J040",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "excited",
@@ -2500,8 +2626,9 @@
           "outcome_type": "confidence"
         },
         {
-          "id": "Y1-047",
+          "id": "Y1-J047",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "excited",
@@ -2514,8 +2641,9 @@
           "outcome_type": "confidence"
         },
         {
-          "id": "Y1-054",
+          "id": "Y1-J054",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "excited",
@@ -2528,8 +2656,9 @@
           "outcome_type": "confidence"
         },
         {
-          "id": "Y1-064",
+          "id": "Y1-J064",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "code",
           "affect": "excited",
@@ -2542,8 +2671,9 @@
           "outcome_type": "confidence"
         },
         {
-          "id": "Y1-066",
+          "id": "Y1-J066",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "image",
           "affect": "excited",
@@ -2565,6 +2695,7 @@
         {
           "id": "Y1-P011",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "data science",
           "medium": "code",
           "affect": "excited",
@@ -2586,6 +2717,7 @@
         {
           "id": "Y1-P012",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "participation",
           "medium": "text",
           "affect": "unsettled",
@@ -2607,6 +2739,7 @@
         {
           "id": "Y1-P013",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "archive",
           "medium": "text",
           "affect": "reflective",
@@ -2626,8 +2759,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-024",
+          "id": "Y1-J024",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "text",
           "affect": "curious",
@@ -2647,8 +2781,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-025",
+          "id": "Y1-J025",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "excited",
@@ -2668,8 +2803,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-026",
+          "id": "Y1-J026",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "uncertain",
@@ -2689,8 +2825,9 @@
       "value": 4,
       "events": [
         {
-          "id": "Y1-026",
+          "id": "Y1-J026",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "uncertain",
@@ -2705,6 +2842,7 @@
         {
           "id": "Y1-P014",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "machine learning",
           "medium": "code",
           "affect": "curious",
@@ -2717,8 +2855,9 @@
           "outcome_type": "question"
         },
         {
-          "id": "Y1-043",
+          "id": "Y1-J043",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "uncertain",
@@ -2731,8 +2870,9 @@
           "outcome_type": "question"
         },
         {
-          "id": "Y1-060",
+          "id": "Y1-J060",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "uncertain",
@@ -2754,6 +2894,7 @@
         {
           "id": "Y1-P014",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "machine learning",
           "medium": "code",
           "affect": "curious",
@@ -2773,8 +2914,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-027",
+          "id": "Y1-J027",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "prototype",
           "affect": "energised",
@@ -2794,8 +2936,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-028",
+          "id": "Y1-J028",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "curious",
@@ -2817,6 +2960,7 @@
         {
           "id": "Y1-P015",
           "period": "Year 1 / Term 1",
+          "series": "practice",
           "theme": "method",
           "medium": "text",
           "affect": "energised",
@@ -2836,8 +2980,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-029",
+          "id": "Y1-J029",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "conversation",
           "affect": "excited",
@@ -2857,8 +3002,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-030",
+          "id": "Y1-J030",
           "period": "Year 1 / Term 1",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "image",
           "affect": "reflective",
@@ -2880,6 +3026,7 @@
         {
           "id": "Y1-P016",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "archive",
           "medium": "code",
           "affect": "excited",
@@ -2899,8 +3046,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-031",
+          "id": "Y1-J031",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "text",
           "affect": "curious",
@@ -2922,6 +3070,7 @@
         {
           "id": "Y1-P017",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "machine learning",
           "medium": "code",
           "affect": "curious",
@@ -2941,8 +3090,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-032",
+          "id": "Y1-J032",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "energised",
@@ -2962,8 +3112,9 @@
       "value": 4,
       "events": [
         {
-          "id": "Y1-032",
+          "id": "Y1-J032",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "energised",
@@ -2978,6 +3129,7 @@
         {
           "id": "Y1-P030",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "graphic design",
           "medium": "presentation",
           "affect": "energised",
@@ -2992,6 +3144,7 @@
         {
           "id": "Y1-P035",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "archive",
           "medium": "text",
           "affect": "excited",
@@ -3004,8 +3157,9 @@
           "outcome_type": "confidence"
         },
         {
-          "id": "Y1-071",
+          "id": "Y1-J071",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "energised",
@@ -3027,6 +3181,7 @@
         {
           "id": "Y1-P018",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "visualisation",
           "medium": "image",
           "affect": "energised",
@@ -3046,8 +3201,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-033",
+          "id": "Y1-J033",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "presentation",
           "affect": "uncertain",
@@ -3069,6 +3225,7 @@
         {
           "id": "Y1-P019",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "method",
           "medium": "text",
           "affect": "reflective",
@@ -3088,8 +3245,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-034",
+          "id": "Y1-J034",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "prototype",
           "affect": "curious",
@@ -3109,8 +3267,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-035",
+          "id": "Y1-J035",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "frustrated",
@@ -3132,6 +3291,7 @@
         {
           "id": "Y1-P020",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "archive",
           "medium": "conversation",
           "affect": "curious",
@@ -3151,8 +3311,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-036",
+          "id": "Y1-J036",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "method",
           "medium": "conversation",
           "affect": "curious",
@@ -3174,6 +3335,7 @@
         {
           "id": "Y1-P021",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "visualisation",
           "medium": "prototype",
           "affect": "excited",
@@ -3193,8 +3355,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-037",
+          "id": "Y1-J037",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "excited",
@@ -3216,6 +3379,7 @@
         {
           "id": "Y1-P022",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "archive",
           "medium": "conversation",
           "affect": "unsettled",
@@ -3235,8 +3399,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-038",
+          "id": "Y1-J038",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "energised",
@@ -3258,6 +3423,7 @@
         {
           "id": "Y1-P023",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "archive",
           "medium": "code",
           "affect": "energised",
@@ -3277,8 +3443,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-039",
+          "id": "Y1-J039",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "ethics",
           "medium": "text",
           "affect": "unsettled",
@@ -3298,8 +3465,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-040",
+          "id": "Y1-J040",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "excited",
@@ -3319,8 +3487,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-041",
+          "id": "Y1-J041",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "curious",
@@ -3342,6 +3511,7 @@
         {
           "id": "Y1-P024",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "machine learning",
           "medium": "code",
           "affect": "frustrated",
@@ -3363,6 +3533,7 @@
         {
           "id": "Y1-P025",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "method",
           "medium": "text",
           "affect": "reflective",
@@ -3382,8 +3553,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-042",
+          "id": "Y1-J042",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "prototype",
           "affect": "energised",
@@ -3403,8 +3575,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-043",
+          "id": "Y1-J043",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "uncertain",
@@ -3426,6 +3599,7 @@
         {
           "id": "Y1-P026",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "ethics",
           "medium": "conversation",
           "affect": "unsettled",
@@ -3445,8 +3619,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-044",
+          "id": "Y1-J044",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "conversation",
           "affect": "energised",
@@ -3466,8 +3641,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-045",
+          "id": "Y1-J045",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "curious",
@@ -3487,8 +3663,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-046",
+          "id": "Y1-J046",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "method",
           "medium": "text",
           "affect": "unsettled",
@@ -3510,6 +3687,7 @@
         {
           "id": "Y1-P027",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "ethics",
           "medium": "text",
           "affect": "unsettled",
@@ -3529,8 +3707,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-047",
+          "id": "Y1-J047",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "excited",
@@ -3550,8 +3729,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-048",
+          "id": "Y1-J048",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "energised",
@@ -3571,8 +3751,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-049",
+          "id": "Y1-J049",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "prototype",
           "affect": "curious",
@@ -3594,6 +3775,7 @@
         {
           "id": "Y1-P028",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "machine learning",
           "medium": "code",
           "affect": "curious",
@@ -3613,8 +3795,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-050",
+          "id": "Y1-J050",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "energised",
@@ -3634,8 +3817,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-051",
+          "id": "Y1-J051",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "curious",
@@ -3657,6 +3841,7 @@
         {
           "id": "Y1-P029",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "reflexivity",
           "medium": "text",
           "affect": "reflective",
@@ -3676,8 +3861,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-052",
+          "id": "Y1-J052",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "presentation",
           "affect": "unsettled",
@@ -3697,8 +3883,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-053",
+          "id": "Y1-J053",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "archive",
           "medium": "image",
           "affect": "energised",
@@ -3720,6 +3907,7 @@
         {
           "id": "Y1-P030",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "graphic design",
           "medium": "presentation",
           "affect": "energised",
@@ -3739,8 +3927,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-054",
+          "id": "Y1-J054",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "excited",
@@ -3760,8 +3949,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-055",
+          "id": "Y1-J055",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "conversation",
           "affect": "curious",
@@ -3783,6 +3973,7 @@
         {
           "id": "Y1-P031",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "reflexivity",
           "medium": "text",
           "affect": "excited",
@@ -3802,8 +3993,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-056",
+          "id": "Y1-J056",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "excited",
@@ -3825,6 +4017,7 @@
         {
           "id": "Y1-P032",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "archive",
           "medium": "code",
           "affect": "reflective",
@@ -3844,8 +4037,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-057",
+          "id": "Y1-J057",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "text",
           "affect": "energised",
@@ -3867,6 +4061,7 @@
         {
           "id": "Y1-P033",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "visualisation",
           "medium": "code",
           "affect": "energised",
@@ -3886,8 +4081,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-058",
+          "id": "Y1-J058",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "conversation",
           "affect": "excited",
@@ -3907,8 +4103,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-058",
+          "id": "Y1-J058",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "conversation",
           "affect": "excited",
@@ -3928,8 +4125,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-059",
+          "id": "Y1-J059",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "method",
           "medium": "text",
           "affect": "energised",
@@ -3951,6 +4149,7 @@
         {
           "id": "Y1-P035",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "archive",
           "medium": "text",
           "affect": "excited",
@@ -3970,8 +4169,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-060",
+          "id": "Y1-J060",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "uncertain",
@@ -3993,6 +4193,7 @@
         {
           "id": "Y1-P034",
           "period": "Year 1 / Term 2",
+          "series": "practice",
           "theme": "machine learning",
           "medium": "text",
           "affect": "reflective",
@@ -4012,8 +4213,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-061",
+          "id": "Y1-J061",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "archive",
           "medium": "text",
           "affect": "curious",
@@ -4033,8 +4235,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-062",
+          "id": "Y1-J062",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "curious",
@@ -4054,8 +4257,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-063",
+          "id": "Y1-J063",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "ethics",
           "medium": "text",
           "affect": "unsettled",
@@ -4075,8 +4279,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-064",
+          "id": "Y1-J064",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "code",
           "affect": "excited",
@@ -4096,8 +4301,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-065",
+          "id": "Y1-J065",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "text",
           "affect": "reflective",
@@ -4117,8 +4323,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-066",
+          "id": "Y1-J066",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "graphic design",
           "medium": "image",
           "affect": "excited",
@@ -4138,8 +4345,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-067",
+          "id": "Y1-J067",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "curious",
@@ -4159,8 +4367,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-067",
+          "id": "Y1-J067",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "data science",
           "medium": "code",
           "affect": "curious",
@@ -4180,8 +4389,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-068",
+          "id": "Y1-J068",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "machine learning",
           "medium": "code",
           "affect": "frustrated",
@@ -4201,8 +4411,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-069",
+          "id": "Y1-J069",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "archive",
           "medium": "image",
           "affect": "energised",
@@ -4222,8 +4433,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-070",
+          "id": "Y1-J070",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "method",
           "medium": "presentation",
           "affect": "unsettled",
@@ -4243,8 +4455,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-071",
+          "id": "Y1-J071",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "visualisation",
           "medium": "code",
           "affect": "energised",
@@ -4264,8 +4477,9 @@
       "value": 1,
       "events": [
         {
-          "id": "Y1-072",
+          "id": "Y1-J072",
           "period": "Year 1 / Term 2",
+          "series": "journal",
           "theme": "reflexivity",
           "medium": "image",
           "affect": "reflective",
@@ -4284,6 +4498,10 @@
     "period": [
       "Year 1 / Term 1",
       "Year 1 / Term 2"
+    ],
+    "series": [
+      "journal",
+      "practice"
     ],
     "theme": [
       "archive",
@@ -4318,8 +4536,9 @@
   },
   "rawEvents": [
     {
-      "id": "Y1-001",
+      "id": "Y1-J001",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "archive",
       "medium": "text",
       "affect": "curious",
@@ -4332,8 +4551,9 @@
       "outcome_type": "question"
     },
     {
-      "id": "Y1-002",
+      "id": "Y1-J002",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "method",
       "medium": "conversation",
       "affect": "energised",
@@ -4346,8 +4566,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-003",
+      "id": "Y1-J003",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "visualisation",
       "medium": "sketch",
       "affect": "excited",
@@ -4360,8 +4581,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-004",
+      "id": "Y1-J004",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "visualisation",
       "medium": "text",
       "affect": "energised",
@@ -4374,8 +4596,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-005",
+      "id": "Y1-J005",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "data science",
       "medium": "code",
       "affect": "curious",
@@ -4388,8 +4611,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-006",
+      "id": "Y1-J006",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "method",
       "medium": "text",
       "affect": "unsettled",
@@ -4402,8 +4626,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-007",
+      "id": "Y1-J007",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "archive",
       "medium": "image",
       "affect": "curious",
@@ -4416,8 +4641,9 @@
       "outcome_type": "question"
     },
     {
-      "id": "Y1-008",
+      "id": "Y1-J008",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "participation",
       "medium": "text",
       "affect": "energised",
@@ -4432,6 +4658,7 @@
     {
       "id": "Y1-P001",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "archive",
       "medium": "prototype",
       "affect": "energised",
@@ -4446,6 +4673,7 @@
     {
       "id": "Y1-P002",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "method",
       "medium": "text",
       "affect": "reflective",
@@ -4458,8 +4686,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-009",
+      "id": "Y1-J009",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "graphic design",
       "medium": "image",
       "affect": "excited",
@@ -4472,8 +4701,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-010",
+      "id": "Y1-J010",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "machine learning",
       "medium": "code",
       "affect": "frustrated",
@@ -4486,8 +4716,9 @@
       "outcome_type": "dead end"
     },
     {
-      "id": "Y1-011",
+      "id": "Y1-J011",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "method",
       "medium": "text",
       "affect": "unsettled",
@@ -4500,8 +4731,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-012",
+      "id": "Y1-J012",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "graphic design",
       "medium": "image",
       "affect": "energised",
@@ -4516,6 +4748,7 @@
     {
       "id": "Y1-P003",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "data science",
       "medium": "code",
       "affect": "energised",
@@ -4530,6 +4763,7 @@
     {
       "id": "Y1-P004",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "graphic design",
       "medium": "text",
       "affect": "curious",
@@ -4542,8 +4776,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-013",
+      "id": "Y1-J013",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "data science",
       "medium": "text",
       "affect": "curious",
@@ -4558,6 +4793,7 @@
     {
       "id": "Y1-P005",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "archive",
       "medium": "code",
       "affect": "curious",
@@ -4570,8 +4806,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-023",
+      "id": "Y1-J023",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "archive",
       "medium": "conversation",
       "affect": "energised",
@@ -4584,8 +4821,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-014",
+      "id": "Y1-J014",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "reflexivity",
       "medium": "conversation",
       "affect": "curious",
@@ -4598,8 +4836,9 @@
       "outcome_type": "redirection"
     },
     {
-      "id": "Y1-015",
+      "id": "Y1-J015",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "interaction",
       "medium": "prototype",
       "affect": "frustrated",
@@ -4614,6 +4853,7 @@
     {
       "id": "Y1-P006",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "method",
       "medium": "text",
       "affect": "reflective",
@@ -4626,8 +4866,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-016",
+      "id": "Y1-J016",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "visualisation",
       "medium": "code",
       "affect": "excited",
@@ -4640,8 +4881,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-017",
+      "id": "Y1-J017",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "archive",
       "medium": "text",
       "affect": "curious",
@@ -4654,8 +4896,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-018",
+      "id": "Y1-J018",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "graphic design",
       "medium": "prototype",
       "affect": "excited",
@@ -4670,6 +4913,7 @@
     {
       "id": "Y1-P007",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "archive",
       "medium": "conversation",
       "affect": "excited",
@@ -4684,6 +4928,7 @@
     {
       "id": "Y1-P008",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "archive",
       "medium": "code",
       "affect": "curious",
@@ -4696,8 +4941,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-019",
+      "id": "Y1-J019",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "machine learning",
       "medium": "text",
       "affect": "uncertain",
@@ -4712,6 +4958,7 @@
     {
       "id": "Y1-P009",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "data science",
       "medium": "code",
       "affect": "reflective",
@@ -4724,8 +4971,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-020",
+      "id": "Y1-J020",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "data science",
       "medium": "code",
       "affect": "curious",
@@ -4740,6 +4988,7 @@
     {
       "id": "Y1-P010",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "method",
       "medium": "text",
       "affect": "energised",
@@ -4752,8 +5001,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-021",
+      "id": "Y1-J021",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "method",
       "medium": "conversation",
       "affect": "curious",
@@ -4766,8 +5016,9 @@
       "outcome_type": "redirection"
     },
     {
-      "id": "Y1-022",
+      "id": "Y1-J022",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "reflexivity",
       "medium": "code",
       "affect": "excited",
@@ -4782,6 +5033,7 @@
     {
       "id": "Y1-P011",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "data science",
       "medium": "code",
       "affect": "excited",
@@ -4796,6 +5048,7 @@
     {
       "id": "Y1-P012",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "participation",
       "medium": "text",
       "affect": "unsettled",
@@ -4810,6 +5063,7 @@
     {
       "id": "Y1-P013",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "archive",
       "medium": "text",
       "affect": "reflective",
@@ -4822,8 +5076,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-024",
+      "id": "Y1-J024",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "visualisation",
       "medium": "text",
       "affect": "curious",
@@ -4836,8 +5091,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-025",
+      "id": "Y1-J025",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "visualisation",
       "medium": "code",
       "affect": "excited",
@@ -4850,8 +5106,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-026",
+      "id": "Y1-J026",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "machine learning",
       "medium": "code",
       "affect": "uncertain",
@@ -4866,6 +5123,7 @@
     {
       "id": "Y1-P014",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "machine learning",
       "medium": "code",
       "affect": "curious",
@@ -4878,8 +5136,9 @@
       "outcome_type": "question"
     },
     {
-      "id": "Y1-027",
+      "id": "Y1-J027",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "graphic design",
       "medium": "prototype",
       "affect": "energised",
@@ -4892,8 +5151,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-028",
+      "id": "Y1-J028",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "archive",
       "medium": "text",
       "affect": "curious",
@@ -4908,6 +5168,7 @@
     {
       "id": "Y1-P015",
       "period": "Year 1 / Term 1",
+      "series": "practice",
       "theme": "method",
       "medium": "text",
       "affect": "energised",
@@ -4920,8 +5181,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-029",
+      "id": "Y1-J029",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "visualisation",
       "medium": "conversation",
       "affect": "excited",
@@ -4934,8 +5196,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-030",
+      "id": "Y1-J030",
       "period": "Year 1 / Term 1",
+      "series": "journal",
       "theme": "reflexivity",
       "medium": "image",
       "affect": "reflective",
@@ -4950,6 +5213,7 @@
     {
       "id": "Y1-P016",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "archive",
       "medium": "code",
       "affect": "excited",
@@ -4962,8 +5226,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-031",
+      "id": "Y1-J031",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "reflexivity",
       "medium": "text",
       "affect": "curious",
@@ -4978,6 +5243,7 @@
     {
       "id": "Y1-P017",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "machine learning",
       "medium": "code",
       "affect": "curious",
@@ -4990,8 +5256,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-032",
+      "id": "Y1-J032",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "data science",
       "medium": "code",
       "affect": "energised",
@@ -5006,6 +5273,7 @@
     {
       "id": "Y1-P018",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "visualisation",
       "medium": "image",
       "affect": "energised",
@@ -5018,8 +5286,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-033",
+      "id": "Y1-J033",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "reflexivity",
       "medium": "presentation",
       "affect": "uncertain",
@@ -5034,6 +5303,7 @@
     {
       "id": "Y1-P019",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "method",
       "medium": "text",
       "affect": "reflective",
@@ -5046,8 +5316,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-034",
+      "id": "Y1-J034",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "graphic design",
       "medium": "prototype",
       "affect": "curious",
@@ -5060,8 +5331,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-035",
+      "id": "Y1-J035",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "machine learning",
       "medium": "code",
       "affect": "frustrated",
@@ -5076,6 +5348,7 @@
     {
       "id": "Y1-P020",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "archive",
       "medium": "conversation",
       "affect": "curious",
@@ -5088,8 +5361,9 @@
       "outcome_type": "question"
     },
     {
-      "id": "Y1-036",
+      "id": "Y1-J036",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "method",
       "medium": "conversation",
       "affect": "curious",
@@ -5104,6 +5378,7 @@
     {
       "id": "Y1-P021",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "visualisation",
       "medium": "prototype",
       "affect": "excited",
@@ -5116,8 +5391,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-037",
+      "id": "Y1-J037",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "visualisation",
       "medium": "code",
       "affect": "excited",
@@ -5132,6 +5408,7 @@
     {
       "id": "Y1-P022",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "archive",
       "medium": "conversation",
       "affect": "unsettled",
@@ -5144,8 +5421,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-038",
+      "id": "Y1-J038",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "archive",
       "medium": "text",
       "affect": "energised",
@@ -5160,6 +5438,7 @@
     {
       "id": "Y1-P023",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "archive",
       "medium": "code",
       "affect": "energised",
@@ -5172,8 +5451,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-039",
+      "id": "Y1-J039",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "ethics",
       "medium": "text",
       "affect": "unsettled",
@@ -5186,8 +5466,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-040",
+      "id": "Y1-J040",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "visualisation",
       "medium": "code",
       "affect": "excited",
@@ -5200,8 +5481,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-041",
+      "id": "Y1-J041",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "data science",
       "medium": "code",
       "affect": "curious",
@@ -5216,6 +5498,7 @@
     {
       "id": "Y1-P024",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "machine learning",
       "medium": "code",
       "affect": "frustrated",
@@ -5230,6 +5513,7 @@
     {
       "id": "Y1-P025",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "method",
       "medium": "text",
       "affect": "reflective",
@@ -5242,8 +5526,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-042",
+      "id": "Y1-J042",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "graphic design",
       "medium": "prototype",
       "affect": "energised",
@@ -5256,8 +5541,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-043",
+      "id": "Y1-J043",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "machine learning",
       "medium": "code",
       "affect": "uncertain",
@@ -5272,6 +5558,7 @@
     {
       "id": "Y1-P026",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "ethics",
       "medium": "conversation",
       "affect": "unsettled",
@@ -5284,8 +5571,9 @@
       "outcome_type": "question"
     },
     {
-      "id": "Y1-044",
+      "id": "Y1-J044",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "reflexivity",
       "medium": "conversation",
       "affect": "energised",
@@ -5298,8 +5586,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-045",
+      "id": "Y1-J045",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "archive",
       "medium": "text",
       "affect": "curious",
@@ -5312,8 +5601,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-046",
+      "id": "Y1-J046",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "method",
       "medium": "text",
       "affect": "unsettled",
@@ -5328,6 +5618,7 @@
     {
       "id": "Y1-P027",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "ethics",
       "medium": "text",
       "affect": "unsettled",
@@ -5340,8 +5631,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-047",
+      "id": "Y1-J047",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "visualisation",
       "medium": "code",
       "affect": "excited",
@@ -5354,8 +5646,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-048",
+      "id": "Y1-J048",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "archive",
       "medium": "text",
       "affect": "energised",
@@ -5368,8 +5661,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-049",
+      "id": "Y1-J049",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "graphic design",
       "medium": "prototype",
       "affect": "curious",
@@ -5384,6 +5678,7 @@
     {
       "id": "Y1-P028",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "machine learning",
       "medium": "code",
       "affect": "curious",
@@ -5396,8 +5691,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-050",
+      "id": "Y1-J050",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "data science",
       "medium": "code",
       "affect": "energised",
@@ -5410,8 +5706,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-051",
+      "id": "Y1-J051",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "machine learning",
       "medium": "code",
       "affect": "curious",
@@ -5426,6 +5723,7 @@
     {
       "id": "Y1-P029",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "reflexivity",
       "medium": "text",
       "affect": "reflective",
@@ -5438,8 +5736,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-052",
+      "id": "Y1-J052",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "graphic design",
       "medium": "presentation",
       "affect": "unsettled",
@@ -5452,8 +5751,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-053",
+      "id": "Y1-J053",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "archive",
       "medium": "image",
       "affect": "energised",
@@ -5468,6 +5768,7 @@
     {
       "id": "Y1-P030",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "graphic design",
       "medium": "presentation",
       "affect": "energised",
@@ -5480,8 +5781,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-054",
+      "id": "Y1-J054",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "visualisation",
       "medium": "code",
       "affect": "excited",
@@ -5494,8 +5796,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-055",
+      "id": "Y1-J055",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "data science",
       "medium": "conversation",
       "affect": "curious",
@@ -5510,6 +5813,7 @@
     {
       "id": "Y1-P031",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "reflexivity",
       "medium": "text",
       "affect": "excited",
@@ -5522,8 +5826,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-056",
+      "id": "Y1-J056",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "data science",
       "medium": "code",
       "affect": "excited",
@@ -5538,6 +5843,7 @@
     {
       "id": "Y1-P032",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "archive",
       "medium": "code",
       "affect": "reflective",
@@ -5550,8 +5856,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-057",
+      "id": "Y1-J057",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "graphic design",
       "medium": "text",
       "affect": "energised",
@@ -5566,6 +5873,7 @@
     {
       "id": "Y1-P033",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "visualisation",
       "medium": "code",
       "affect": "energised",
@@ -5578,8 +5886,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-058",
+      "id": "Y1-J058",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "visualisation",
       "medium": "conversation",
       "affect": "excited",
@@ -5592,8 +5901,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-059",
+      "id": "Y1-J059",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "method",
       "medium": "text",
       "affect": "energised",
@@ -5608,6 +5918,7 @@
     {
       "id": "Y1-P035",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "archive",
       "medium": "text",
       "affect": "excited",
@@ -5620,8 +5931,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-060",
+      "id": "Y1-J060",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "machine learning",
       "medium": "code",
       "affect": "uncertain",
@@ -5636,6 +5948,7 @@
     {
       "id": "Y1-P034",
       "period": "Year 1 / Term 2",
+      "series": "practice",
       "theme": "machine learning",
       "medium": "text",
       "affect": "reflective",
@@ -5648,8 +5961,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-061",
+      "id": "Y1-J061",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "archive",
       "medium": "text",
       "affect": "curious",
@@ -5662,8 +5976,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-062",
+      "id": "Y1-J062",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "data science",
       "medium": "code",
       "affect": "curious",
@@ -5676,8 +5991,9 @@
       "outcome_type": "redirection"
     },
     {
-      "id": "Y1-063",
+      "id": "Y1-J063",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "ethics",
       "medium": "text",
       "affect": "unsettled",
@@ -5690,8 +6006,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-064",
+      "id": "Y1-J064",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "graphic design",
       "medium": "code",
       "affect": "excited",
@@ -5704,8 +6021,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-065",
+      "id": "Y1-J065",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "reflexivity",
       "medium": "text",
       "affect": "reflective",
@@ -5718,8 +6036,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-066",
+      "id": "Y1-J066",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "graphic design",
       "medium": "image",
       "affect": "excited",
@@ -5732,8 +6051,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-067",
+      "id": "Y1-J067",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "data science",
       "medium": "code",
       "affect": "curious",
@@ -5746,8 +6066,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-068",
+      "id": "Y1-J068",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "machine learning",
       "medium": "code",
       "affect": "frustrated",
@@ -5760,8 +6081,9 @@
       "outcome_type": "dead end"
     },
     {
-      "id": "Y1-069",
+      "id": "Y1-J069",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "archive",
       "medium": "image",
       "affect": "energised",
@@ -5774,8 +6096,9 @@
       "outcome_type": "insight"
     },
     {
-      "id": "Y1-070",
+      "id": "Y1-J070",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "method",
       "medium": "presentation",
       "affect": "unsettled",
@@ -5788,8 +6111,9 @@
       "outcome_type": "clarification"
     },
     {
-      "id": "Y1-071",
+      "id": "Y1-J071",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "visualisation",
       "medium": "code",
       "affect": "energised",
@@ -5802,8 +6126,9 @@
       "outcome_type": "confidence"
     },
     {
-      "id": "Y1-072",
+      "id": "Y1-J072",
       "period": "Year 1 / Term 2",
+      "series": "journal",
       "theme": "reflexivity",
       "medium": "image",
       "affect": "reflective",
@@ -6271,6 +6596,20 @@
       "label": "Strengthened",
       "group": "direction",
       "description": "Confirmed current direction"
+    },
+    {
+      "field": "series",
+      "value": "journal",
+      "label": "Journal",
+      "group": "series",
+      "description": "Event in the main chronological journal stream"
+    },
+    {
+      "field": "series",
+      "value": "practice",
+      "label": "Practice",
+      "group": "series",
+      "description": "Event in the practice-specific build stream"
     }
   ]
 }

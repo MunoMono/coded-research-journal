@@ -10,6 +10,16 @@ export default function SankeyChart({ width = 900, height = 360 }) {
   const tooltipRef = useRef(null)
   const wrapperRef = useRef(null)
   const colorScaleRef = useRef(d3.scaleOrdinal(d3.schemeTableau10))
+  const emptyFilters = {
+    input: '',
+    action: '',
+    outcome: '',
+    period: '',
+    series: '',
+    theme: '',
+    medium: '',
+    affect: '',
+  }
   const [data, setData] = useState(null)
   const [rawRows, setRawRows] = useState(null)
   const [lookupsMap, setLookupsMap] = useState(() => new Map())
@@ -18,21 +28,15 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     action: [],
     outcome: [],
     period: [],
+    series: [],
     theme: [],
     medium: [],
     affect: [],
   })
-  const [filters, setFilters] = useState({
-    input: '',
-    action: '',
-    outcome: '',
-    period: '',
-    theme: '',
-    medium: '',
-    affect: '',
-  })
+  const [filters, setFilters] = useState(emptyFilters)
   const [pinned, setPinned] = useState(null)
   const [containerWidth, setContainerWidth] = useState(width)
+  const isCompactLayout = containerWidth < 672
 
   const normalizeLookupText = value => (value == null ? '' : String(value).trim())
   const buildLookupKey = (field, value) => `${normalizeLookupText(field)}|||${normalizeLookupText(value)}`
@@ -54,6 +58,16 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     return sourceMap.get(buildLookupKey(normalizedField, normalizedValue)) || createLookupMeta(normalizedField, normalizedValue)
   }
   const isEmptyRow = row => !Object.values(row || {}).some(value => normalizeLookupText(value))
+  const getSeriesValue = row => {
+    const explicitSeries = normalizeLookupText(row.series)
+    if (explicitSeries) return explicitSeries
+    const eventId = normalizeLookupText(row.id)
+    if (!eventId) return ''
+    if (/^Y\d+-P\d+$/i.test(eventId)) return 'practice'
+    if (/^Y\d+-J\d+$/i.test(eventId)) return 'journal'
+    return 'journal'
+  }
+  const getRowFieldValue = (row, field) => (field === 'series' ? getSeriesValue(row) : normalizeLookupText(row[field]))
   const getInputValue = row => normalizeLookupText(row.source_type) || normalizeLookupText(row.source_label)
   const formatTags = value => normalizeLookupText(value)
     .split(';')
@@ -61,7 +75,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     .filter(Boolean)
     .join(', ')
   const buildFilterChoices = (rows, field, sourceMap = lookupsMap) => Array.from(
-    new Set(rows.map(row => normalizeLookupText(row[field])).filter(Boolean))
+    new Set(rows.map(row => getRowFieldValue(row, field)).filter(Boolean))
   )
     .map(value => getLookupMeta(field, value, sourceMap))
     .sort((left, right) => {
@@ -82,6 +96,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     if (filters.action && normalizeLookupText(row.practice_action) !== filters.action) return false
     if (filters.outcome && normalizeLookupText(row.outcome_type) !== filters.outcome) return false
     if (filters.period && normalizeLookupText(row.period) !== filters.period) return false
+    if (filters.series && getSeriesValue(row) !== filters.series) return false
     if (filters.theme && normalizeLookupText(row.theme) !== filters.theme) return false
     if (filters.medium && normalizeLookupText(row.medium) !== filters.medium) return false
     if (filters.affect && normalizeLookupText(row.affect) !== filters.affect) return false
@@ -140,6 +155,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
           action: buildFilterChoices(rows, 'practice_action', lookups),
           outcome: buildFilterChoices(rows, 'outcome_type', lookups),
           period: buildFilterChoices(rows, 'period', lookups),
+          series: buildFilterChoices(rows, 'series', lookups),
           theme: buildFilterChoices(rows, 'theme', lookups),
           medium: buildFilterChoices(rows, 'medium', lookups),
           affect: buildFilterChoices(rows, 'affect', lookups),
@@ -255,21 +271,24 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       })
 
       // render sankey
-      const renderWidth = Math.max(300, containerWidth || width)
+      const renderWidth = Math.max(280, containerWidth || width)
+      const renderHeight = isCompactLayout ? Math.max(420, Math.min(height, Math.round(renderWidth * 1.12))) : height
+      const labelFontSize = isCompactLayout ? 10 : 12
+      const labelTrim = isCompactLayout ? 18 : 28
       const color = colorScaleRef.current
-      const trim = (s, n = 28) => (s && s.length > n ? s.slice(0, n - 1) + '…' : s)
+      const trim = (s, n = labelTrim) => (s && s.length > n ? s.slice(0, n - 1) + '…' : s)
       const getLabelX = d => (d.x0 < renderWidth / 2 ? d.x1 + 6 : d.x0 - 6)
       const getLabelAnchor = d => (d.x0 < renderWidth / 2 ? 'start' : 'end')
 
       const sankeyGen = d3sankey()
         .nodeId(d => d.id)
         .nodeWidth(14)
-        .nodePadding(18)
-        .extent([[1, 1], [renderWidth - 1, height - 1]])
+        .nodePadding(isCompactLayout ? 14 : 18)
+        .extent([[1, 1], [renderWidth - 1, renderHeight - 1]])
 
       const graph = sankeyGen({ nodes: nodes.map(d => Object.assign({}, d)), links: links.map(d => Object.assign({}, d)) })
 
-      svg.attr('viewBox', `0 0 ${renderWidth} ${height}`).attr('preserveAspectRatio', 'xMidYMid meet')
+      svg.attr('viewBox', `0 0 ${renderWidth} ${renderHeight}`).attr('preserveAspectRatio', 'xMidYMid meet')
       const content = svg.selectAll('.sankey-content').data([null]).join('g').attr('class', 'sankey-content')
       const linkLayer = content.selectAll('.sankey-links').data([null]).join('g').attr('class', 'sankey-links').attr('fill', 'none').attr('stroke-opacity', 0.6)
       const nodeLayer = content.selectAll('.sankey-nodes').data([null]).join('g').attr('class', 'sankey-nodes')
@@ -363,7 +382,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         .attr('dy', '0.35em')
         .attr('text-anchor', d => getLabelAnchor(d))
         .attr('font-family', 'Inter, Arial, Helvetica, sans-serif')
-        .attr('font-size', 12)
+        .attr('font-size', labelFontSize)
         .attr('opacity', 0)
 
       labelEnter.merge(labelSel)
@@ -373,6 +392,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         .attr('x', d => getLabelX(d))
         .attr('y', d => (d.y1 + d.y0) / 2)
         .attr('text-anchor', d => getLabelAnchor(d))
+        .attr('font-size', labelFontSize)
         .attr('opacity', 1)
 
       labelSel.exit()
@@ -479,7 +499,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     img.onload = () => {
       const canvas = document.createElement('canvas')
       const w = (containerWidth || width)
-      const h = height
+      const h = isCompactLayout ? Math.max(420, Math.min(height, Math.round(w * 1.12))) : height
       canvas.width = Math.floor(w * DPR)
       canvas.height = Math.floor(h * DPR)
       canvas.style.width = `${w}px`
@@ -505,10 +525,10 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       
 
       <div ref={wrapperRef} className="sankey-wrapper" style={{ position: 'relative', width: '100%' }}>
-        <svg ref={ref} className="sankey-chart" style={{ width: '100%', height: `${height}px` }} />
-        <div ref={tooltipRef} className="sankey-tooltip" style={{ position: 'absolute', pointerEvents: 'none', opacity: 0, background: 'rgba(0,0,0,0.82)', color: '#fff', padding: 10, borderRadius: 6, boxShadow: '0 6px 18px rgba(0,0,0,0.35)', fontSize: 13, maxWidth: 420, zIndex: 9999 }} />
+        <svg ref={ref} className="sankey-chart" style={{ width: '100%', height: `${isCompactLayout ? Math.max(420, Math.min(height, Math.round((containerWidth || width) * 1.12))) : height}px` }} />
+        <div ref={tooltipRef} className="sankey-tooltip" style={{ position: 'absolute', pointerEvents: 'none', opacity: 0, background: 'rgba(0,0,0,0.82)', color: '#fff', padding: 10, borderRadius: 6, boxShadow: '0 6px 18px rgba(0,0,0,0.35)', fontSize: 13, maxWidth: isCompactLayout ? Math.max(220, (containerWidth || width) - 32) : 420, zIndex: 9999 }} />
         {pinned && (
-          <Tile style={{ position: 'absolute', right: 10, bottom: 10, width: 320, maxHeight: 300, overflow: 'auto' }}>
+          <Tile className="sankey-pinned-tile" style={{ position: isCompactLayout ? 'static' : 'absolute', right: isCompactLayout ? 'auto' : 10, bottom: isCompactLayout ? 'auto' : 10, width: isCompactLayout ? '100%' : 320, maxWidth: isCompactLayout ? '100%' : 320, marginTop: isCompactLayout ? 12 : 0, maxHeight: isCompactLayout ? 'none' : 300, overflow: 'auto' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <strong>Pinned event</strong>
               <Button size="sm" kind="ghost" onClick={() => setPinned(null)}>Close</Button>
@@ -516,6 +536,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
             <div style={{ marginTop: 8 }}>
               <div><strong>ID:</strong> {pinned.id}</div>
               <div><strong>Period:</strong> {getLookupMeta('period', pinned.period).label}</div>
+              <div><strong>Series:</strong> {getLookupMeta('series', getSeriesValue(pinned)).label}</div>
               <div><strong>Theme:</strong> {getLookupMeta('theme', pinned.theme).label}</div>
               <div><strong>Medium:</strong> {getLookupMeta('medium', pinned.medium).label}</div>
               <div><strong>Affect:</strong> {getLookupMeta('affect', pinned.affect).label}</div>
@@ -559,6 +580,13 @@ export default function SankeyChart({ width = 900, height = 360 }) {
           </Column>
 
           <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
+            <Select id="select-series" labelText="Series" value={filters.series} onChange={e => setFilters(f => ({ ...f, series: e.target.value }))}>
+              <SelectItem value="" text="All series" />
+              {choices.series.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
+            </Select>
+          </Column>
+
+          <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
             <Select id="select-theme" labelText="Theme" value={filters.theme} onChange={e => setFilters(f => ({ ...f, theme: e.target.value }))}>
               <SelectItem value="" text="All themes" />
               {choices.theme.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
@@ -581,7 +609,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
 
           <Column lg={2} md={4} sm={4} className="filter-action-column">
             <div className="filter-action-spacer" aria-hidden="true">Reset</div>
-            <Button className="filter-reset-button" size="sm" kind="secondary" onClick={() => setFilters({ input: '', action: '', outcome: '', period: '', theme: '', medium: '', affect: '' })}>Reset</Button>
+            <Button className="filter-reset-button" size="sm" kind="secondary" onClick={() => setFilters(emptyFilters)}>Reset</Button>
           </Column>
         </Grid>
 

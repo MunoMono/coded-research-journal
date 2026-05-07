@@ -41,6 +41,10 @@ html, body, #root {
   padding: 2rem;
 }
 
+.hero-title {
+  margin: 0 0 0.25rem 1rem;
+}
+
 .hero {
   margin-top: 4rem;
   padding-top: 3rem;
@@ -137,6 +141,10 @@ html.dark .cds--header__menu-title[aria-current='page'] {
   padding-bottom: 1rem;
 }
 
+.sankey-pinned-tile {
+  box-sizing: border-box;
+}
+
 .sankey-chart {
   width: 100%;
   height: auto;
@@ -193,6 +201,52 @@ html.dark .cds--header__menu-title[aria-current='page'] {
 }
 
 @media (max-width: 42rem) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .hero {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    margin-left: 0;
+  }
+
+  .hero::after {
+    left: 0.5rem;
+    right: 0.5rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+  }
+
+  .sankey-wrapper {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .sankey-tooltip {
+    max-width: calc(100vw - 2rem);
+    font-size: 12px;
+  }
+
+  .filter-action-column {
+    width: 100%;
+  }
+
+  .filter-reset-button {
+    width: 100%;
+  }
+
+  .sankey-pinned-tile {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .export-actions {
     flex-direction: column;
     align-items: stretch;

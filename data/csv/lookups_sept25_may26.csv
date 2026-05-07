@@ -64,3 +64,5 @@ influence_on_direction,disrupted,Disrupted,direction,Interrupted assumptions or 
 influence_on_direction,opened,Opened,direction,Created a new possible direction
 influence_on_direction,shifted,Shifted,direction,Changed direction or emphasis
 influence_on_direction,strengthened,Strengthened,direction,Confirmed current direction
+series,journal,Journal,series,Event in the main chronological journal stream
+series,practice,Practice,series,Event in the practice-specific build stream

@@ -49,7 +49,7 @@ function main() {
   const eventsFile = files.find(f => /practice_events/i.test(f))
   const lookupsFile = files.find(f => /lookups/i.test(f))
 
-  const output = { nodes: [], links: [], filters: { period: [], theme: [], medium: [], affect: [] }, rawEvents: [] }
+  const output = { nodes: [], links: [], filters: { period: [], series: [], theme: [], medium: [], affect: [] }, rawEvents: [] }
 
   // parse lookups as optional reference (not required for Sankey linking)
   if (lookupsFile) {
@@ -71,17 +71,20 @@ function main() {
   const nodeSet = new Set()
 
   rows.forEach((r, idx) => {
+    const eventId = r['id'] || `evt-${idx}`
     const sourceType = r['source_type'] || ''
     const sourceLabel = r['source_label'] || r['source'] || ''
     const inputId = sourceLabel ? `${sourceType}:${sourceLabel}` : sourceType || 'Unknown Input'
 
     const action = r['practice_action'] || r['action'] || 'Unknown Action'
     const outputType = r['outcome_type'] || r['outcome'] || 'Unknown Outcome'
+    const series = r['series'] || (/^Y\d+-P\d+$/i.test(eventId) ? 'practice' : /^Y\d+-J\d+$/i.test(eventId) ? 'journal' : 'journal')
 
     // event metadata
     const event = {
-      id: r['id'] || `evt-${idx}`,
+      id: eventId,
       period: r['period'] || r['date'] || '',
+      series,
       theme: r['theme'] || '',
       medium: r['medium'] || '',
       affect: r['affect'] || '',
@@ -98,6 +101,7 @@ function main() {
 
     // update filters
     if (event.period && !output.filters.period.includes(event.period)) output.filters.period.push(event.period)
+    if (event.series && !output.filters.series.includes(event.series)) output.filters.series.push(event.series)
     if (event.theme && !output.filters.theme.includes(event.theme)) output.filters.theme.push(event.theme)
     if (event.medium && !output.filters.medium.includes(event.medium)) output.filters.medium.push(event.medium)
     if (event.affect && !output.filters.affect.includes(event.affect)) output.filters.affect.push(event.affect)

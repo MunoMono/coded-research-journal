@@ -44,7 +44,7 @@ export default function App() {
           <Grid fullWidth narrow style={{ ['--cds-grid-columns']: '12' }}>
             <Column lg={12} md={8} sm={4}>
               <div className="hero">
-                <h1 style={{ marginLeft: '1rem' }}>
+                <h1 className="hero-title">
                   {activePage === 'visualisation' ? 'Coded research journal' : 'About'}
                 </h1>
               </div>
