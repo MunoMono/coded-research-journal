@@ -51,11 +51,9 @@ export default function App() {
 
               {activePage === 'visualisation' ? (
                 <section className="viz">
-                  <Grid style={{ marginTop: '2rem', ['--cds-grid-columns']: '16' }}>
-                    <Column lg={16} md={8} sm={4} style={{ paddingLeft: 0, paddingRight: 0 }}>
-                      <SankeyChart width={1240} height={680} />
-                    </Column>
-                  </Grid>
+                  <div className="viz-shell">
+                    <SankeyChart width={1240} height={680} />
+                  </div>
                 </section>
               ) : (
                 <section className="about-page">

@@ -37,6 +37,17 @@ html, body, #root {
   color: var(--text);
 }
 
+body {
+  overflow-x: hidden;
+}
+
+.app-root,
+.main-content,
+.viz,
+.viz-shell {
+  min-width: 0;
+}
+
 .main-content {
   padding: 2rem;
 }
@@ -106,6 +117,11 @@ html.dark .cds--header__menu-title[aria-current='page'] {
 
 .viz {
   margin-top: 2rem;
+}
+
+.viz-shell {
+  margin-top: 2rem;
+  width: 100%;
 }
 
 .about-page {
@@ -203,6 +219,14 @@ html.dark .cds--header__menu-title[aria-current='page'] {
 @media (max-width: 42rem) {
   .main-content {
     padding: 1rem;
+  }
+
+  .viz {
+    margin-top: 1rem;
+  }
+
+  .viz-shell {
+    margin-top: 1rem;
   }
 
   .hero {
