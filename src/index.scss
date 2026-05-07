@@ -71,13 +71,37 @@ html.dark .cds--header {
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
+html.dark .cds--header__menu-trigger,
+html.dark .cds--header__action {
+  color: var(--text) !important;
+}
+
 html.dark .cds--header .cds--header__name {
   color: inherit !important;
 }
 
 html.dark .cds--header__menu-item,
-html.dark .cds--header__menu-title[aria-current='page'] {
+html.dark .cds--header__menu-title[aria-current='page'],
+html.dark .cds--side-nav,
+html.dark .cds--side-nav__navigation,
+html.dark .cds--side-nav__items,
+html.dark .cds--side-nav__link,
+html.dark .cds--side-nav__menu-item,
+html.dark .cds--side-nav__submenu,
+html.dark .cds--side-nav__submenu-title {
   color: var(--text) !important;
+}
+
+html.dark .cds--side-nav,
+html.dark .cds--side-nav__navigation {
+  background: var(--bg) !important;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+html.dark .cds--side-nav__link:hover,
+html.dark .cds--side-nav__menu-item:hover,
+html.dark .cds--side-nav__submenu-title:hover {
+  background: rgba(255,255,255,0.08) !important;
 }
 
 .hero h1 {
