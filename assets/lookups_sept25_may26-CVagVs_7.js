@@ -63,4 +63,6 @@ affect,unsettled,Unsettled,affect,Affective category describing an unsettled res
 influence_on_direction,disrupted,Disrupted,direction,Interrupted assumptions or workflow\r
 influence_on_direction,opened,Opened,direction,Created a new possible direction\r
 influence_on_direction,shifted,Shifted,direction,Changed direction or emphasis\r
-influence_on_direction,strengthened,Strengthened,direction,Confirmed current direction`;export{e as default};
+influence_on_direction,strengthened,Strengthened,direction,Confirmed current direction\r
+series,journal,Journal,series,Event in the main chronological journal stream\r
+series,practice,Practice,series,Event in the practice-specific build stream`;export{e as default};
