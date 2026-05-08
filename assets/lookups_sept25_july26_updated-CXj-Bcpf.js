@@ -1,6 +1,7 @@
 const e=`\uFEFFfield,value,label,group,description\r
 period,Year 1 / Term 1,Year 1 / Term 1,time,Time period used in the coded research journal timeline (Year 1 / Term 1)\r
 period,Year 1 / Term 2,Year 1 / Term 2,time,Time period used in the coded research journal timeline (Year 1 / Term 2)\r
+period,Year 1 / Term 3,Year 1 / Term 3,time,Time period used in the coded research journal timeline (Year 1 / Term 3)\r
 source_type,archival research,Archival Research,input,Input category for archival research in the research process\r
 source_type,coding,Coding,input,Input category for coding in the research process\r
 source_type,conversation,Conversation,input,Input category for conversation in the research process\r
@@ -39,6 +40,7 @@ theme,reflexivity,Reflexivity,theme,Thematic category for reflexivity in the cod
 theme,visualisation,Visualisation,theme,Thematic category for visualisation in the coded journal\r
 medium,code,Code,medium,Scripts notebooks or app components\r
 medium,conversation,Conversation,medium,Medium category for conversation material or output\r
+medium,diagram,Diagram,medium,"Diagram, map or structured visual reasoning artefact"\r
 medium,image,Image,medium,Scanned document image screenshot photograph\r
 medium,presentation,Presentation,medium,Medium category for presentation material or output\r
 medium,prototype,Prototype,medium,Medium category for prototype material or output\r
@@ -63,6 +65,4 @@ affect,unsettled,Unsettled,affect,Affective category describing an unsettled res
 influence_on_direction,disrupted,Disrupted,direction,Interrupted assumptions or workflow\r
 influence_on_direction,opened,Opened,direction,Created a new possible direction\r
 influence_on_direction,shifted,Shifted,direction,Changed direction or emphasis\r
-influence_on_direction,strengthened,Strengthened,direction,Confirmed current direction\r
-series,journal,Journal,series,Event in the main chronological journal stream\r
-series,practice,Practice,series,Event in the practice-specific build stream`;export{e as default};
+influence_on_direction,strengthened,Strengthened,direction,Confirmed current direction`;export{e as default};
