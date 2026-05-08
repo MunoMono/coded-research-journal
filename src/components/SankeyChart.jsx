@@ -128,8 +128,8 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     const load = async () => {
       try {
         const [eventsMod, lookupsMod] = await Promise.all([
-          import('../../data/csv/practice_events_sept25_may26.csv?raw'),
-          import('../../data/csv/lookups_sept25_may26.csv?raw').catch(() => null),
+          import('../../data/csv/practice_events_sept25_july26_updated.csv?raw'),
+          import('../../data/csv/lookups_sept25_july26_updated.csv?raw').catch(() => null),
         ])
         const raw = eventsMod.default || eventsMod
         const rows = d3.csvParse(raw).filter(row => !isEmptyRow(row))

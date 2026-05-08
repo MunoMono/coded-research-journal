@@ -46,6 +46,12 @@ export default function App() {
               <h1 className="hero-title">
                 {activePage === 'visualisation' ? 'Coded research journal' : 'About'}
               </h1>
+              {activePage === 'visualisation' ? (
+                <h3 className="hero-subtitle">
+                  Tracing how research practice produces new legibilities of contested
+                  design knowledge.
+                </h3>
+              ) : null}
             </div>
 
             {activePage === 'visualisation' ? (

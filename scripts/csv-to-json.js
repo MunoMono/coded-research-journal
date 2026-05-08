@@ -33,6 +33,12 @@ function aggregateLinks(links) {
   return Array.from(map.values())
 }
 
+function findPreferredCsv(files, pattern) {
+  const matches = files.filter(file => pattern.test(file))
+  if (matches.length === 0) return null
+  return matches.find(file => /updated/i.test(file)) || matches[0]
+}
+
 function main() {
   if (!fs.existsSync(CSV_DIR)) {
     console.error('CSV folder not found:', CSV_DIR)
@@ -45,9 +51,8 @@ function main() {
     process.exit(1)
   }
 
-  // expecting `practice_events.csv` and `lookups.csv`
-  const eventsFile = files.find(f => /practice_events/i.test(f))
-  const lookupsFile = files.find(f => /lookups/i.test(f))
+  const eventsFile = findPreferredCsv(files, /practice_events/i)
+  const lookupsFile = findPreferredCsv(files, /lookups/i)
 
   const output = { nodes: [], links: [], filters: { period: [], series: [], theme: [], medium: [], affect: [] }, rawEvents: [] }
 
@@ -65,6 +70,36 @@ function main() {
 
   const csv = fs.readFileSync(path.join(CSV_DIR, eventsFile), 'utf8')
   const rows = parseCSV(csv)
+
+  const duplicateIds = new Set()
+  const seenIds = new Set()
+  const missingRequired = []
+
+  rows.forEach((row, index) => {
+    const eventId = row['id'] || `row-${index + 2}`
+    if (row['id']) {
+      if (seenIds.has(row['id'])) duplicateIds.add(row['id'])
+      seenIds.add(row['id'])
+    }
+
+    const missingFields = ['source_type', 'practice_action', 'outcome_type']
+      .filter(field => !String(row[field] || '').trim())
+
+    if (missingFields.length > 0) {
+      missingRequired.push({ eventId, missingFields })
+    }
+  })
+
+  if (duplicateIds.size > 0) {
+    console.warn('Duplicate event ids found:', Array.from(duplicateIds).join(', '))
+  }
+
+  if (missingRequired.length > 0) {
+    console.warn('Rows missing required fields:')
+    missingRequired.forEach(({ eventId, missingFields }) => {
+      console.warn(` - ${eventId}: ${missingFields.join(', ')}`)
+    })
+  }
 
   // iterate rows and build links: input -> action, action -> output
   const rawLinks = []
@@ -124,6 +159,8 @@ function main() {
   Object.keys(output.filters).forEach(k => output.filters[k].sort())
 
   fs.writeFileSync(OUT_FILE, JSON.stringify(output, null, 2), 'utf8')
+  console.log('Using events CSV:', eventsFile)
+  if (lookupsFile) console.log('Using lookups CSV:', lookupsFile)
   console.log('Wrote sankey JSON to', OUT_FILE)
 }
 
