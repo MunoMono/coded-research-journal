@@ -22,6 +22,8 @@ export default function SankeyChart({ width = 900, height = 360 }) {
   }
   const [data, setData] = useState(null)
   const [rawRows, setRawRows] = useState(null)
+  const [seededPracticeEventsCsv, setSeededPracticeEventsCsv] = useState('')
+  const [seededLookupsCsv, setSeededLookupsCsv] = useState('')
   const [lookupsMap, setLookupsMap] = useState(() => new Map())
   const [choices, setChoices] = useState({
     input: [],
@@ -148,6 +150,8 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         }
 
         setRawRows(rows)
+        setSeededPracticeEventsCsv(raw)
+        setSeededLookupsCsv(lookupRaw || '')
         setLookupsMap(lookups)
 
         setChoices({
@@ -163,6 +167,8 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       } catch (e) {
         // fallback to prebuilt sankey JSON: extract filters if possible
         setRawRows(null)
+        setSeededPracticeEventsCsv('')
+        setSeededLookupsCsv('')
         setLookupsMap(new Map())
         setData(sankeyData)
       }
@@ -474,12 +480,45 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     return source
   }
 
+  const downloadCsvText = (csvText, filename) => {
+    if (!csvText) return
+    downloadBlob(new Blob([csvText], { type: 'text/csv;charset=utf-8;' }), filename)
+  }
+
+  const handleDownloadPracticeEventsCsv = () => {
+    if (seededPracticeEventsCsv) {
+      downloadCsvText(seededPracticeEventsCsv, 'practice_events_seed.csv')
+      return
+    }
+
+    if (!rawRows) return
+    downloadCsvText(d3.csvFormat(rawRows), 'practice_events_seed.csv')
+  }
+
+  const handleDownloadLookupsCsv = () => {
+    if (seededLookupsCsv) {
+      downloadCsvText(seededLookupsCsv, 'lookups_seed.csv')
+      return
+    }
+
+    const lookupRows = Array.from(lookupsMap.values()).map(({ field, value, label, group, description }) => ({
+      field,
+      value,
+      label,
+      group,
+      description,
+    }))
+    if (lookupRows.length === 0) return
+
+    downloadCsvText(d3.csvFormat(lookupRows), 'lookups_seed.csv')
+  }
+
   // Download CSV of currently filtered rows
-  const handleDownloadCSV = () => {
+  const handleDownloadFilteredCsv = () => {
     if (!rawRows) return
     const filtered = getFilteredRows()
     const csv = d3.csvFormat(filtered)
-    downloadBlob(new Blob([csv], { type: 'text/csv;charset=utf-8;' }), 'sankey-export.csv')
+    downloadCsvText(csv, 'sankey-export.csv')
   }
 
   const handleDownloadSVG = () => {
@@ -620,8 +659,14 @@ export default function SankeyChart({ width = 900, height = 360 }) {
           <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadSVG}>
             Download SVG
           </Button>
-          <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadCSV}>
-            Download CSV
+          <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadFilteredCsv}>
+            Download filtered CSV
+          </Button>
+          <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadPracticeEventsCsv}>
+            Download practice events CSV
+          </Button>
+          <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadLookupsCsv}>
+            Download lookups CSV
           </Button>
         </div>
         </>
