@@ -588,88 +588,100 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       </div>
 
       {(choices && (choices.period.length > 0)) && (
-        <>
-        <Grid style={{ marginTop: 12, marginBottom: 8 }}>
-          <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <Select id="select-input" labelText="Input" value={filters.input} onChange={e => setFilters(f => ({ ...f, input: e.target.value }))}>
-              <SelectItem value="" text="All inputs" />
-              {choices.input.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
-            </Select>
-          </Column>
+        <div className="controls-panel">
+          <section className="controls-section" aria-labelledby="filters-heading">
+            <div className="controls-section-header">
+              <h2 id="filters-heading" className="controls-heading">Filters</h2>
+            </div>
+            <Grid className="controls-grid">
+              <Column lg={2} md={4} sm={4} className="filter-control-column">
+                <Select id="select-input" labelText="Input" value={filters.input} onChange={e => setFilters(f => ({ ...f, input: e.target.value }))}>
+                  <SelectItem value="" text="All inputs" />
+                  {choices.input.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
+                </Select>
+              </Column>
 
-          <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <Select id="select-action" labelText="Action" value={filters.action} onChange={e => setFilters(f => ({ ...f, action: e.target.value }))}>
-              <SelectItem value="" text="All actions" />
-              {choices.action.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
-            </Select>
-          </Column>
+              <Column lg={2} md={4} sm={4} className="filter-control-column">
+                <Select id="select-action" labelText="Action" value={filters.action} onChange={e => setFilters(f => ({ ...f, action: e.target.value }))}>
+                  <SelectItem value="" text="All actions" />
+                  {choices.action.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
+                </Select>
+              </Column>
 
-          <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <Select id="select-outcome" labelText="Outcome" value={filters.outcome} onChange={e => setFilters(f => ({ ...f, outcome: e.target.value }))}>
-              <SelectItem value="" text="All outcomes" />
-              {choices.outcome.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
-            </Select>
-          </Column>
+              <Column lg={2} md={4} sm={4} className="filter-control-column">
+                <Select id="select-outcome" labelText="Outcome" value={filters.outcome} onChange={e => setFilters(f => ({ ...f, outcome: e.target.value }))}>
+                  <SelectItem value="" text="All outcomes" />
+                  {choices.outcome.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
+                </Select>
+              </Column>
 
-          <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <Select id="select-period" labelText="Period" value={filters.period} onChange={e => setFilters(f => ({ ...f, period: e.target.value }))}>
-              <SelectItem value="" text="All periods" />
-              {choices.period.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
-            </Select>
-          </Column>
+              <Column lg={2} md={4} sm={4} className="filter-control-column">
+                <Select id="select-period" labelText="Period" value={filters.period} onChange={e => setFilters(f => ({ ...f, period: e.target.value }))}>
+                  <SelectItem value="" text="All periods" />
+                  {choices.period.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
+                </Select>
+              </Column>
 
-          <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <Select id="select-series" labelText="Series" value={filters.series} onChange={e => setFilters(f => ({ ...f, series: e.target.value }))}>
-              <SelectItem value="" text="All series" />
-              {choices.series.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
-            </Select>
-          </Column>
+              <Column lg={2} md={4} sm={4} className="filter-control-column">
+                <Select id="select-series" labelText="Series" value={filters.series} onChange={e => setFilters(f => ({ ...f, series: e.target.value }))}>
+                  <SelectItem value="" text="All series" />
+                  {choices.series.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
+                </Select>
+              </Column>
 
-          <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <Select id="select-theme" labelText="Theme" value={filters.theme} onChange={e => setFilters(f => ({ ...f, theme: e.target.value }))}>
-              <SelectItem value="" text="All themes" />
-              {choices.theme.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
-            </Select>
-          </Column>
+              <Column lg={2} md={4} sm={4} className="filter-control-column">
+                <Select id="select-theme" labelText="Theme" value={filters.theme} onChange={e => setFilters(f => ({ ...f, theme: e.target.value }))}>
+                  <SelectItem value="" text="All themes" />
+                  {choices.theme.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
+                </Select>
+              </Column>
 
-          <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <Select id="select-medium" labelText="Medium" value={filters.medium} onChange={e => setFilters(f => ({ ...f, medium: e.target.value }))}>
-              <SelectItem value="" text="All media" />
-              {choices.medium.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
-            </Select>
-          </Column>
+              <Column lg={2} md={4} sm={4} className="filter-control-column">
+                <Select id="select-medium" labelText="Medium" value={filters.medium} onChange={e => setFilters(f => ({ ...f, medium: e.target.value }))}>
+                  <SelectItem value="" text="All media" />
+                  {choices.medium.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
+                </Select>
+              </Column>
 
-          <Column lg={2} md={4} sm={4} style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <Select id="select-affect" labelText="Affect" value={filters.affect} onChange={e => setFilters(f => ({ ...f, affect: e.target.value }))}>
-              <SelectItem value="" text="All affect" />
-              {choices.affect.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
-            </Select>
-          </Column>
+              <Column lg={2} md={4} sm={4} className="filter-control-column">
+                <Select id="select-affect" labelText="Affect" value={filters.affect} onChange={e => setFilters(f => ({ ...f, affect: e.target.value }))}>
+                  <SelectItem value="" text="All affect" />
+                  {choices.affect.map(choice => <SelectItem key={choice.value} value={choice.value} text={choice.label} title={choice.description || choice.group || choice.label} />)}
+                </Select>
+              </Column>
 
-          <Column lg={2} md={4} sm={4} className="filter-action-column">
-            <div className="filter-action-spacer" aria-hidden="true">Reset</div>
-            <Button className="filter-reset-button" size="sm" kind="secondary" onClick={() => setFilters(emptyFilters)}>Reset</Button>
-          </Column>
-        </Grid>
+              <Column lg={2} md={4} sm={4} className="filter-action-column">
+                <div className="filter-action-spacer" aria-hidden="true">Reset</div>
+                <Button className="filter-reset-button" size="sm" kind="secondary" onClick={() => setFilters(emptyFilters)}>Reset</Button>
+              </Column>
+            </Grid>
+          </section>
 
-        <div className="export-actions">
-          <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadPNG}>
-            Download PNG
-          </Button>
-          <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadSVG}>
-            Download SVG
-          </Button>
-          <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadFilteredCsv}>
-            Download filtered CSV
-          </Button>
-          <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadPracticeEventsCsv}>
-            Download practice events CSV
-          </Button>
-          <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadLookupsCsv}>
-            Download lookups CSV
-          </Button>
+          <div className="controls-keyline" aria-hidden="true" />
+
+          <section className="controls-section" aria-labelledby="downloads-heading">
+            <div className="controls-section-header">
+              <h2 id="downloads-heading" className="controls-heading">Downloads</h2>
+            </div>
+            <div className="export-actions">
+              <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadPNG}>
+                Download PNG
+              </Button>
+              <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadSVG}>
+                Download SVG
+              </Button>
+              <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadFilteredCsv}>
+                Download filtered CSV
+              </Button>
+              <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadPracticeEventsCsv}>
+                Download practice events CSV
+              </Button>
+              <Button className="export-action-button" kind="tertiary" size="md" renderIcon={Download} onClick={handleDownloadLookupsCsv}>
+                Download lookups CSV
+              </Button>
+            </div>
+          </section>
         </div>
-        </>
       )}
     </div>
   )

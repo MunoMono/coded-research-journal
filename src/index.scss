@@ -222,12 +222,58 @@ html.dark .cds--side-nav__submenu-title:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
-.export-actions {
+.controls-panel {
+  margin-top: 1.5rem;
+  padding: 1.25rem 2rem 0;
+  border: 1px solid var(--sankey-keyline);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--bg) 92%, var(--text) 8%);
+}
+
+.controls-section {
+  margin: 0;
+}
+
+.controls-section-header {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
   align-items: center;
-  margin-top: 1rem;
+  margin-bottom: 0.875rem;
+}
+
+.controls-heading {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--text) 72%, transparent);
+}
+
+.controls-keyline {
+  height: 1px;
+  margin: 0 0 1.25rem;
+  background: var(--sankey-keyline);
+}
+
+.controls-grid {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  row-gap: 0.25rem;
+}
+
+.filter-control-column {
+  display: flex;
+  align-items: flex-start;
+}
+
+.export-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.75rem;
+  align-items: stretch;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 .filter-action-column {
@@ -249,7 +295,8 @@ html.dark .cds--side-nav__submenu-title:hover {
 }
 
 .export-action-button.cds--btn {
-  min-width: 11rem;
+  width: 100%;
+  min-width: 0;
   justify-content: space-between;
   padding-inline: 1.25rem 1rem;
 }
@@ -310,6 +357,10 @@ html.dark .cds--side-nav__submenu-title:hover {
     padding-bottom: 0.75rem;
   }
 
+  .controls-panel {
+    padding: 1rem 0.75rem 0;
+  }
+
   .sankey-tooltip {
     max-width: calc(100vw - 2rem);
     font-size: 12px;
@@ -329,8 +380,7 @@ html.dark .cds--side-nav__submenu-title:hover {
   }
 
   .export-actions {
-    flex-direction: column;
-    align-items: stretch;
+    grid-template-columns: 1fr;
   }
 
   .export-action-button.cds--btn {
