@@ -9,6 +9,7 @@ source_type,critique,Critique,input,Input category for critique in the research 
 source_type,data science,Data Science,input,Input category for data science in the research process\r
 source_type,documenting,Documenting,input,Input category for documenting in the research process\r
 source_type,graphic design,Graphic Design,input,Input category for graphic design in the research process\r
+source_type,writing,Writing,input,Input category for writing in the research process\r
 source_type,machine learning,Machine Learning,input,Input category for machine learning in the research process\r
 source_type,making,Making,input,Input category for making in the research process\r
 source_type,mapping,Mapping,input,Input category for mapping in the research process\r
@@ -32,6 +33,7 @@ theme,archive,Archive,theme,Thematic category for archive in the coded journal\r
 theme,data science,Data Science,theme,Thematic category for data science in the coded journal\r
 theme,ethics,Ethics,theme,Ethical concerns around data representation and interpretation\r
 theme,graphic design,Graphic Design,theme,Thematic category for graphic design in the coded journal\r
+theme,writing,Writing,theme,Thematic category for writing in the coded journal\r
 theme,interaction,Interaction,theme,Thematic category for interaction in the coded journal\r
 theme,machine learning,Machine Learning,theme,Thematic category for machine learning in the coded journal\r
 theme,method,Method,theme,Thematic category for method in the coded journal\r
@@ -45,6 +47,7 @@ medium,image,Image,medium,Scanned document image screenshot photograph\r
 medium,presentation,Presentation,medium,Medium category for presentation material or output\r
 medium,prototype,Prototype,medium,Medium category for prototype material or output\r
 medium,sketch,Sketch,medium,Medium category for sketch material or output\r
+medium,writing,Writing,medium,Medium category for formal writing as  practice\r
 medium,text,Text,medium,Written notes papers annotations\r
 intensity,1,1,scale,Very low intensity\r
 intensity,2,2,scale,Low intensity\r
