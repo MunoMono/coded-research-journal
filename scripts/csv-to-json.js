@@ -36,7 +36,9 @@ function aggregateLinks(links) {
 function findPreferredCsv(files, pattern) {
   const matches = files.filter(file => pattern.test(file))
   if (matches.length === 0) return null
-  return matches.find(file => /updated/i.test(file)) || matches[0]
+  const updated = matches.filter(file => /updated/i.test(file))
+  const pool = updated.length > 0 ? updated : matches
+  return pool.sort().at(-1)
 }
 
 function main() {

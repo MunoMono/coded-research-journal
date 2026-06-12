@@ -181,7 +181,7 @@
       "id": "coding:API demonstration and MVP ingestion workflow"
     },
     {
-      "id": "reading:Schön and reflexive practice notes"
+      "id": "reading:Sch�n and reflexive practice notes"
     },
     {
       "id": "machine learning:ABBYY / OCR workflow exploration"
@@ -235,7 +235,7 @@
       "id": "data science:Value weighting test using intensity score"
     },
     {
-      "id": "machine learning:Innovationdesign retrieval pipeline test"
+      "id": "machine learning:Innovation design retrieval pipeline test"
     },
     {
       "id": "supervision:Rewrite build narrative for contemporary research audience"
@@ -418,13 +418,13 @@
       "id": "writing:Script of SoC RCA + CVS Royal Holloway presentation"
     },
     {
-      "id": "reading:Levelling up of strands, feminism, missingnes in archives, RAG and UMAP"
+      "id": "reading:Levelling up of strands, feminism, missingness in archives, RAG and UMAP"
     },
     {
       "id": "writing:Agreement with V&A"
     },
     {
-      "id": "graphic design:Alluval diagram"
+      "id": "graphic design:Alluvial diagram"
     },
     {
       "id": "writing:Writing of SoC RCA + CVS Royal Holloway introduction"
@@ -434,6 +434,15 @@
     },
     {
       "id": "coding:New NAS and RAID back ups"
+    },
+    {
+      "id": "writing:AI/ML research inquiry instruments Sow (Statement of Work)"
+    },
+    {
+      "id": "conversation:V&A agreement meeting"
+    },
+    {
+      "id": "conversation:Research presentation from Hotessa Laurence"
     }
   ],
   "links": [
@@ -493,7 +502,7 @@
           "theme": "method",
           "medium": "conversation",
           "affect": "energised",
-          "reflexive_note": "Talking through colleagues's methods made me realise I wanted a process that could hold digital artefacts, metadata notes and computational experiments together.",
+          "reflexive_note": "Talking through colleague's methods made me realise I wanted a process that could hold digital artefacts, metadata notes and computational experiments together.",
           "evidence_link": "Induction notes",
           "tags": "cohort; method",
           "source_type": "conversation",
@@ -506,7 +515,7 @@
     {
       "source": "documenting",
       "target": "clarification",
-      "value": 16,
+      "value": 17,
       "events": [
         {
           "id": "Y1-J002",
@@ -515,7 +524,7 @@
           "theme": "method",
           "medium": "conversation",
           "affect": "energised",
-          "reflexive_note": "Talking through colleagues's methods made me realise I wanted a process that could hold digital artefacts, metadata notes and computational experiments together.",
+          "reflexive_note": "Talking through colleague's methods made me realise I wanted a process that could hold digital artefacts, metadata notes and computational experiments together.",
           "evidence_link": "Induction notes",
           "tags": "cohort; method",
           "source_type": "conversation",
@@ -745,6 +754,21 @@
           "tags": "NAS; RAID; backup; storage; data stewardship; archive infrastructure",
           "source_type": "coding",
           "source_label": "New NAS and RAID back ups",
+          "practice_action": "documenting",
+          "outcome_type": "clarification"
+        },
+        {
+          "id": "Y1-J080",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "archive",
+          "medium": "conversation",
+          "affect": "energised",
+          "reflexive_note": "Stakeholder meeting with V&A archive team and RCA special collections team with favourable outcome and signing agreement regarding image and data rights. Should now be fit for purpose moving forwards.",
+          "evidence_link": "V&A data agreement doc",
+          "tags": "ethics; rights; metadata; stakeholder management",
+          "source_type": "conversation",
+          "source_label": "V&A agreement meeting",
           "practice_action": "documenting",
           "outcome_type": "clarification"
         }
@@ -983,7 +1007,7 @@
           "evidence_link": "Alluvial diagram export / Figma file",
           "tags": "alluvial diagram; visualisation; flow; process; research direction",
           "source_type": "graphic design",
-          "source_label": "Alluval diagram",
+          "source_label": "Alluvial diagram",
           "practice_action": "mapping",
           "outcome_type": "insight"
         }
@@ -1014,7 +1038,7 @@
     {
       "source": "reframing",
       "target": "insight",
-      "value": 13,
+      "value": 14,
       "events": [
         {
           "id": "Y1-J004",
@@ -1210,6 +1234,21 @@
           "source_label": "Archer paper",
           "practice_action": "reframing",
           "outcome_type": "insight"
+        },
+        {
+          "id": "Y1-J081",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "reflective",
+          "reflexive_note": "Tessa (Yr3) crushed it with her 12 minute presentation. I should prepare notes similar to hers to keep the presentation on track and allow room to riff off the slides.",
+          "evidence_link": "CVC + RCA methods of intent",
+          "tags": "presenting; knowledge sharing; rhetoric; articulation",
+          "source_type": "conversation",
+          "source_label": "Research presentation from Hotessa Laurence",
+          "practice_action": "reframing",
+          "outcome_type": "insight"
         }
       ]
     },
@@ -1394,7 +1433,7 @@
     {
       "source": "documenting",
       "target": "question",
-      "value": 6,
+      "value": 7,
       "events": [
         {
           "id": "Y1-J007",
@@ -1483,6 +1522,21 @@
           "tags": "contribution; claims",
           "source_type": "conversation",
           "source_label": "Supervisor chat on contribution claims",
+          "practice_action": "documenting",
+          "outcome_type": "question"
+        },
+        {
+          "id": "Y1-W012",
+          "period": "Year 1 / Term 3",
+          "series": "writing",
+          "theme": "method",
+          "medium": "text",
+          "affect": "uncertain",
+          "reflexive_note": "Writing the SoW helped me frame the machine learning research instruments of inquiry into five buckets: retrieval, missingness analysis, oral-historical interpretation, embedded based visual analytics, and corroborative checking.",
+          "evidence_link": "Conceptual framework for archival activation doc",
+          "tags": "ML; AI; SoW; RAG; LLM; UMAP; core positioning",
+          "source_type": "writing",
+          "source_label": "AI/ML research inquiry instruments Sow (Statement of Work)",
           "practice_action": "documenting",
           "outcome_type": "question"
         }
@@ -1697,7 +1751,7 @@
           "evidence_link": "Annotated notebook Jan 8",
           "tags": "schon; reflexivity",
           "source_type": "reading",
-          "source_label": "Schön and reflexive practice notes",
+          "source_label": "Sch�n and reflexive practice notes",
           "practice_action": "reframing",
           "outcome_type": "clarification"
         },
@@ -1905,7 +1959,7 @@
           "evidence_link": "Kanban wip board; Review of practice 9.docx",
           "tags": "innovationdesign; retrieval; limits",
           "source_type": "machine learning",
-          "source_label": "Innovationdesign retrieval pipeline test",
+          "source_label": "Innovation design retrieval pipeline test",
           "practice_action": "testing",
           "outcome_type": "dead end"
         },
@@ -2110,7 +2164,7 @@
           "affect": "uncertain",
           "reflexive_note": "Feedback from supervision suggested that the writing leaned too heavily on opposition and antithesis, which made the project feel more polarised than exploratory.",
           "evidence_link": "Supervision transcript",
-          "tags": "writing; failiure",
+          "tags": "writing; failure",
           "source_type": "writing",
           "source_label": "First pass at writing a long form literature review",
           "practice_action": "writing",
@@ -2132,7 +2186,7 @@
           "affect": "uncertain",
           "reflexive_note": "Feedback from supervision suggested that the writing leaned too heavily on opposition and antithesis, which made the project feel more polarised than exploratory.",
           "evidence_link": "Supervision transcript",
-          "tags": "writing; failiure",
+          "tags": "writing; failure",
           "source_type": "writing",
           "source_label": "First pass at writing a long form literature review",
           "practice_action": "writing",
@@ -2625,7 +2679,7 @@
           "affect": "uncertain",
           "reflexive_note": "The second pass at the literature review marked a shift from trying to cover the field comprehensively towards using writing as a way of reframing the research question. The process remained uncertain.",
           "evidence_link": "Supervision memo Dec 26",
-          "tags": "writing; failiure",
+          "tags": "writing; failure",
           "source_type": "writing",
           "source_label": "Second pass at writing literature review",
           "practice_action": "reframing",
@@ -3217,7 +3271,7 @@
           "affect": "uncertain",
           "reflexive_note": "The second pass at the literature review marked a shift from trying to cover the field comprehensively towards using writing as a way of reframing the research question. The process remained uncertain.",
           "evidence_link": "Supervision memo Dec 26",
-          "tags": "writing; failiure",
+          "tags": "writing; failure",
           "source_type": "writing",
           "source_label": "Second pass at writing literature review",
           "practice_action": "reframing",
@@ -3358,7 +3412,7 @@
       ]
     },
     {
-      "source": "reading:Schön and reflexive practice notes",
+      "source": "reading:Sch�n and reflexive practice notes",
       "target": "reframing",
       "value": 1,
       "events": [
@@ -3373,7 +3427,7 @@
           "evidence_link": "Annotated notebook Jan 8",
           "tags": "schon; reflexivity",
           "source_type": "reading",
-          "source_label": "Schön and reflexive practice notes",
+          "source_label": "Sch�n and reflexive practice notes",
           "practice_action": "reframing",
           "outcome_type": "clarification"
         }
@@ -3881,7 +3935,7 @@
       ]
     },
     {
-      "source": "machine learning:Innovationdesign retrieval pipeline test",
+      "source": "machine learning:Innovation design retrieval pipeline test",
       "target": "testing",
       "value": 1,
       "events": [
@@ -3896,7 +3950,7 @@
           "evidence_link": "Kanban wip board; Review of practice 9.docx",
           "tags": "innovationdesign; retrieval; limits",
           "source_type": "machine learning",
-          "source_label": "Innovationdesign retrieval pipeline test",
+          "source_label": "Innovation design retrieval pipeline test",
           "practice_action": "testing",
           "outcome_type": "dead end"
         }
@@ -4234,7 +4288,7 @@
           "evidence_link": "Reading notes / strand mapping notes",
           "tags": "feminism; missingness; archives; RAG; UMAP; methodology",
           "source_type": "reading",
-          "source_label": "Levelling up of strands, feminism, missingnes in archives, RAG and UMAP",
+          "source_label": "Levelling up of strands, feminism, missingness in archives, RAG and UMAP",
           "practice_action": "mapping",
           "outcome_type": "clarification"
         }
@@ -5208,7 +5262,7 @@
           "affect": "unsettled",
           "reflexive_note": "The Friction research group meeting opened a useful critical frame for thinking about resistance, uncertainty and productive difficulty in the future of graphic design.",
           "evidence_link": "RCA Friction research group notes / calendar entry / meeting notes",
-          "tags": "friction; research culture; reflexivity; uncertainty; graphic desifn",
+          "tags": "friction; research culture; reflexivity; uncertainty; graphic design",
           "source_type": "conversation",
           "source_label": "RCA's Friction research group kick off meeting",
           "practice_action": "mapping",
@@ -5230,7 +5284,7 @@
           "affect": "unsettled",
           "reflexive_note": "The Friction research group meeting opened a useful critical frame for thinking about resistance, uncertainty and productive difficulty in the future of graphic design.",
           "evidence_link": "RCA Friction research group notes / calendar entry / meeting notes",
-          "tags": "friction; research culture; reflexivity; uncertainty; graphic desifn",
+          "tags": "friction; research culture; reflexivity; uncertainty; graphic design",
           "source_type": "conversation",
           "source_label": "RCA's Friction research group kick off meeting",
           "practice_action": "mapping",
@@ -5393,7 +5447,7 @@
       ]
     },
     {
-      "source": "reading:Levelling up of strands, feminism, missingnes in archives, RAG and UMAP",
+      "source": "reading:Levelling up of strands, feminism, missingness in archives, RAG and UMAP",
       "target": "mapping",
       "value": 1,
       "events": [
@@ -5408,7 +5462,7 @@
           "evidence_link": "Reading notes / strand mapping notes",
           "tags": "feminism; missingness; archives; RAG; UMAP; methodology",
           "source_type": "reading",
-          "source_label": "Levelling up of strands, feminism, missingnes in archives, RAG and UMAP",
+          "source_label": "Levelling up of strands, feminism, missingness in archives, RAG and UMAP",
           "practice_action": "mapping",
           "outcome_type": "clarification"
         }
@@ -5437,7 +5491,7 @@
       ]
     },
     {
-      "source": "graphic design:Alluval diagram",
+      "source": "graphic design:Alluvial diagram",
       "target": "mapping",
       "value": 1,
       "events": [
@@ -5452,7 +5506,7 @@
           "evidence_link": "Alluvial diagram export / Figma file",
           "tags": "alluvial diagram; visualisation; flow; process; research direction",
           "source_type": "graphic design",
-          "source_label": "Alluval diagram",
+          "source_label": "Alluvial diagram",
           "practice_action": "mapping",
           "outcome_type": "insight"
         }
@@ -5521,6 +5575,72 @@
           "source_label": "New NAS and RAID back ups",
           "practice_action": "documenting",
           "outcome_type": "clarification"
+        }
+      ]
+    },
+    {
+      "source": "writing:AI/ML research inquiry instruments Sow (Statement of Work)",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-W012",
+          "period": "Year 1 / Term 3",
+          "series": "writing",
+          "theme": "method",
+          "medium": "text",
+          "affect": "uncertain",
+          "reflexive_note": "Writing the SoW helped me frame the machine learning research instruments of inquiry into five buckets: retrieval, missingness analysis, oral-historical interpretation, embedded based visual analytics, and corroborative checking.",
+          "evidence_link": "Conceptual framework for archival activation doc",
+          "tags": "ML; AI; SoW; RAG; LLM; UMAP; core positioning",
+          "source_type": "writing",
+          "source_label": "AI/ML research inquiry instruments Sow (Statement of Work)",
+          "practice_action": "documenting",
+          "outcome_type": "question"
+        }
+      ]
+    },
+    {
+      "source": "conversation:V&A agreement meeting",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J080",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "archive",
+          "medium": "conversation",
+          "affect": "energised",
+          "reflexive_note": "Stakeholder meeting with V&A archive team and RCA special collections team with favourable outcome and signing agreement regarding image and data rights. Should now be fit for purpose moving forwards.",
+          "evidence_link": "V&A data agreement doc",
+          "tags": "ethics; rights; metadata; stakeholder management",
+          "source_type": "conversation",
+          "source_label": "V&A agreement meeting",
+          "practice_action": "documenting",
+          "outcome_type": "clarification"
+        }
+      ]
+    },
+    {
+      "source": "conversation:Research presentation from Hotessa Laurence",
+      "target": "reframing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J081",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "reflective",
+          "reflexive_note": "Tessa (Yr3) crushed it with her 12 minute presentation. I should prepare notes similar to hers to keep the presentation on track and allow room to riff off the slides.",
+          "evidence_link": "CVC + RCA methods of intent",
+          "tags": "presenting; knowledge sharing; rhetoric; articulation",
+          "source_type": "conversation",
+          "source_label": "Research presentation from Hotessa Laurence",
+          "practice_action": "reframing",
+          "outcome_type": "insight"
         }
       ]
     }
@@ -5593,7 +5713,7 @@
       "theme": "method",
       "medium": "conversation",
       "affect": "energised",
-      "reflexive_note": "Talking through colleagues's methods made me realise I wanted a process that could hold digital artefacts, metadata notes and computational experiments together.",
+      "reflexive_note": "Talking through colleague's methods made me realise I wanted a process that could hold digital artefacts, metadata notes and computational experiments together.",
       "evidence_link": "Induction notes",
       "tags": "cohort; method",
       "source_type": "conversation",
@@ -5805,7 +5925,7 @@
       "affect": "uncertain",
       "reflexive_note": "Feedback from supervision suggested that the writing leaned too heavily on opposition and antithesis, which made the project feel more polarised than exploratory.",
       "evidence_link": "Supervision transcript",
-      "tags": "writing; failiure",
+      "tags": "writing; failure",
       "source_type": "writing",
       "source_label": "First pass at writing a long form literature review",
       "practice_action": "writing",
@@ -6180,7 +6300,7 @@
       "affect": "uncertain",
       "reflexive_note": "The second pass at the literature review marked a shift from trying to cover the field comprehensively towards using writing as a way of reframing the research question. The process remained uncertain.",
       "evidence_link": "Supervision memo Dec 26",
-      "tags": "writing; failiure",
+      "tags": "writing; failure",
       "source_type": "writing",
       "source_label": "Second pass at writing literature review",
       "practice_action": "reframing",
@@ -6287,7 +6407,7 @@
       "evidence_link": "Annotated notebook Jan 8",
       "tags": "schon; reflexivity",
       "source_type": "reading",
-      "source_label": "Schön and reflexive practice notes",
+      "source_label": "Sch�n and reflexive practice notes",
       "practice_action": "reframing",
       "outcome_type": "clarification"
     },
@@ -6557,7 +6677,7 @@
       "evidence_link": "Kanban wip board; Review of practice 9.docx",
       "tags": "innovationdesign; retrieval; limits",
       "source_type": "machine learning",
-      "source_label": "Innovationdesign retrieval pipeline test",
+      "source_label": "Innovation design retrieval pipeline test",
       "practice_action": "testing",
       "outcome_type": "dead end"
     },
@@ -7365,7 +7485,7 @@
       "affect": "unsettled",
       "reflexive_note": "The Friction research group meeting opened a useful critical frame for thinking about resistance, uncertainty and productive difficulty in the future of graphic design.",
       "evidence_link": "RCA Friction research group notes / calendar entry / meeting notes",
-      "tags": "friction; research culture; reflexivity; uncertainty; graphic desifn",
+      "tags": "friction; research culture; reflexivity; uncertainty; graphic design",
       "source_type": "conversation",
       "source_label": "RCA's Friction research group kick off meeting",
       "practice_action": "mapping",
@@ -7472,7 +7592,7 @@
       "evidence_link": "Reading notes / strand mapping notes",
       "tags": "feminism; missingness; archives; RAG; UMAP; methodology",
       "source_type": "reading",
-      "source_label": "Levelling up of strands, feminism, missingnes in archives, RAG and UMAP",
+      "source_label": "Levelling up of strands, feminism, missingness in archives, RAG and UMAP",
       "practice_action": "mapping",
       "outcome_type": "clarification"
     },
@@ -7502,7 +7622,7 @@
       "evidence_link": "Alluvial diagram export / Figma file",
       "tags": "alluvial diagram; visualisation; flow; process; research direction",
       "source_type": "graphic design",
-      "source_label": "Alluval diagram",
+      "source_label": "Alluvial diagram",
       "practice_action": "mapping",
       "outcome_type": "insight"
     },
@@ -7550,6 +7670,51 @@
       "source_label": "New NAS and RAID back ups",
       "practice_action": "documenting",
       "outcome_type": "clarification"
+    },
+    {
+      "id": "Y1-W012",
+      "period": "Year 1 / Term 3",
+      "series": "writing",
+      "theme": "method",
+      "medium": "text",
+      "affect": "uncertain",
+      "reflexive_note": "Writing the SoW helped me frame the machine learning research instruments of inquiry into five buckets: retrieval, missingness analysis, oral-historical interpretation, embedded based visual analytics, and corroborative checking.",
+      "evidence_link": "Conceptual framework for archival activation doc",
+      "tags": "ML; AI; SoW; RAG; LLM; UMAP; core positioning",
+      "source_type": "writing",
+      "source_label": "AI/ML research inquiry instruments Sow (Statement of Work)",
+      "practice_action": "documenting",
+      "outcome_type": "question"
+    },
+    {
+      "id": "Y1-J080",
+      "period": "Year 1 / Term 3",
+      "series": "journal",
+      "theme": "archive",
+      "medium": "conversation",
+      "affect": "energised",
+      "reflexive_note": "Stakeholder meeting with V&A archive team and RCA special collections team with favourable outcome and signing agreement regarding image and data rights. Should now be fit for purpose moving forwards.",
+      "evidence_link": "V&A data agreement doc",
+      "tags": "ethics; rights; metadata; stakeholder management",
+      "source_type": "conversation",
+      "source_label": "V&A agreement meeting",
+      "practice_action": "documenting",
+      "outcome_type": "clarification"
+    },
+    {
+      "id": "Y1-J081",
+      "period": "Year 1 / Term 3",
+      "series": "journal",
+      "theme": "reflexivity",
+      "medium": "conversation",
+      "affect": "reflective",
+      "reflexive_note": "Tessa (Yr3) crushed it with her 12 minute presentation. I should prepare notes similar to hers to keep the presentation on track and allow room to riff off the slides.",
+      "evidence_link": "CVC + RCA methods of intent",
+      "tags": "presenting; knowledge sharing; rhetoric; articulation",
+      "source_type": "conversation",
+      "source_label": "Research presentation from Hotessa Laurence",
+      "practice_action": "reframing",
+      "outcome_type": "insight"
     }
   ],
   "lookups": [
