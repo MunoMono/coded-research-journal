@@ -1,9 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
 import { sankey as d3sankey, sankeyLinkHorizontal } from 'd3-sankey'
+import activeSankeySource from '../data/active-sankey-source.json'
 import sankeyData from '../data/sankey.json'
 import { Select, SelectItem, Button, Tile, Grid, Column } from '@carbon/react'
 import { Download } from '@carbon/icons-react'
+
+const rawCsvModules = import.meta.glob('../../data/csv/*.csv', { query: '?raw', import: 'default' })
 
 export default function SankeyChart({ width = 900, height = 360 }) {
   const ref = useRef(null)
@@ -129,9 +132,18 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     // load raw CSVs on first mount
     const load = async () => {
       try {
+        const eventsPath = `../../data/csv/${activeSankeySource.eventsFile}`
+        const lookupsPath = `../../data/csv/${activeSankeySource.lookupsFile}`
+        const loadEventsCsv = rawCsvModules[eventsPath]
+        const loadLookupsCsv = rawCsvModules[lookupsPath]
+
+        if (!loadEventsCsv) {
+          throw new Error(`configured events CSV not found: ${activeSankeySource.eventsFile}`)
+        }
+
         const [eventsMod, lookupsMod] = await Promise.all([
-          import('../../data/csv/practice_events_sept25_july26_updated.csv?raw'),
-          import('../../data/csv/lookups_sept25_july26_updated.csv?raw').catch(() => null),
+          loadEventsCsv(),
+          loadLookupsCsv ? loadLookupsCsv().catch(() => null) : Promise.resolve(null),
         ])
         const raw = eventsMod.default || eventsMod
         const rows = d3.csvParse(raw).filter(row => !isEmptyRow(row))

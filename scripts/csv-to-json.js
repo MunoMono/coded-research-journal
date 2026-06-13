@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename)
 
 const CSV_DIR = path.join(__dirname, '..', 'data', 'csv')
 const OUT_FILE = path.join(__dirname, '..', 'src', 'data', 'sankey.json')
+const SOURCE_CONFIG_FILE = path.join(__dirname, '..', 'src', 'data', 'active-sankey-source.json')
 
 // Very small CSV parser - for robust parsing swap to a CSV library
 function parseCSV(content) {
@@ -41,6 +42,31 @@ function findPreferredCsv(files, pattern) {
   return pool.sort().at(-1)
 }
 
+function loadSourceConfig() {
+  if (!fs.existsSync(SOURCE_CONFIG_FILE)) return null
+
+  const raw = fs.readFileSync(SOURCE_CONFIG_FILE, 'utf8')
+  const parsed = JSON.parse(raw)
+
+  return {
+    eventsFile: typeof parsed.eventsFile === 'string' ? parsed.eventsFile.trim() : '',
+    lookupsFile: typeof parsed.lookupsFile === 'string' ? parsed.lookupsFile.trim() : '',
+  }
+}
+
+function resolveSelectedCsv(files, configuredFile, pattern, label) {
+  if (configuredFile) {
+    if (!files.includes(configuredFile)) {
+      console.error(`Configured ${label} CSV not found: ${configuredFile}`)
+      process.exit(1)
+    }
+
+    return configuredFile
+  }
+
+  return findPreferredCsv(files, pattern)
+}
+
 function main() {
   if (!fs.existsSync(CSV_DIR)) {
     console.error('CSV folder not found:', CSV_DIR)
@@ -53,8 +79,9 @@ function main() {
     process.exit(1)
   }
 
-  const eventsFile = findPreferredCsv(files, /practice_events/i)
-  const lookupsFile = findPreferredCsv(files, /lookups/i)
+  const sourceConfig = loadSourceConfig()
+  const eventsFile = resolveSelectedCsv(files, sourceConfig?.eventsFile, /practice_events/i, 'events')
+  const lookupsFile = resolveSelectedCsv(files, sourceConfig?.lookupsFile, /lookups/i, 'lookups')
 
   const output = { nodes: [], links: [], filters: { period: [], series: [], theme: [], medium: [], affect: [] }, rawEvents: [] }
 

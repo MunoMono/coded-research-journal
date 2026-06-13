@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "seed": "node scripts/csv-to-json.js",
+    "set-sankey-source": "node scripts/set-active-sankey-source.js",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
