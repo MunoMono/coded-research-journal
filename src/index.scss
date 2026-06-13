@@ -222,6 +222,96 @@ html.dark .cds--side-nav__submenu-title:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
+.event-search-panel {
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+.event-search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.875rem;
+}
+
+.event-search-input {
+  max-width: 42rem;
+}
+
+.event-search-meta {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+  color: color-mix(in srgb, var(--text) 72%, transparent);
+}
+
+.event-search-warning {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.875rem;
+  padding: 0.875rem 1rem;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--bg) 80%, #0f62fe 20%);
+}
+
+.event-search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.event-search-result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--sankey-keyline);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.event-search-result:hover,
+.event-search-result:focus-visible,
+.event-search-result.is-active {
+  border-color: #0f62fe;
+  background: color-mix(in srgb, var(--bg) 82%, #0f62fe 18%);
+  transform: translateY(-1px);
+}
+
+.event-search-result-topline,
+.event-search-result-body,
+.event-search-result-meta {
+  display: block;
+  width: 100%;
+}
+
+.event-search-result-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: color-mix(in srgb, var(--text) 76%, transparent);
+}
+
+.event-search-result-body {
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+
+.event-search-result-meta {
+  font-size: 0.8rem;
+  color: color-mix(in srgb, var(--text) 68%, transparent);
+}
+
 .controls-panel {
   margin-top: 1.5rem;
   padding: 1.25rem 2rem 0;
@@ -306,6 +396,16 @@ html.dark .cds--side-nav__submenu-title:hover {
 }
 
 @media (max-width: 42rem) {
+  .event-search-panel {
+    margin: 0 0 1rem;
+  }
+
+  .event-search-header,
+  .event-search-warning {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .main-content {
     padding: 1rem;
   }

@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import * as d3 from 'd3'
 import { sankey as d3sankey, sankeyLinkHorizontal } from 'd3-sankey'
 import activeSankeySource from '../data/active-sankey-source.json'
 import sankeyData from '../data/sankey.json'
-import { Select, SelectItem, Button, Tile, Grid, Column } from '@carbon/react'
+import { Select, SelectItem, Button, Tile, Grid, Column, Search } from '@carbon/react'
 import { Download } from '@carbon/icons-react'
 
 const rawCsvModules = import.meta.glob('../../data/csv/*.csv', { query: '?raw', import: 'default' })
@@ -39,6 +39,8 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     affect: [],
   })
   const [filters, setFilters] = useState(emptyFilters)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedEventId, setSelectedEventId] = useState('')
   const [pinned, setPinned] = useState(null)
   const [containerWidth, setContainerWidth] = useState(width)
   const isCompactLayout = containerWidth < 672
@@ -74,6 +76,21 @@ export default function SankeyChart({ width = 900, height = 360 }) {
   }
   const getRowFieldValue = (row, field) => (field === 'series' ? getSeriesValue(row) : normalizeLookupText(row[field]))
   const getInputValue = row => normalizeLookupText(row.source_type) || normalizeLookupText(row.source_label)
+  const makeNodeId = (stage, field, value) => `${stage}|||${field}|||${value}`
+  const getNodeIdsForRow = row => {
+    const sourceType = normalizeLookupText(row?.source_type)
+    const sourceLabel = normalizeLookupText(row?.source_label)
+    const sourceField = sourceType ? 'source_type' : 'source_label'
+    const sourceValue = sourceType || sourceLabel || 'Unknown'
+    const actionValue = normalizeLookupText(row?.practice_action) || 'unknown_action'
+    const outcomeValue = normalizeLookupText(row?.outcome_type) || 'unknown_outcome'
+
+    return {
+      sourceId: makeNodeId('source', sourceField, sourceValue),
+      actionId: makeNodeId('action', 'practice_action', actionValue),
+      outcomeId: makeNodeId('outcome', 'outcome_type', outcomeValue),
+    }
+  }
   const formatTags = value => normalizeLookupText(value)
     .split(';')
     .map(tag => tag.trim())
@@ -106,6 +123,48 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     if (filters.medium && normalizeLookupText(row.medium) !== filters.medium) return false
     if (filters.affect && normalizeLookupText(row.affect) !== filters.affect) return false
     return true
+  }
+  const buildSearchText = row => [
+    row.id,
+    row.date,
+    row.period,
+    row.source_type,
+    row.source_label,
+    row.practice_action,
+    row.outcome_type,
+    row.theme,
+    row.medium,
+    row.affect,
+    row.reflexive_note,
+    row.evidence_link,
+    row.tags,
+    getSeriesValue(row),
+  ].map(normalizeLookupText).join(' ').toLowerCase()
+  const filteredRows = useMemo(() => (rawRows ? rawRows.filter(rowMatchesFilters) : []), [rawRows, filters])
+  const selectedEvent = useMemo(() => {
+    if (!rawRows || !selectedEventId) return null
+    return rawRows.find(row => normalizeLookupText(row.id) === selectedEventId) || null
+  }, [rawRows, selectedEventId])
+  const selectedEventNodeIds = useMemo(() => {
+    if (!selectedEvent) return new Set()
+    const { sourceId, actionId, outcomeId } = getNodeIdsForRow(selectedEvent)
+    return new Set([sourceId, actionId, outcomeId])
+  }, [selectedEvent])
+  const searchResults = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase()
+    if (!rawRows || !query) return []
+    return rawRows
+      .filter(row => buildSearchText(row).includes(query))
+      .slice(0, 8)
+  }, [rawRows, searchQuery])
+  const selectedEventVisible = useMemo(() => {
+    if (!selectedEventId) return false
+    return filteredRows.some(row => normalizeLookupText(row.id) === selectedEventId)
+  }, [filteredRows, selectedEventId])
+  const handleSelectEvent = row => {
+    const eventId = normalizeLookupText(row?.id)
+    setPinned(row || null)
+    setSelectedEventId(eventId)
   }
 
   // keep container width in sync using ResizeObserver for responsive rendering
@@ -197,14 +256,12 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         } else return
       }
 
-      // apply filters to rows
-      const filtered = (rowsToUse || []).filter(rowMatchesFilters)
+      const filtered = rowsToUse || []
 
       // build aggregated links
       const linkCounts = new Map()
       const eventsByLink = new Map()
       const linkSeparator = '>>>>'
-      const makeNodeId = (stage, field, value) => `${stage}|||${field}|||${value}`
       const parseNodeId = nodeId => {
         const [stage = '', field = '', ...valueParts] = nodeId.split('|||')
         return {
@@ -297,6 +354,9 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       const trim = (s, n = labelTrim) => (s && s.length > n ? s.slice(0, n - 1) + '…' : s)
       const getLabelX = d => (d.x0 < renderWidth / 2 ? d.x1 + 6 : d.x0 - 6)
       const getLabelAnchor = d => (d.x0 < renderWidth / 2 ? 'start' : 'end')
+      const hasSelectedEvent = Boolean(selectedEventId)
+      const linkContainsSelectedEvent = link => hasSelectedEvent && link.events && link.events.some(eventRow => normalizeLookupText(eventRow.id) === selectedEventId)
+      const nodeIsOnSelectedPath = node => !hasSelectedEvent || selectedEventNodeIds.has(node.id)
 
       const sankeyGen = d3sankey()
         .nodeId(d => d.id)
@@ -330,8 +390,14 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         .delay(d => Math.min(220, d.source.x0 * 0.35))
         .attr('d', sankeyLinkHorizontal())
         .attr('stroke', d => color(d.source.id))
-        .attr('stroke-width', d => Math.max(2, d.width))
-        .attr('opacity', 0.72)
+        .attr('stroke-width', d => {
+          const baseWidth = Math.max(2, d.width)
+          return linkContainsSelectedEvent(d) ? baseWidth + 2 : baseWidth
+        })
+        .attr('opacity', d => {
+          if (!hasSelectedEvent) return 0.72
+          return linkContainsSelectedEvent(d) ? 0.96 : 0.14
+        })
 
       linkSel.exit()
         .transition()
@@ -368,7 +434,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         .transition(layoutTransition)
         .delay(d => Math.min(260, d.x0 * 0.45))
         .attr('transform', d => `translate(${d.x0},${d.y0})`)
-        .attr('opacity', 1)
+        .attr('opacity', d => (nodeIsOnSelectedPath(d) ? 1 : 0.4))
 
       nodeMerge.select('rect')
         .transition(layoutTransition)
@@ -376,7 +442,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         .attr('width', d => Math.max(1, d.x1 - d.x0))
         .attr('height', d => Math.max(1, d.y1 - d.y0))
         .attr('fill', d => color(d.id))
-        .attr('opacity', 1)
+        .attr('opacity', d => (nodeIsOnSelectedPath(d) ? 1 : 0.4))
 
       nodeSel.exit()
         .transition()
@@ -411,7 +477,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         .attr('y', d => (d.y1 + d.y0) / 2)
         .attr('text-anchor', d => getLabelAnchor(d))
         .attr('font-size', labelFontSize)
-        .attr('opacity', 1)
+        .attr('opacity', d => (nodeIsOnSelectedPath(d) ? 1 : 0.4))
 
       labelSel.exit()
         .transition()
@@ -449,13 +515,19 @@ export default function SankeyChart({ width = 900, height = 360 }) {
         const [x, y] = d3.pointer(event, ref.current)
         tt.style('left', `${x + 20}px`).style('top', `${y + 20}px`)
       }).on('mouseout', () => { d3.select(tooltipRef.current).style('opacity', 0) })
-        .on('click', (event, d) => { if (d.events && d.events.length) { const withNote = d.events.find(e => e.reflexive_note && e.reflexive_note.trim()); const ev = withNote || d.events[0]; setPinned(ev) } })
+        .on('click', (event, d) => {
+          if (d.events && d.events.length) {
+            const withNote = d.events.find(e => e.reflexive_note && e.reflexive_note.trim())
+            const ev = withNote || d.events[0]
+            handleSelectEvent(ev)
+          }
+        })
     }
 
     renderFromRows()
 
     return () => { svg.selectAll('*').interrupt() }
-  }, [width, height, rawRows, filters, containerWidth, data, lookupsMap])
+  }, [width, height, filteredRows, containerWidth, data, lookupsMap, selectedEventId, selectedEventNodeIds])
 
   const downloadBlob = (blob, filename) => {
     const url = URL.createObjectURL(blob)
@@ -469,8 +541,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
   }
 
   const getFilteredRows = () => {
-    if (!rawRows) return []
-    return rawRows.filter(rowMatchesFilters)
+    return filteredRows
   }
 
   const serializeSvg = () => {
@@ -573,8 +644,6 @@ export default function SankeyChart({ width = 900, height = 360 }) {
 
   return (
     <div>
-      
-
       <div ref={wrapperRef} className="sankey-wrapper" style={{ position: 'relative', width: '100%' }}>
         <svg ref={ref} className="sankey-chart" style={{ width: '100%', height: `${isCompactLayout ? Math.max(420, Math.min(height, Math.round((containerWidth || width) * 1.12))) : height}px` }} />
         <div ref={tooltipRef} className="sankey-tooltip" style={{ position: 'absolute', pointerEvents: 'none', opacity: 0, background: 'rgba(0,0,0,0.82)', color: '#fff', padding: 10, borderRadius: 6, boxShadow: '0 6px 18px rgba(0,0,0,0.35)', fontSize: 13, maxWidth: isCompactLayout ? Math.max(220, (containerWidth || width) - 32) : 420, zIndex: 9999 }} />
@@ -668,6 +737,75 @@ export default function SankeyChart({ width = 900, height = 360 }) {
               </Column>
             </Grid>
           </section>
+
+          <div className="controls-keyline" aria-hidden="true" />
+
+          {rawRows && (
+            <section className="controls-section event-search-panel" aria-labelledby="row-search-heading">
+              <div className="event-search-header">
+                <h2 id="row-search-heading" className="controls-heading">Row search</h2>
+                {selectedEventId ? (
+                  <Button size="sm" kind="ghost" onClick={() => { setSelectedEventId(''); setPinned(null) }}>
+                    Clear focus
+                  </Button>
+                ) : null}
+              </div>
+              <Search
+                id="event-search"
+                className="event-search-input"
+                labelText="Search rows"
+                placeholder="Search ID, note, tag, source, or evidence"
+                value={searchQuery}
+                onChange={event => setSearchQuery(event.target.value)}
+                size="lg"
+              />
+              <p className="event-search-meta">
+                {searchQuery.trim()
+                  ? `${searchResults.length}${searchResults.length === 1 ? ' match' : ' matches'} shown from all entries.`
+                  : 'Search across all journal, practice, and writing entries.'}
+              </p>
+              {selectedEvent && !selectedEventVisible ? (
+                <div className="event-search-warning">
+                  <span>The selected row is currently hidden by the active filters.</span>
+                  <Button size="sm" kind="secondary" onClick={() => setFilters(emptyFilters)}>
+                    Reset filters to reveal it
+                  </Button>
+                </div>
+              ) : null}
+              {searchResults.length > 0 ? (
+                <div className="event-search-results" role="list">
+                  {searchResults.map(row => {
+                    const rowId = normalizeLookupText(row.id)
+                    const isActive = rowId === selectedEventId
+                    return (
+                      <button
+                        key={rowId}
+                        type="button"
+                        className={`event-search-result${isActive ? ' is-active' : ''}`}
+                        onClick={() => handleSelectEvent(row)}
+                      >
+                        <span className="event-search-result-topline">
+                          <strong>{row.id}</strong>
+                          <span>{row.date}</span>
+                          <span>{getLookupMeta('series', getSeriesValue(row)).label}</span>
+                        </span>
+                        <span className="event-search-result-body">
+                          {row.source_label || getLookupMeta('source_type', row.source_type).label}
+                        </span>
+                        <span className="event-search-result-meta">
+                          {[
+                            getLookupMeta('source_type', row.source_type).label,
+                            getLookupMeta('theme', row.theme).label,
+                            getLookupMeta('outcome_type', row.outcome_type).label,
+                          ].filter(Boolean).join(' • ')}
+                        </span>
+                      </button>
+                    )
+                  })}
+                </div>
+              ) : null}
+            </section>
+          )}
 
           <div className="controls-keyline" aria-hidden="true" />
 
