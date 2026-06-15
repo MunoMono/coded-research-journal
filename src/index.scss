@@ -245,6 +245,27 @@ html.dark .cds--side-nav__submenu-title:hover {
   color: color-mix(in srgb, var(--text) 72%, transparent);
 }
 
+.event-date-range {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+
+  .cds--date-picker {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .cds--date-picker-input__wrapper {
+    max-width: 14rem;
+  }
+
+  .date-range-clear {
+    margin-bottom: 0.125rem;
+  }
+}
+
 .event-search-warning {
   display: flex;
   justify-content: space-between;

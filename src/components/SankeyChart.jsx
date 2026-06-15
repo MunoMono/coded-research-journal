@@ -3,7 +3,7 @@ import * as d3 from 'd3'
 import { sankey as d3sankey, sankeyLinkHorizontal } from 'd3-sankey'
 import activeSankeySource from '../data/active-sankey-source.json'
 import sankeyData from '../data/sankey.json'
-import { Select, SelectItem, Button, Tile, Grid, Column, Search } from '@carbon/react'
+import { Select, SelectItem, Button, Tile, Grid, Column, Search, DatePicker, DatePickerInput } from '@carbon/react'
 import { Download } from '@carbon/icons-react'
 
 const rawCsvModules = import.meta.glob('../../data/csv/*.csv', { query: '?raw', import: 'default' })
@@ -42,6 +42,8 @@ export default function SankeyChart({ width = 900, height = 360 }) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedEventId, setSelectedEventId] = useState('')
   const [pinned, setPinned] = useState(null)
+  const [dateRange, setDateRange] = useState({ start: null, end: null })
+  const [datePickerKey, setDatePickerKey] = useState(0)
   const [containerWidth, setContainerWidth] = useState(width)
   const isCompactLayout = containerWidth < 672
 
@@ -108,6 +110,18 @@ export default function SankeyChart({ width = 900, height = 360 }) {
       return (left.value || '').localeCompare(right.value || '')
     })
 
+  const parseCsvDate = dateStr => {
+    if (!dateStr) return null
+    const parts = String(dateStr).trim().split('/')
+    if (parts.length !== 3) return null
+    const day = parseInt(parts[0], 10)
+    const month = parseInt(parts[1], 10) - 1
+    const yearRaw = parseInt(parts[2], 10)
+    const year = yearRaw < 100 ? 2000 + yearRaw : yearRaw
+    const d = new Date(year, month, day)
+    return isNaN(d.getTime()) ? null : d
+  }
+
   const buildInputChoices = (rows, sourceMap = lookupsMap) => Array.from(
     new Set(rows.map(row => getInputValue(row)).filter(Boolean))
   )
@@ -122,6 +136,20 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     if (filters.theme && normalizeLookupText(row.theme) !== filters.theme) return false
     if (filters.medium && normalizeLookupText(row.medium) !== filters.medium) return false
     if (filters.affect && normalizeLookupText(row.affect) !== filters.affect) return false
+    if (dateRange.start || dateRange.end) {
+      const rowDate = parseCsvDate(normalizeLookupText(row.date))
+      if (!rowDate) return false
+      if (dateRange.start) {
+        const start = new Date(dateRange.start)
+        start.setHours(0, 0, 0, 0)
+        if (rowDate < start) return false
+      }
+      if (dateRange.end) {
+        const end = new Date(dateRange.end)
+        end.setHours(23, 59, 59, 999)
+        if (rowDate > end) return false
+      }
+    }
     return true
   }
   const buildSearchText = row => [
@@ -140,7 +168,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     row.tags,
     getSeriesValue(row),
   ].map(normalizeLookupText).join(' ').toLowerCase()
-  const filteredRows = useMemo(() => (rawRows ? rawRows.filter(rowMatchesFilters) : []), [rawRows, filters])
+  const filteredRows = useMemo(() => (rawRows ? rawRows.filter(rowMatchesFilters) : []), [rawRows, filters, dateRange])
   const selectedEvent = useMemo(() => {
     if (!rawRows || !selectedEventId) return null
     return rawRows.find(row => normalizeLookupText(row.id) === selectedEventId) || null
@@ -249,14 +277,18 @@ export default function SankeyChart({ width = 900, height = 360 }) {
 
     // render whenever rawRows / filters / size update
     const renderFromRows = () => {
-      const rowsToUse = rawRows || (data ? [] : [])
-      if (!rowsToUse || rowsToUse.length === 0) {
+      if (!rawRows && !data) return
+      // Use filteredRows (dropdown + date filters applied) when CSV is loaded
+      const filtered = rawRows ? filteredRows : []
+      if (!filtered || filtered.length === 0) {
         if (data) {
           // render fallback sankeyData
-        } else return
+        } else {
+          // clear the SVG when no rows match the active filters
+          d3.select(ref.current).selectAll('*').remove()
+          return
+        }
       }
-
-      const filtered = rowsToUse || []
 
       // build aggregated links
       const linkCounts = new Map()
@@ -733,7 +765,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
 
               <Column lg={2} md={4} sm={4} className="filter-action-column">
                 <div className="filter-action-spacer" aria-hidden="true">Reset</div>
-                <Button className="filter-reset-button" size="sm" kind="secondary" onClick={() => setFilters(emptyFilters)}>Reset</Button>
+                <Button className="filter-reset-button" size="sm" kind="secondary" onClick={() => { setFilters(emptyFilters); setDateRange({ start: null, end: null }); setDatePickerKey(k => k + 1) }}>Reset</Button>
               </Column>
             </Grid>
           </section>
@@ -764,6 +796,40 @@ export default function SankeyChart({ width = 900, height = 360 }) {
                   ? `${searchResults.length}${searchResults.length === 1 ? ' match' : ' matches'} shown from all entries.`
                   : 'Search across all journal, practice, and writing entries.'}
               </p>
+              <div className="event-date-range">
+                <DatePicker
+                  key={datePickerKey}
+                  datePickerType="range"
+                  dateFormat="d/m/y"
+                  onChange={dates => {
+                    const [start = null, end = null] = dates
+                    setDateRange({ start: start || null, end: end || null })
+                  }}
+                >
+                  <DatePickerInput
+                    id="date-range-start"
+                    placeholder="dd/mm/yy"
+                    labelText="From date"
+                    size="lg"
+                  />
+                  <DatePickerInput
+                    id="date-range-end"
+                    placeholder="dd/mm/yy"
+                    labelText="To date"
+                    size="lg"
+                  />
+                </DatePicker>
+                {(dateRange.start || dateRange.end) && (
+                  <Button
+                    size="sm"
+                    kind="ghost"
+                    className="date-range-clear"
+                    onClick={() => { setDateRange({ start: null, end: null }); setDatePickerKey(k => k + 1) }}
+                  >
+                    Clear dates
+                  </Button>
+                )}
+              </div>
               {selectedEvent && !selectedEventVisible ? (
                 <div className="event-search-warning">
                   <span>The selected row is currently hidden by the active filters.</span>
