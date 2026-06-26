@@ -66,6 +66,10 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     const normalizedValue = normalizeLookupText(value)
     return sourceMap.get(buildLookupKey(normalizedField, normalizedValue)) || createLookupMeta(normalizedField, normalizedValue)
   }
+  const normalizeEventRow = row => ({
+    ...row,
+    reflexive_note: normalizeLookupText(row?.reflexive_note) || normalizeLookupText(row?.['reflexive note']),
+  })
   const isEmptyRow = row => !Object.values(row || {}).some(value => normalizeLookupText(value))
   const getSeriesValue = row => {
     const explicitSeries = normalizeLookupText(row.series)
@@ -233,7 +237,9 @@ export default function SankeyChart({ width = 900, height = 360 }) {
           loadLookupsCsv ? loadLookupsCsv().catch(() => null) : Promise.resolve(null),
         ])
         const raw = eventsMod.default || eventsMod
-        const rows = d3.csvParse(raw).filter(row => !isEmptyRow(row))
+        const rows = d3.csvParse(raw)
+          .map(normalizeEventRow)
+          .filter(row => !isEmptyRow(row))
         if (!rows || rows.length === 0) throw new Error('empty csv')
 
         const lookupRaw = lookupsMod ? (lookupsMod.default || lookupsMod) : null

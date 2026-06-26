@@ -18,6 +18,9 @@ function parseCSV(content) {
     Object.entries(row).forEach(([key, value]) => {
       normalizedRow[String(key).trim()] = typeof value === 'string' ? value.trim() : value
     })
+    if (!normalizedRow.reflexive_note && normalizedRow['reflexive note']) {
+      normalizedRow.reflexive_note = normalizedRow['reflexive note']
+    }
     return normalizedRow
   }).filter(row => Object.values(row).some(value => String(value || '').trim()))
 }

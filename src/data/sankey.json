@@ -181,7 +181,7 @@
       "id": "coding:API demonstration and MVP ingestion workflow"
     },
     {
-      "id": "reading:Sch�n and reflexive practice notes"
+      "id": "reading:Schï¿½n and reflexive practice notes"
     },
     {
       "id": "machine learning:ABBYY / OCR workflow exploration"
@@ -443,6 +443,27 @@
     },
     {
       "id": "conversation:Research presentation from Hotessa Laurence"
+    },
+    {
+      "id": "conversation:RCA Friction research Group (FRG) brainstorming at MayDay Rooms"
+    },
+    {
+      "id": "data science:Getting started with quantitative data analysis for doctoral  research' with Ravi Sikhwal"
+    },
+    {
+      "id": "conversation:Supervision tutorial encouragement"
+    },
+    {
+      "id": "graphic design:Feedback on CSV/RCA proceedings design"
+    },
+    {
+      "id": "writing:Researching and writing your PhD thesis, a user's guide' with Philip Clark"
+    },
+    {
+      "id": "coding:DDR admin and DDR  public development"
+    },
+    {
+      "id": "critique:Adding titles and metadate to the latest wave of DDR archive from V&A"
     }
   ],
   "links": [
@@ -1751,7 +1772,7 @@
           "evidence_link": "Annotated notebook Jan 8",
           "tags": "schon; reflexivity",
           "source_type": "reading",
-          "source_label": "Sch�n and reflexive practice notes",
+          "source_label": "Schï¿½n and reflexive practice notes",
           "practice_action": "reframing",
           "outcome_type": "clarification"
         },
@@ -1872,7 +1893,7 @@
     {
       "source": "mapping",
       "target": "confidence",
-      "value": 1,
+      "value": 2,
       "events": [
         {
           "id": "Y1-J009",
@@ -1886,6 +1907,21 @@
           "tags": "layout; timeline",
           "source_type": "graphic design",
           "source_label": "Poster-style timeline of process",
+          "practice_action": "mapping",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J084",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "energised",
+          "reflexive_note": "Stephen Boyd Davis said, 'Broadly speaking, I was extremely happy. I thought the way that you’ve taken on the advice we’ve given you was really, really a pleasure. Thank you. Things which were previously a bit confused have become much clearer, and you’ve clearly made significant progress with the practical work. I think you said last time we met that you’ve made more progress than you initially expected to, which is great.'",
+          "evidence_link": "",
+          "tags": "Supervision; feedback; REF; best in the world",
+          "source_type": "conversation",
+          "source_label": "Supervision tutorial encouragement",
           "practice_action": "mapping",
           "outcome_type": "confidence"
         }
@@ -2285,7 +2321,7 @@
     {
       "source": "prototyping",
       "target": "insight",
-      "value": 2,
+      "value": 3,
       "events": [
         {
           "id": "Y1-P005",
@@ -2314,6 +2350,21 @@
           "tags": "ingestion; v&a; records",
           "source_type": "coding",
           "source_label": "Ingest V&A East Storehouse DDR material",
+          "practice_action": "prototyping",
+          "outcome_type": "insight"
+        },
+        {
+          "id": "Y1-J083",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "method",
+          "medium": "presentation",
+          "affect": "curious",
+          "reflexive_note": "An insightful lecture on quant from Ravi at the School of Design. I am interested in exploring the value proposition of quantitative data analytics for my PhD and will endeavour to obtain a licence for SUPR-Q: a questionnaire used to measure the overall quality of a digital user experience, including usability, trust/credibility, appearance and loyalty. It is usually used for websites or digital products.",
+          "evidence_link": "",
+          "tags": "DTP; quantitative;  SUPR-Q; UMAP; data types",
+          "source_type": "data science",
+          "source_label": "Getting started with quantitative data analysis for doctoral  research' with Ravi Sikhwal",
           "practice_action": "prototyping",
           "outcome_type": "insight"
         }
@@ -2653,7 +2704,7 @@
     {
       "source": "reframing",
       "target": "question",
-      "value": 6,
+      "value": 8,
       "events": [
         {
           "id": "Y1-J019",
@@ -2742,6 +2793,36 @@
           "tags": "rehearsal; narrative; presentation; visualisation; public framing",
           "source_type": "archival research",
           "source_label": "Design of SoC RCA + CVS Royal Holloway presentation",
+          "practice_action": "reframing",
+          "outcome_type": "question"
+        },
+        {
+          "id": "Y1-J082",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "conversation",
+          "affect": "excited",
+          "reflexive_note": "I am now part of the RCA’s graphic design inner circle. It has taken 35 years to get here, and it feels an honour to be part of the future of graphic design across community, education and industry.",
+          "evidence_link": "June supervision audio recording",
+          "tags": "graphic design; graphic design mafia; inner circle; guerilla graphic design",
+          "source_type": "conversation",
+          "source_label": "RCA Friction research Group (FRG) brainstorming at MayDay Rooms",
+          "practice_action": "reframing",
+          "outcome_type": "question"
+        },
+        {
+          "id": "Y1-P049",
+          "period": "Year 1 / Term 3",
+          "series": "practice",
+          "theme": "archive",
+          "medium": "text",
+          "affect": "curious",
+          "reflexive_note": "Now the build is stable I can be more rigorous with digital asset descriptions. There are 45 new assets scanned from the V&A in May that really add flavour to the archive across Archer records, DEU Baynes and Roberts etc. I wonder whatever happened to the Design Dimension Project?. Now what the builds is stable I can confidently add assets, V&A box numbers and descriptions.",
+          "evidence_link": "June 2026 V&A DDR ingestion burst xls",
+          "tags": "V&A ingestion; DDR archive metadata; Design Dimension Project; Archer and DEU records; digital asset description",
+          "source_type": "critique",
+          "source_label": "Adding titles and metadate to the latest wave of DDR archive from V&A",
           "practice_action": "reframing",
           "outcome_type": "question"
         }
@@ -3208,7 +3289,7 @@
     {
       "source": "testing",
       "target": "question",
-      "value": 3,
+      "value": 4,
       "events": [
         {
           "id": "Y1-P014",
@@ -3252,6 +3333,21 @@
           "tags": "active learning; tags",
           "source_type": "machine learning",
           "source_label": "Active learning idea for assisted tagging",
+          "practice_action": "testing",
+          "outcome_type": "question"
+        },
+        {
+          "id": "Y1-J085",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "archive",
+          "medium": "code",
+          "affect": "unsettled",
+          "reflexive_note": "My local repo has dirty code, it is incredibly frustrating to loose so much work, days and days of work. Thank heaven I am using git commits. After a painful day on Wednesday I got it back to where it should be. I will create a clean local repo over the summer from production and we can go into Year 2 without all this mess.",
+          "evidence_link": "Git builds",
+          "tags": "git recovery; dirty repo; DDR public development; production rebuild; Year 2 preparation",
+          "source_type": "coding",
+          "source_label": "DDR admin and DDR  public development",
           "practice_action": "testing",
           "outcome_type": "question"
         }
@@ -3412,7 +3508,7 @@
       ]
     },
     {
-      "source": "reading:Sch�n and reflexive practice notes",
+      "source": "reading:Schï¿½n and reflexive practice notes",
       "target": "reframing",
       "value": 1,
       "events": [
@@ -3427,7 +3523,7 @@
           "evidence_link": "Annotated notebook Jan 8",
           "tags": "schon; reflexivity",
           "source_type": "reading",
-          "source_label": "Sch�n and reflexive practice notes",
+          "source_label": "Schï¿½n and reflexive practice notes",
           "practice_action": "reframing",
           "outcome_type": "clarification"
         }
@@ -3480,7 +3576,7 @@
     {
       "source": "documenting",
       "target": "confidence",
-      "value": 8,
+      "value": 9,
       "events": [
         {
           "id": "Y1-J032",
@@ -3599,6 +3695,21 @@
           "tags": "peer review; publication; experimental writing; itinerant space; visibility",
           "source_type": "critique",
           "source_label": "Article accepted for Itinerant Space peer reviewed experimental journal",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-P048",
+          "period": "Year 1 / Term 3",
+          "series": "practice",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "energised",
+          "reflexive_note": "The Head of Doctoral Programmes at the RCA said my design of the CVC + RCA proceedings was 'brilliant', and offered me the opportunity to design the identity for the forthcoming RCA Research Biennale 2027 showcase.",
+          "evidence_link": "DTP conversation and email confirmation with Hala Mansour",
+          "tags": "graphic design; proceedings; recognition; identity design; Research Biennale",
+          "source_type": "graphic design",
+          "source_label": "Feedback on CSV/RCA proceedings design",
           "practice_action": "documenting",
           "outcome_type": "confidence"
         }
@@ -5427,7 +5538,7 @@
     {
       "source": "writing",
       "target": "confidence",
-      "value": 1,
+      "value": 2,
       "events": [
         {
           "id": "Y1-W009",
@@ -5441,6 +5552,21 @@
           "tags": "script; presentation; method; research narrative; SoC; CVS",
           "source_type": "writing",
           "source_label": "Script of SoC RCA + CVS Royal Holloway presentation",
+          "practice_action": "writing",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-W013",
+          "period": "Year 1 / Term 3",
+          "series": "writing",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "energised",
+          "reflexive_note": "Phil kindly commented on my expanded abstract: 'The writing is very, very fluid. It draws the reader through—this is a subject completely outside my experience, but I was completely drawn in.' He also said, 'Your enthusiasm is at the centre of the PhD, and I think that’s great. More PhDs should have the stomach to do that.'",
+          "evidence_link": "DTP; audio recording of the interview onstage in front of DTP colleagues",
+          "tags": "DTP; audio recording; interview; peer review",
+          "source_type": "writing",
+          "source_label": "Researching and writing your PhD thesis, a user's guide' with Philip Clark",
           "practice_action": "writing",
           "outcome_type": "confidence"
         }
@@ -5641,6 +5767,160 @@
           "source_label": "Research presentation from Hotessa Laurence",
           "practice_action": "reframing",
           "outcome_type": "insight"
+        }
+      ]
+    },
+    {
+      "source": "conversation:RCA Friction research Group (FRG) brainstorming at MayDay Rooms",
+      "target": "reframing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J082",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "conversation",
+          "affect": "excited",
+          "reflexive_note": "I am now part of the RCA’s graphic design inner circle. It has taken 35 years to get here, and it feels an honour to be part of the future of graphic design across community, education and industry.",
+          "evidence_link": "June supervision audio recording",
+          "tags": "graphic design; graphic design mafia; inner circle; guerilla graphic design",
+          "source_type": "conversation",
+          "source_label": "RCA Friction research Group (FRG) brainstorming at MayDay Rooms",
+          "practice_action": "reframing",
+          "outcome_type": "question"
+        }
+      ]
+    },
+    {
+      "source": "data science:Getting started with quantitative data analysis for doctoral  research' with Ravi Sikhwal",
+      "target": "prototyping",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J083",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "method",
+          "medium": "presentation",
+          "affect": "curious",
+          "reflexive_note": "An insightful lecture on quant from Ravi at the School of Design. I am interested in exploring the value proposition of quantitative data analytics for my PhD and will endeavour to obtain a licence for SUPR-Q: a questionnaire used to measure the overall quality of a digital user experience, including usability, trust/credibility, appearance and loyalty. It is usually used for websites or digital products.",
+          "evidence_link": "",
+          "tags": "DTP; quantitative;  SUPR-Q; UMAP; data types",
+          "source_type": "data science",
+          "source_label": "Getting started with quantitative data analysis for doctoral  research' with Ravi Sikhwal",
+          "practice_action": "prototyping",
+          "outcome_type": "insight"
+        }
+      ]
+    },
+    {
+      "source": "conversation:Supervision tutorial encouragement",
+      "target": "mapping",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J084",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "energised",
+          "reflexive_note": "Stephen Boyd Davis said, 'Broadly speaking, I was extremely happy. I thought the way that you’ve taken on the advice we’ve given you was really, really a pleasure. Thank you. Things which were previously a bit confused have become much clearer, and you’ve clearly made significant progress with the practical work. I think you said last time we met that you’ve made more progress than you initially expected to, which is great.'",
+          "evidence_link": "",
+          "tags": "Supervision; feedback; REF; best in the world",
+          "source_type": "conversation",
+          "source_label": "Supervision tutorial encouragement",
+          "practice_action": "mapping",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "graphic design:Feedback on CSV/RCA proceedings design",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-P048",
+          "period": "Year 1 / Term 3",
+          "series": "practice",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "energised",
+          "reflexive_note": "The Head of Doctoral Programmes at the RCA said my design of the CVC + RCA proceedings was 'brilliant', and offered me the opportunity to design the identity for the forthcoming RCA Research Biennale 2027 showcase.",
+          "evidence_link": "DTP conversation and email confirmation with Hala Mansour",
+          "tags": "graphic design; proceedings; recognition; identity design; Research Biennale",
+          "source_type": "graphic design",
+          "source_label": "Feedback on CSV/RCA proceedings design",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "writing:Researching and writing your PhD thesis, a user's guide' with Philip Clark",
+      "target": "writing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-W013",
+          "period": "Year 1 / Term 3",
+          "series": "writing",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "energised",
+          "reflexive_note": "Phil kindly commented on my expanded abstract: 'The writing is very, very fluid. It draws the reader through—this is a subject completely outside my experience, but I was completely drawn in.' He also said, 'Your enthusiasm is at the centre of the PhD, and I think that’s great. More PhDs should have the stomach to do that.'",
+          "evidence_link": "DTP; audio recording of the interview onstage in front of DTP colleagues",
+          "tags": "DTP; audio recording; interview; peer review",
+          "source_type": "writing",
+          "source_label": "Researching and writing your PhD thesis, a user's guide' with Philip Clark",
+          "practice_action": "writing",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "coding:DDR admin and DDR  public development",
+      "target": "testing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J085",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "archive",
+          "medium": "code",
+          "affect": "unsettled",
+          "reflexive_note": "My local repo has dirty code, it is incredibly frustrating to loose so much work, days and days of work. Thank heaven I am using git commits. After a painful day on Wednesday I got it back to where it should be. I will create a clean local repo over the summer from production and we can go into Year 2 without all this mess.",
+          "evidence_link": "Git builds",
+          "tags": "git recovery; dirty repo; DDR public development; production rebuild; Year 2 preparation",
+          "source_type": "coding",
+          "source_label": "DDR admin and DDR  public development",
+          "practice_action": "testing",
+          "outcome_type": "question"
+        }
+      ]
+    },
+    {
+      "source": "critique:Adding titles and metadate to the latest wave of DDR archive from V&A",
+      "target": "reframing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-P049",
+          "period": "Year 1 / Term 3",
+          "series": "practice",
+          "theme": "archive",
+          "medium": "text",
+          "affect": "curious",
+          "reflexive_note": "Now the build is stable I can be more rigorous with digital asset descriptions. There are 45 new assets scanned from the V&A in May that really add flavour to the archive across Archer records, DEU Baynes and Roberts etc. I wonder whatever happened to the Design Dimension Project?. Now what the builds is stable I can confidently add assets, V&A box numbers and descriptions.",
+          "evidence_link": "June 2026 V&A DDR ingestion burst xls",
+          "tags": "V&A ingestion; DDR archive metadata; Design Dimension Project; Archer and DEU records; digital asset description",
+          "source_type": "critique",
+          "source_label": "Adding titles and metadate to the latest wave of DDR archive from V&A",
+          "practice_action": "reframing",
+          "outcome_type": "question"
         }
       ]
     }
@@ -6407,7 +6687,7 @@
       "evidence_link": "Annotated notebook Jan 8",
       "tags": "schon; reflexivity",
       "source_type": "reading",
-      "source_label": "Sch�n and reflexive practice notes",
+      "source_label": "Schï¿½n and reflexive practice notes",
       "practice_action": "reframing",
       "outcome_type": "clarification"
     },
@@ -7715,6 +7995,111 @@
       "source_label": "Research presentation from Hotessa Laurence",
       "practice_action": "reframing",
       "outcome_type": "insight"
+    },
+    {
+      "id": "Y1-J082",
+      "period": "Year 1 / Term 3",
+      "series": "journal",
+      "theme": "graphic design",
+      "medium": "conversation",
+      "affect": "excited",
+      "reflexive_note": "I am now part of the RCA’s graphic design inner circle. It has taken 35 years to get here, and it feels an honour to be part of the future of graphic design across community, education and industry.",
+      "evidence_link": "June supervision audio recording",
+      "tags": "graphic design; graphic design mafia; inner circle; guerilla graphic design",
+      "source_type": "conversation",
+      "source_label": "RCA Friction research Group (FRG) brainstorming at MayDay Rooms",
+      "practice_action": "reframing",
+      "outcome_type": "question"
+    },
+    {
+      "id": "Y1-J083",
+      "period": "Year 1 / Term 3",
+      "series": "journal",
+      "theme": "method",
+      "medium": "presentation",
+      "affect": "curious",
+      "reflexive_note": "An insightful lecture on quant from Ravi at the School of Design. I am interested in exploring the value proposition of quantitative data analytics for my PhD and will endeavour to obtain a licence for SUPR-Q: a questionnaire used to measure the overall quality of a digital user experience, including usability, trust/credibility, appearance and loyalty. It is usually used for websites or digital products.",
+      "evidence_link": "",
+      "tags": "DTP; quantitative;  SUPR-Q; UMAP; data types",
+      "source_type": "data science",
+      "source_label": "Getting started with quantitative data analysis for doctoral  research' with Ravi Sikhwal",
+      "practice_action": "prototyping",
+      "outcome_type": "insight"
+    },
+    {
+      "id": "Y1-J084",
+      "period": "Year 1 / Term 3",
+      "series": "journal",
+      "theme": "reflexivity",
+      "medium": "conversation",
+      "affect": "energised",
+      "reflexive_note": "Stephen Boyd Davis said, 'Broadly speaking, I was extremely happy. I thought the way that you’ve taken on the advice we’ve given you was really, really a pleasure. Thank you. Things which were previously a bit confused have become much clearer, and you’ve clearly made significant progress with the practical work. I think you said last time we met that you’ve made more progress than you initially expected to, which is great.'",
+      "evidence_link": "",
+      "tags": "Supervision; feedback; REF; best in the world",
+      "source_type": "conversation",
+      "source_label": "Supervision tutorial encouragement",
+      "practice_action": "mapping",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-P048",
+      "period": "Year 1 / Term 3",
+      "series": "practice",
+      "theme": "reflexivity",
+      "medium": "conversation",
+      "affect": "energised",
+      "reflexive_note": "The Head of Doctoral Programmes at the RCA said my design of the CVC + RCA proceedings was 'brilliant', and offered me the opportunity to design the identity for the forthcoming RCA Research Biennale 2027 showcase.",
+      "evidence_link": "DTP conversation and email confirmation with Hala Mansour",
+      "tags": "graphic design; proceedings; recognition; identity design; Research Biennale",
+      "source_type": "graphic design",
+      "source_label": "Feedback on CSV/RCA proceedings design",
+      "practice_action": "documenting",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-W013",
+      "period": "Year 1 / Term 3",
+      "series": "writing",
+      "theme": "reflexivity",
+      "medium": "conversation",
+      "affect": "energised",
+      "reflexive_note": "Phil kindly commented on my expanded abstract: 'The writing is very, very fluid. It draws the reader through—this is a subject completely outside my experience, but I was completely drawn in.' He also said, 'Your enthusiasm is at the centre of the PhD, and I think that’s great. More PhDs should have the stomach to do that.'",
+      "evidence_link": "DTP; audio recording of the interview onstage in front of DTP colleagues",
+      "tags": "DTP; audio recording; interview; peer review",
+      "source_type": "writing",
+      "source_label": "Researching and writing your PhD thesis, a user's guide' with Philip Clark",
+      "practice_action": "writing",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J085",
+      "period": "Year 1 / Term 3",
+      "series": "journal",
+      "theme": "archive",
+      "medium": "code",
+      "affect": "unsettled",
+      "reflexive_note": "My local repo has dirty code, it is incredibly frustrating to loose so much work, days and days of work. Thank heaven I am using git commits. After a painful day on Wednesday I got it back to where it should be. I will create a clean local repo over the summer from production and we can go into Year 2 without all this mess.",
+      "evidence_link": "Git builds",
+      "tags": "git recovery; dirty repo; DDR public development; production rebuild; Year 2 preparation",
+      "source_type": "coding",
+      "source_label": "DDR admin and DDR  public development",
+      "practice_action": "testing",
+      "outcome_type": "question"
+    },
+    {
+      "id": "Y1-P049",
+      "period": "Year 1 / Term 3",
+      "series": "practice",
+      "theme": "archive",
+      "medium": "text",
+      "affect": "curious",
+      "reflexive_note": "Now the build is stable I can be more rigorous with digital asset descriptions. There are 45 new assets scanned from the V&A in May that really add flavour to the archive across Archer records, DEU Baynes and Roberts etc. I wonder whatever happened to the Design Dimension Project?. Now what the builds is stable I can confidently add assets, V&A box numbers and descriptions.",
+      "evidence_link": "June 2026 V&A DDR ingestion burst xls",
+      "tags": "V&A ingestion; DDR archive metadata; Design Dimension Project; Archer and DEU records; digital asset description",
+      "source_type": "critique",
+      "source_label": "Adding titles and metadate to the latest wave of DDR archive from V&A",
+      "practice_action": "reframing",
+      "outcome_type": "question"
     }
   ],
   "lookups": [
