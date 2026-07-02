@@ -199,6 +199,46 @@ html.dark .cds--side-nav__submenu-title:hover {
   padding-bottom: 1rem;
 }
 
+.sankey-wrapper--fullscreen {
+  position: fixed !important;
+  inset: 0;
+  z-index: 9999;
+  overflow-y: auto;
+  border-radius: 0 !important;
+  border: none !important;
+  padding: 2rem !important;
+  background: var(--bg, #161616) !important;
+}
+
+.sankey-expand-btn {
+  position: absolute;
+  bottom: 0.625rem;
+  right: 0.625rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text, #f4f4f4);
+  opacity: 0.4;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s, background 0.15s;
+
+  &:hover {
+    opacity: 1;
+    background: var(--sankey-keyline, rgba(255,255,255,0.1));
+    border-color: var(--sankey-keyline, rgba(255,255,255,0.1));
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--cds-focus, #0f62fe);
+    outline-offset: 2px;
+    opacity: 1;
+  }
+}
+
 .sankey-pinned-tile {
   box-sizing: border-box;
 }

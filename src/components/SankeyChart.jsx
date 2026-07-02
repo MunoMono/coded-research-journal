@@ -4,7 +4,7 @@ import { sankey as d3sankey, sankeyLinkHorizontal } from 'd3-sankey'
 import activeSankeySource from '../data/active-sankey-source.json'
 import sankeyData from '../data/sankey.json'
 import { Select, SelectItem, Button, Tile, Grid, Column, Search, DatePicker, DatePickerInput } from '@carbon/react'
-import { Download } from '@carbon/icons-react'
+import { Download, Maximize, Minimize } from '@carbon/icons-react'
 
 const rawCsvModules = import.meta.glob('../../data/csv/*.csv', { query: '?raw', import: 'default' })
 
@@ -45,6 +45,7 @@ export default function SankeyChart({ width = 900, height = 360 }) {
   const [dateRange, setDateRange] = useState({ start: null, end: null })
   const [datePickerKey, setDatePickerKey] = useState(0)
   const [containerWidth, setContainerWidth] = useState(width)
+  const [fullscreen, setFullscreen] = useState(false)
   const isCompactLayout = containerWidth < 672
 
   const normalizeLookupText = value => (value == null ? '' : String(value).trim())
@@ -567,6 +568,13 @@ export default function SankeyChart({ width = 900, height = 360 }) {
     return () => { svg.selectAll('*').interrupt() }
   }, [width, height, filteredRows, containerWidth, data, lookupsMap, selectedEventId, selectedEventNodeIds])
 
+  useEffect(() => {
+    if (!fullscreen) return
+    const handleKeyDown = (e) => { if (e.key === 'Escape') setFullscreen(false) }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [fullscreen])
+
   const downloadBlob = (blob, filename) => {
     const url = URL.createObjectURL(blob)
     const anchor = document.createElement('a')
@@ -682,9 +690,17 @@ export default function SankeyChart({ width = 900, height = 360 }) {
 
   return (
     <div>
-      <div ref={wrapperRef} className="sankey-wrapper" style={{ position: 'relative', width: '100%' }}>
+      <div ref={wrapperRef} className={`sankey-wrapper${fullscreen ? ' sankey-wrapper--fullscreen' : ''}`} style={{ position: 'relative', width: '100%' }}>
         <svg ref={ref} className="sankey-chart" style={{ width: '100%', height: `${isCompactLayout ? Math.max(420, Math.min(height, Math.round((containerWidth || width) * 1.12))) : height}px` }} />
         <div ref={tooltipRef} className="sankey-tooltip" style={{ position: 'absolute', pointerEvents: 'none', opacity: 0, background: 'rgba(0,0,0,0.82)', color: '#fff', padding: 10, borderRadius: 6, boxShadow: '0 6px 18px rgba(0,0,0,0.35)', fontSize: 13, maxWidth: isCompactLayout ? Math.max(220, (containerWidth || width) - 32) : 420, zIndex: 9999 }} />
+        <button
+          className="sankey-expand-btn"
+          onClick={() => setFullscreen(f => !f)}
+          aria-label={fullscreen ? 'Exit fullscreen' : 'Expand to fullscreen'}
+          title={fullscreen ? 'Exit fullscreen (Esc)' : 'Expand to fullscreen'}
+        >
+          {fullscreen ? <Minimize size={16} /> : <Maximize size={16} />}
+        </button>
         {pinned && (
           <Tile className="sankey-pinned-tile" style={{ position: isCompactLayout ? 'static' : 'absolute', right: isCompactLayout ? 'auto' : 10, bottom: isCompactLayout ? 'auto' : 10, width: isCompactLayout ? '100%' : 320, maxWidth: isCompactLayout ? '100%' : 320, marginTop: isCompactLayout ? 12 : 0, maxHeight: isCompactLayout ? 'none' : 300, overflow: 'auto' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
