@@ -203,11 +203,20 @@ html.dark .cds--side-nav__submenu-title:hover {
   position: fixed !important;
   inset: 0;
   z-index: 9999;
-  overflow-y: auto;
+  overflow: hidden;
   border-radius: 0 !important;
   border: none !important;
-  padding: 2rem !important;
+  padding: 1rem !important;
   background: var(--bg, #161616) !important;
+  display: flex;
+  flex-direction: column;
+
+  .sankey-chart {
+    flex: 1 1 auto;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0;
+  }
 }
 
 .sankey-expand-btn {
