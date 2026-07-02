@@ -229,7 +229,7 @@
       "id": "reading:Visualisation ethics reading"
     },
     {
-      "id": "coding:GraphQl parsing to Granite ML model"
+      "id": "coding:GraphQL parsing to Granite ML model"
     },
     {
       "id": "data science:Value weighting test using intensity score"
@@ -464,6 +464,18 @@
     },
     {
       "id": "critique:Adding titles and metadate to the latest wave of DDR archive from V&A"
+    },
+    {
+      "id": "coding:Dead end coding"
+    },
+    {
+      "id": "coding:Yr 1 release of DDR archive"
+    },
+    {
+      "id": "writing:Summer writing bridging the theory and practice"
+    },
+    {
+      "id": "reading:Summer reading folding the practice into the theory"
     }
   ],
   "links": [
@@ -1744,7 +1756,7 @@
     {
       "source": "reframing",
       "target": "clarification",
-      "value": 8,
+      "value": 10,
       "events": [
         {
           "id": "Y1-P002",
@@ -1863,6 +1875,36 @@
           "tags": "oral history; archival LLM; visual analytics; methodology; reactivation",
           "source_type": "making",
           "source_label": "Methodological rationale diagram for archival reactivation",
+          "practice_action": "reframing",
+          "outcome_type": "clarification"
+        },
+        {
+          "id": "Y1-J085",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "method",
+          "medium": "text",
+          "affect": "curious",
+          "reflexive_note": "Bought an RCA A5 notebook with square grid to write notes on how I can fold the practice in to the theory. This will take time. Something to do on the LHR-HKG-LHR flights.",
+          "evidence_link": "Sketchbook journalling",
+          "tags": "Writing; mind mapping; questions",
+          "source_type": "writing",
+          "source_label": "Summer writing bridging the theory and practice",
+          "practice_action": "reframing",
+          "outcome_type": "clarification"
+        },
+        {
+          "id": "Y1-J086",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "method",
+          "medium": "text",
+          "affect": "curious",
+          "reflexive_note": "Need to work on a more systematic literature pipeline to build out more rigorous way of situating the thesis.",
+          "evidence_link": "Zotero reading funnel",
+          "tags": "Zotero; reading; theory; synthesis",
+          "source_type": "reading",
+          "source_label": "Summer reading folding the practice into the theory",
           "practice_action": "reframing",
           "outcome_type": "clarification"
         }
@@ -3037,7 +3079,7 @@
     {
       "source": "prototyping",
       "target": "confidence",
-      "value": 9,
+      "value": 10,
       "events": [
         {
           "id": "Y1-J022",
@@ -3110,7 +3152,7 @@
           "evidence_link": "Commit filters-01",
           "tags": "filters; affect",
           "source_type": "coding",
-          "source_label": "GraphQl parsing to Granite ML model",
+          "source_label": "GraphQL parsing to Granite ML model",
           "practice_action": "prototyping",
           "outcome_type": "confidence"
         },
@@ -3171,6 +3213,21 @@
           "tags": "print; poster",
           "source_type": "graphic design",
           "source_label": "Poster draft of sankey for APR",
+          "practice_action": "prototyping",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-P051",
+          "period": "Year 1 / Term 3",
+          "series": "practice",
+          "theme": "archive",
+          "medium": "code",
+          "affect": "energised",
+          "reflexive_note": "Relieved I achieved my objective of releasing a stable version on the application at the end of Yr 1. It's far better than I could have imagined in September 2025. I can now focus development on ML in Yr 2.",
+          "evidence_link": "ddrarchive.org / admin.ddrarchive.org",
+          "tags": "ddrarchive.org; admin.ddrarchive.org; git",
+          "source_type": "coding",
+          "source_label": "Yr 1 release of DDR archive",
           "practice_action": "prototyping",
           "outcome_type": "confidence"
         }
@@ -4002,7 +4059,7 @@
       ]
     },
     {
-      "source": "coding:GraphQl parsing to Granite ML model",
+      "source": "coding:GraphQL parsing to Granite ML model",
       "target": "prototyping",
       "value": 1,
       "events": [
@@ -4017,7 +4074,7 @@
           "evidence_link": "Commit filters-01",
           "tags": "filters; affect",
           "source_type": "coding",
-          "source_label": "GraphQl parsing to Granite ML model",
+          "source_label": "GraphQL parsing to Granite ML model",
           "practice_action": "prototyping",
           "outcome_type": "confidence"
         }
@@ -4770,7 +4827,7 @@
           "medium": "conversation",
           "affect": "excited",
           "reflexive_note": "The reading helped justify a dataset made of coded practice events rather than only conventional metrics.",
-          "evidence_link": "Workshop notes / bookmarks",
+          "evidence_link": "Workshop notes; bookmarks",
           "tags": "observable; sankey",
           "source_type": "workshop",
           "source_label": "Observable / D3 gallery review",
@@ -4792,7 +4849,7 @@
           "medium": "conversation",
           "affect": "excited",
           "reflexive_note": "The reading helped justify a dataset made of coded practice events rather than only conventional metrics.",
-          "evidence_link": "Workshop notes / bookmarks",
+          "evidence_link": "Workshop notes; bookmarks",
           "tags": "observable; sankey",
           "source_type": "workshop",
           "source_label": "Observable / D3 gallery review",
@@ -5923,6 +5980,116 @@
           "outcome_type": "question"
         }
       ]
+    },
+    {
+      "source": "coding:Dead end coding",
+      "target": "coding",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-P050",
+          "period": "Year 1 / Term 3",
+          "series": "practice",
+          "theme": "reflexivity",
+          "medium": "code",
+          "affect": "frustrated",
+          "reflexive_note": "Too many hours wasted on dirty repo git commits and ghost code. I will create a clean local dev repo over the summer that ensures this bad code container pain will go.",
+          "evidence_link": "Git builds",
+          "tags": "",
+          "source_type": "coding",
+          "source_label": "Dead end coding",
+          "practice_action": "coding",
+          "outcome_type": "dead end"
+        }
+      ]
+    },
+    {
+      "source": "coding",
+      "target": "dead end",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-P050",
+          "period": "Year 1 / Term 3",
+          "series": "practice",
+          "theme": "reflexivity",
+          "medium": "code",
+          "affect": "frustrated",
+          "reflexive_note": "Too many hours wasted on dirty repo git commits and ghost code. I will create a clean local dev repo over the summer that ensures this bad code container pain will go.",
+          "evidence_link": "Git builds",
+          "tags": "",
+          "source_type": "coding",
+          "source_label": "Dead end coding",
+          "practice_action": "coding",
+          "outcome_type": "dead end"
+        }
+      ]
+    },
+    {
+      "source": "coding:Yr 1 release of DDR archive",
+      "target": "prototyping",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-P051",
+          "period": "Year 1 / Term 3",
+          "series": "practice",
+          "theme": "archive",
+          "medium": "code",
+          "affect": "energised",
+          "reflexive_note": "Relieved I achieved my objective of releasing a stable version on the application at the end of Yr 1. It's far better than I could have imagined in September 2025. I can now focus development on ML in Yr 2.",
+          "evidence_link": "ddrarchive.org / admin.ddrarchive.org",
+          "tags": "ddrarchive.org; admin.ddrarchive.org; git",
+          "source_type": "coding",
+          "source_label": "Yr 1 release of DDR archive",
+          "practice_action": "prototyping",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "writing:Summer writing bridging the theory and practice",
+      "target": "reframing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J085",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "method",
+          "medium": "text",
+          "affect": "curious",
+          "reflexive_note": "Bought an RCA A5 notebook with square grid to write notes on how I can fold the practice in to the theory. This will take time. Something to do on the LHR-HKG-LHR flights.",
+          "evidence_link": "Sketchbook journalling",
+          "tags": "Writing; mind mapping; questions",
+          "source_type": "writing",
+          "source_label": "Summer writing bridging the theory and practice",
+          "practice_action": "reframing",
+          "outcome_type": "clarification"
+        }
+      ]
+    },
+    {
+      "source": "reading:Summer reading folding the practice into the theory",
+      "target": "reframing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J086",
+          "period": "Year 1 / Term 3",
+          "series": "journal",
+          "theme": "method",
+          "medium": "text",
+          "affect": "curious",
+          "reflexive_note": "Need to work on a more systematic literature pipeline to build out more rigorous way of situating the thesis.",
+          "evidence_link": "Zotero reading funnel",
+          "tags": "Zotero; reading; theory; synthesis",
+          "source_type": "reading",
+          "source_label": "Summer reading folding the practice into the theory",
+          "practice_action": "reframing",
+          "outcome_type": "clarification"
+        }
+      ]
     }
   ],
   "filters": {
@@ -6927,7 +7094,7 @@
       "evidence_link": "Commit filters-01",
       "tags": "filters; affect",
       "source_type": "coding",
-      "source_label": "GraphQl parsing to Granite ML model",
+      "source_label": "GraphQL parsing to Granite ML model",
       "practice_action": "prototyping",
       "outcome_type": "confidence"
     },
@@ -7404,7 +7571,7 @@
       "medium": "conversation",
       "affect": "excited",
       "reflexive_note": "The reading helped justify a dataset made of coded practice events rather than only conventional metrics.",
-      "evidence_link": "Workshop notes / bookmarks",
+      "evidence_link": "Workshop notes; bookmarks",
       "tags": "observable; sankey",
       "source_type": "workshop",
       "source_label": "Observable / D3 gallery review",
@@ -8100,6 +8267,66 @@
       "source_label": "Adding titles and metadate to the latest wave of DDR archive from V&A",
       "practice_action": "reframing",
       "outcome_type": "question"
+    },
+    {
+      "id": "Y1-P050",
+      "period": "Year 1 / Term 3",
+      "series": "practice",
+      "theme": "reflexivity",
+      "medium": "code",
+      "affect": "frustrated",
+      "reflexive_note": "Too many hours wasted on dirty repo git commits and ghost code. I will create a clean local dev repo over the summer that ensures this bad code container pain will go.",
+      "evidence_link": "Git builds",
+      "tags": "",
+      "source_type": "coding",
+      "source_label": "Dead end coding",
+      "practice_action": "coding",
+      "outcome_type": "dead end"
+    },
+    {
+      "id": "Y1-P051",
+      "period": "Year 1 / Term 3",
+      "series": "practice",
+      "theme": "archive",
+      "medium": "code",
+      "affect": "energised",
+      "reflexive_note": "Relieved I achieved my objective of releasing a stable version on the application at the end of Yr 1. It's far better than I could have imagined in September 2025. I can now focus development on ML in Yr 2.",
+      "evidence_link": "ddrarchive.org / admin.ddrarchive.org",
+      "tags": "ddrarchive.org; admin.ddrarchive.org; git",
+      "source_type": "coding",
+      "source_label": "Yr 1 release of DDR archive",
+      "practice_action": "prototyping",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J085",
+      "period": "Year 1 / Term 3",
+      "series": "journal",
+      "theme": "method",
+      "medium": "text",
+      "affect": "curious",
+      "reflexive_note": "Bought an RCA A5 notebook with square grid to write notes on how I can fold the practice in to the theory. This will take time. Something to do on the LHR-HKG-LHR flights.",
+      "evidence_link": "Sketchbook journalling",
+      "tags": "Writing; mind mapping; questions",
+      "source_type": "writing",
+      "source_label": "Summer writing bridging the theory and practice",
+      "practice_action": "reframing",
+      "outcome_type": "clarification"
+    },
+    {
+      "id": "Y1-J086",
+      "period": "Year 1 / Term 3",
+      "series": "journal",
+      "theme": "method",
+      "medium": "text",
+      "affect": "curious",
+      "reflexive_note": "Need to work on a more systematic literature pipeline to build out more rigorous way of situating the thesis.",
+      "evidence_link": "Zotero reading funnel",
+      "tags": "Zotero; reading; theory; synthesis",
+      "source_type": "reading",
+      "source_label": "Summer reading folding the practice into the theory",
+      "practice_action": "reframing",
+      "outcome_type": "clarification"
     }
   ],
   "lookups": [
