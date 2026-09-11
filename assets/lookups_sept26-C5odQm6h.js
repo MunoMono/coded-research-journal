@@ -2,6 +2,9 @@ const e=`\uFEFFfield,value,label,group,description\r
 period,Year 1 / Term 1,Year 1 / Term 1,time,Time period used in the coded research journal timeline (Year 1 / Term 1)\r
 period,Year 1 / Term 2,Year 1 / Term 2,time,Time period used in the coded research journal timeline (Year 1 / Term 2)\r
 period,Year 1 / Term 3,Year 1 / Term 3,time,Time period used in the coded research journal timeline (Year 1 / Term 3)\r
+period,Year 2 / Term 1,Year 2 / Term 1,time,Time period used in the coded research journal timeline (Year 2 / Term 1)\r
+period,Year 2 / Term 2,Year 2 / Term 2,time,Time period used in the coded research journal timeline (Year 2 / Term 2)\r
+period,Year 2 / Term 3,Year 2 / Term 3,time,Time period used in the coded research journal timeline (Year 2 / Term 3)\r
 source_type,archival research,Archival Research,input,Input category for archival research in the research process\r
 source_type,coding,Coding,input,Input category for coding in the research process\r
 source_type,conversation,Conversation,input,Input category for conversation in the research process\r
