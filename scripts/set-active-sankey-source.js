@@ -40,6 +40,17 @@ function listEventFiles() {
     .sort()
 }
 
+function listLookupFiles() {
+  if (!fs.existsSync(CSV_DIR)) {
+    console.error('CSV folder not found:', CSV_DIR)
+    process.exit(1)
+  }
+
+  return fs.readdirSync(CSV_DIR)
+    .filter(file => file.endsWith('.csv') && /lookups/i.test(file))
+    .sort()
+}
+
 function validateFileName(fileName, availableFiles) {
   if (!fileName) {
     console.error('No CSV filename provided.')
@@ -52,6 +63,17 @@ function validateFileName(fileName, availableFiles) {
     availableFiles.forEach(file => console.error(` - ${file}`))
     process.exit(1)
   }
+}
+
+function inferLookupFile(eventsFile, availableLookupFiles) {
+  if (!eventsFile) return ''
+
+  const suffix = eventsFile.replace(/^practice_events/i, '')
+  const directMatch = `lookups${suffix}`
+  if (availableLookupFiles.includes(directMatch)) return directMatch
+
+  const normalizedEventName = eventsFile.replace(/^practice_events_?/i, '').replace(/\.csv$/i, '')
+  return availableLookupFiles.find(file => file.includes(normalizedEventName)) || ''
 }
 
 function askQuestion(prompt) {
@@ -75,6 +97,7 @@ function rebuildSankey() {
 
 async function main() {
   const availableFiles = listEventFiles()
+  const availableLookupFiles = listLookupFiles()
   if (availableFiles.length === 0) {
     console.error('No practice_events CSV files found in', CSV_DIR)
     process.exit(1)
@@ -101,12 +124,16 @@ async function main() {
 
   validateFileName(selectedFile, availableFiles)
 
+  const inferredLookupFile = inferLookupFile(selectedFile, availableLookupFiles)
+  const lookupsFile = inferredLookupFile || currentConfig.lookupsFile || 'lookups_sept25_july26_updated.csv'
+
   writeSourceConfig({
     eventsFile: selectedFile,
-    lookupsFile: currentConfig.lookupsFile || 'lookups_sept25_july26_updated.csv',
+    lookupsFile,
   })
 
   console.log(`Updated active Sankey events CSV to ${selectedFile}`)
+  console.log(`Using lookups CSV ${lookupsFile}`)
   rebuildSankey()
 }
 
