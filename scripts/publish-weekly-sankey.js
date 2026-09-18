@@ -36,7 +36,7 @@ function runCapture(command, args, options = {}) {
     process.exit(result.status ?? 1)
   }
 
-  return (result.stdout || '').trim()
+  return result.stdout || ''
 }
 
 function loadSourceConfig() {
