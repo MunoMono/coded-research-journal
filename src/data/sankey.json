@@ -452,6 +452,18 @@
     },
     {
       "id": "writing:Oral history discussion guide"
+    },
+    {
+      "id": "coding:Application recovery from wrong commit"
+    },
+    {
+      "id": "critique:Critical reading and writing for Turin conference paper"
+    },
+    {
+      "id": "graphic design:Design of sassy UMAP visualisations in 3D"
+    },
+    {
+      "id": "coding:Towards C2PA (Coalition for Content Provenance and Authenticity) compliance"
     }
   ],
   "links": [
@@ -1286,7 +1298,7 @@
     {
       "source": "testing",
       "target": "clarification",
-      "value": 7,
+      "value": 8,
       "events": [
         {
           "id": "Y1-J005",
@@ -1390,6 +1402,21 @@
           "tags": "palette; category",
           "source_type": "graphic design",
           "source_label": "Colour system test for themes",
+          "practice_action": "testing",
+          "outcome_type": "clarification"
+        },
+        {
+          "id": "Y1-J085",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "ethics",
+          "medium": "code",
+          "affect": "curious",
+          "reflexive_note": "Stumbled across the C2PA compliance in a paper this week, my research instrument is about 73% compliant now with selected research outputs are signed as C2PA manifests that record source passages as ingredients and capture the creation action. The resulting manifests are independently checked for validity and hard-binding tamper detection. This tests technical interoperability with the C2PA data model and validation tooling; it does not claim C2PA conformance, certification or media authenticity.",
+          "evidence_link": "",
+          "tags": "provenance; standards; compliance; responsible artificial intelligene",
+          "source_type": "coding",
+          "source_label": "Towards C2PA (Coalition for Content Provenance and Authenticity) compliance",
           "practice_action": "testing",
           "outcome_type": "clarification"
         }
@@ -1598,7 +1625,7 @@
     {
       "source": "prototyping",
       "target": "clarification",
-      "value": 7,
+      "value": 8,
       "events": [
         {
           "id": "Y1-P001",
@@ -1702,6 +1729,21 @@
           "tags": "keywords; media assets; ingestion; archive; search; metadata",
           "source_type": "coding",
           "source_label": "Keyword functionality for API database media asset ingestion",
+          "practice_action": "prototyping",
+          "outcome_type": "clarification"
+        },
+        {
+          "id": "Y1-J083",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "code",
+          "affect": "frustrated",
+          "reflexive_note": "The dirty dev repo on local commited an old build; hell on earth to fix it, thank heavens I do a daily repo back up on my NAS. Fixed it in about an hour. Wold have lost 2 months work. Never again.",
+          "evidence_link": "",
+          "tags": "git; NAS; recovery; backup; relief",
+          "source_type": "coding",
+          "source_label": "Application recovery from wrong commit",
           "practice_action": "prototyping",
           "outcome_type": "clarification"
         }
@@ -2522,7 +2564,7 @@
     {
       "source": "testing",
       "target": "confidence",
-      "value": 3,
+      "value": 4,
       "events": [
         {
           "id": "Y1-J018",
@@ -2566,6 +2608,21 @@
           "tags": "stress test; dummy data",
           "source_type": "coding",
           "source_label": "Dummy dataset generation for stress test",
+          "practice_action": "testing",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J084",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "data science",
+          "medium": "image",
+          "affect": "energised",
+          "reflexive_note": "I'm loving exploring the nexus of graphic design, user interaction and data science. The TensorFlow projector poeject is an excellent reference.",
+          "evidence_link": "",
+          "tags": "UMAP; embedding projector; semantic atlas; semantic neighbourhoods; comparitive views; temporal and documentary change; critical inquiry",
+          "source_type": "graphic design",
+          "source_label": "Design of sassy UMAP visualisations in 3D",
           "practice_action": "testing",
           "outcome_type": "confidence"
         }
@@ -5451,7 +5508,7 @@
     {
       "source": "writing",
       "target": "confidence",
-      "value": 2,
+      "value": 3,
       "events": [
         {
           "id": "Y1-W009",
@@ -5480,6 +5537,21 @@
           "tags": "oral history; qualitative, discussion guide; semi-strucured interview",
           "source_type": "writing",
           "source_label": "Oral history discussion guide",
+          "practice_action": "writing",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-W015",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "method",
+          "medium": "text",
+          "affect": "reflective",
+          "reflexive_note": "Really pleased to get back into some litereature critical reading and writing. Some excellent papers on synthetic heritage and ML inference has warranted the claims in my Turin paper.",
+          "evidence_link": "",
+          "tags": "literature review; retreival augmented inference; zotero; thesis; conference paper",
+          "source_type": "critique",
+          "source_label": "Critical reading and writing for Turin conference paper",
           "practice_action": "writing",
           "outcome_type": "confidence"
         }
@@ -5768,6 +5840,94 @@
           "source_label": "Oral history discussion guide",
           "practice_action": "writing",
           "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "coding:Application recovery from wrong commit",
+      "target": "prototyping",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J083",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "code",
+          "affect": "frustrated",
+          "reflexive_note": "The dirty dev repo on local commited an old build; hell on earth to fix it, thank heavens I do a daily repo back up on my NAS. Fixed it in about an hour. Wold have lost 2 months work. Never again.",
+          "evidence_link": "",
+          "tags": "git; NAS; recovery; backup; relief",
+          "source_type": "coding",
+          "source_label": "Application recovery from wrong commit",
+          "practice_action": "prototyping",
+          "outcome_type": "clarification"
+        }
+      ]
+    },
+    {
+      "source": "critique:Critical reading and writing for Turin conference paper",
+      "target": "writing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-W015",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "method",
+          "medium": "text",
+          "affect": "reflective",
+          "reflexive_note": "Really pleased to get back into some litereature critical reading and writing. Some excellent papers on synthetic heritage and ML inference has warranted the claims in my Turin paper.",
+          "evidence_link": "",
+          "tags": "literature review; retreival augmented inference; zotero; thesis; conference paper",
+          "source_type": "critique",
+          "source_label": "Critical reading and writing for Turin conference paper",
+          "practice_action": "writing",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "graphic design:Design of sassy UMAP visualisations in 3D",
+      "target": "testing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J084",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "data science",
+          "medium": "image",
+          "affect": "energised",
+          "reflexive_note": "I'm loving exploring the nexus of graphic design, user interaction and data science. The TensorFlow projector poeject is an excellent reference.",
+          "evidence_link": "",
+          "tags": "UMAP; embedding projector; semantic atlas; semantic neighbourhoods; comparitive views; temporal and documentary change; critical inquiry",
+          "source_type": "graphic design",
+          "source_label": "Design of sassy UMAP visualisations in 3D",
+          "practice_action": "testing",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "coding:Towards C2PA (Coalition for Content Provenance and Authenticity) compliance",
+      "target": "testing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J085",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "ethics",
+          "medium": "code",
+          "affect": "curious",
+          "reflexive_note": "Stumbled across the C2PA compliance in a paper this week, my research instrument is about 73% compliant now with selected research outputs are signed as C2PA manifests that record source passages as ingredients and capture the creation action. The resulting manifests are independently checked for validity and hard-binding tamper detection. This tests technical interoperability with the C2PA data model and validation tooling; it does not claim C2PA conformance, certification or media authenticity.",
+          "evidence_link": "",
+          "tags": "provenance; standards; compliance; responsible artificial intelligene",
+          "source_type": "coding",
+          "source_label": "Towards C2PA (Coalition for Content Provenance and Authenticity) compliance",
+          "practice_action": "testing",
+          "outcome_type": "clarification"
         }
       ]
     }
@@ -7888,6 +8048,66 @@
       "source_label": "Oral history discussion guide",
       "practice_action": "writing",
       "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J083",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "reflexivity",
+      "medium": "code",
+      "affect": "frustrated",
+      "reflexive_note": "The dirty dev repo on local commited an old build; hell on earth to fix it, thank heavens I do a daily repo back up on my NAS. Fixed it in about an hour. Wold have lost 2 months work. Never again.",
+      "evidence_link": "",
+      "tags": "git; NAS; recovery; backup; relief",
+      "source_type": "coding",
+      "source_label": "Application recovery from wrong commit",
+      "practice_action": "prototyping",
+      "outcome_type": "clarification"
+    },
+    {
+      "id": "Y1-W015",
+      "period": "Year 2 / Term 1",
+      "series": "writing",
+      "theme": "method",
+      "medium": "text",
+      "affect": "reflective",
+      "reflexive_note": "Really pleased to get back into some litereature critical reading and writing. Some excellent papers on synthetic heritage and ML inference has warranted the claims in my Turin paper.",
+      "evidence_link": "",
+      "tags": "literature review; retreival augmented inference; zotero; thesis; conference paper",
+      "source_type": "critique",
+      "source_label": "Critical reading and writing for Turin conference paper",
+      "practice_action": "writing",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J084",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "data science",
+      "medium": "image",
+      "affect": "energised",
+      "reflexive_note": "I'm loving exploring the nexus of graphic design, user interaction and data science. The TensorFlow projector poeject is an excellent reference.",
+      "evidence_link": "",
+      "tags": "UMAP; embedding projector; semantic atlas; semantic neighbourhoods; comparitive views; temporal and documentary change; critical inquiry",
+      "source_type": "graphic design",
+      "source_label": "Design of sassy UMAP visualisations in 3D",
+      "practice_action": "testing",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J085",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "ethics",
+      "medium": "code",
+      "affect": "curious",
+      "reflexive_note": "Stumbled across the C2PA compliance in a paper this week, my research instrument is about 73% compliant now with selected research outputs are signed as C2PA manifests that record source passages as ingredients and capture the creation action. The resulting manifests are independently checked for validity and hard-binding tamper detection. This tests technical interoperability with the C2PA data model and validation tooling; it does not claim C2PA conformance, certification or media authenticity.",
+      "evidence_link": "",
+      "tags": "provenance; standards; compliance; responsible artificial intelligene",
+      "source_type": "coding",
+      "source_label": "Towards C2PA (Coalition for Content Provenance and Authenticity) compliance",
+      "practice_action": "testing",
+      "outcome_type": "clarification"
     }
   ],
   "lookups": [
