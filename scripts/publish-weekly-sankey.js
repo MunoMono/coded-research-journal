@@ -78,7 +78,7 @@ function getTrackedFiles(config) {
 
 function getStatusLines() {
   const output = runCapture('git', ['status', '--short'])
-  return output ? output.split('\n').filter(Boolean) : []
+  return output ? output.trimEnd().split('\n').filter(Boolean) : []
 }
 
 function getAllowedStatusPaths(allowedFiles) {
