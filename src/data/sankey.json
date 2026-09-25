@@ -464,6 +464,21 @@
     },
     {
       "id": "coding:Towards C2PA (Coalition for Content Provenance and Authenticity) compliance"
+    },
+    {
+      "id": "supervision:Thesis opening out"
+    },
+    {
+      "id": "documenting:Theoretical framework"
+    },
+    {
+      "id": "graphic design:UMAP projector diagram"
+    },
+    {
+      "id": "conversation:Oral history confirmation"
+    },
+    {
+      "id": "writing:Development of Turin conference presentation"
     }
   ],
   "links": [
@@ -1059,7 +1074,7 @@
     {
       "source": "reframing",
       "target": "insight",
-      "value": 14,
+      "value": 15,
       "events": [
         {
           "id": "Y1-J004",
@@ -1270,6 +1285,21 @@
           "source_label": "Research presentation from Hotessa Laurence",
           "practice_action": "reframing",
           "outcome_type": "insight"
+        },
+        {
+          "id": "Y1-J087",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "method",
+          "medium": "diagram",
+          "affect": "unsettled",
+          "reflexive_note": "Some great insights from Methods of Intent discussion with Wenbo Ai on theory. I feel my framework of critical design historiography, critical archival theory and critical computational approaches will go a long way to passing the confirmation exam",
+          "evidence_link": "PhD theoretical model diagram",
+          "tags": "theoretical framework; critical design historiography; critical archival theory; critical computation; confirmation exam",
+          "source_type": "documenting",
+          "source_label": "Theoretical framework",
+          "practice_action": "reframing",
+          "outcome_type": "insight"
         }
       ]
     },
@@ -1298,7 +1328,7 @@
     {
       "source": "testing",
       "target": "clarification",
-      "value": 8,
+      "value": 9,
       "events": [
         {
           "id": "Y1-J005",
@@ -1414,9 +1444,24 @@
           "affect": "curious",
           "reflexive_note": "Stumbled across the C2PA compliance in a paper this week, my research instrument is about 73% compliant now with selected research outputs are signed as C2PA manifests that record source passages as ingredients and capture the creation action. The resulting manifests are independently checked for validity and hard-binding tamper detection. This tests technical interoperability with the C2PA data model and validation tooling; it does not claim C2PA conformance, certification or media authenticity.",
           "evidence_link": "",
-          "tags": "provenance; standards; compliance; responsible artificial intelligene",
+          "tags": "provenance; standards; compliance; responsible artificial intelligence",
           "source_type": "coding",
           "source_label": "Towards C2PA (Coalition for Content Provenance and Authenticity) compliance",
+          "practice_action": "testing",
+          "outcome_type": "clarification"
+        },
+        {
+          "id": "Y1-J086",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "opened",
+          "reflexive_note": "Excellent supervision with Teal Triggs, key take away being I have a 'go' to develop the thesis sequence of chapters based on Patrick Dunleavy's open out model pp.59",
+          "evidence_link": "Supervision transcript",
+          "tags": "supervision; thesis structure; open-out model; Patrick Dunleavy; chapter sequencing",
+          "source_type": "supervision",
+          "source_label": "Thesis opening out",
           "practice_action": "testing",
           "outcome_type": "clarification"
         }
@@ -1739,7 +1784,7 @@
           "theme": "reflexivity",
           "medium": "code",
           "affect": "frustrated",
-          "reflexive_note": "The dirty dev repo on local commited an old build; hell on earth to fix it, thank heavens I do a daily repo back up on my NAS. Fixed it in about an hour. Wold have lost 2 months work. Never again.",
+          "reflexive_note": "The dirty dev repo on local committed an old build; hell on earth to fix it, thank heavens I do a daily repo back up on my NAS. Fixed it in about an hour. Would have lost 2 months work. Never again.",
           "evidence_link": "",
           "tags": "git; NAS; recovery; backup; relief",
           "source_type": "coding",
@@ -2618,9 +2663,9 @@
           "theme": "data science",
           "medium": "image",
           "affect": "energised",
-          "reflexive_note": "I'm loving exploring the nexus of graphic design, user interaction and data science. The TensorFlow projector poeject is an excellent reference.",
+          "reflexive_note": "I'm loving exploring the nexus of graphic design, user interaction and data science. The TensorFlow projector project is an excellent reference.",
           "evidence_link": "",
-          "tags": "UMAP; embedding projector; semantic atlas; semantic neighbourhoods; comparitive views; temporal and documentary change; critical inquiry",
+          "tags": "UMAP; embedding projector; semantic atlas; semantic neighbourhoods; comparative views; temporal and documentary change; critical inquiry",
           "source_type": "graphic design",
           "source_label": "Design of sassy UMAP visualisations in 3D",
           "practice_action": "testing",
@@ -3546,7 +3591,7 @@
     {
       "source": "documenting",
       "target": "confidence",
-      "value": 8,
+      "value": 10,
       "events": [
         {
           "id": "Y1-J032",
@@ -3665,6 +3710,36 @@
           "tags": "peer review; publication; experimental writing; itinerant space; visibility",
           "source_type": "critique",
           "source_label": "Article accepted for Itinerant Space peer reviewed experimental journal",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J088",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "visualisation",
+          "medium": "diagram",
+          "affect": "energised",
+          "reflexive_note": "Nice to get back into graphic design and build out the UMAP diagram. And yes, I am still a world class graphic designer.",
+          "evidence_link": "UMAP projector | testamentary traces in play diagram",
+          "tags": "UMAP; visualisation; semantic projection; testamentary traces; graphic design",
+          "source_type": "graphic design",
+          "source_label": "UMAP projector diagram",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J089",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "excited",
+          "reflexive_note": "Delighted that John Wood and Kevin McCartney have agreed to the interview. Wood replied, \"I would be delighted to assist\"; McCartney replied, \"It is good to hear from someone at RCA and DDR in particular\".",
+          "evidence_link": "Email correspondence",
+          "tags": "oral history; interview recruitment; John Wood; Kevin McCartney; DDR testimony",
+          "source_type": "conversation",
+          "source_label": "Oral history confirmation",
           "practice_action": "documenting",
           "outcome_type": "confidence"
         }
@@ -4891,7 +4966,7 @@
     {
       "source": "writing",
       "target": "clarification",
-      "value": 4,
+      "value": 5,
       "events": [
         {
           "id": "Y1-W005",
@@ -4950,6 +5025,21 @@
           "tags": "conference; archival activation; synthetic heritage; scoped missingness; experiment;",
           "source_type": "writing",
           "source_label": "Turin conference paper drafting",
+          "practice_action": "writing",
+          "outcome_type": "clarification"
+        },
+        {
+          "id": "Y1-W016",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "reflexivity",
+          "medium": "presentation",
+          "affect": "uncertain",
+          "reflexive_note": "I want to present the paper as a McKinsey specialist track consultant x Chrisopher Hitchens. I want to emulate this articulation when I am on stage in preparation for the viva.",
+          "evidence_link": "Presentation deck / rehearsal notes / conference paper",
+          "tags": "conference presentation; public speaking; articulation; viva preparation; research communication",
+          "source_type": "writing",
+          "source_label": "Development of Turin conference presentation",
           "practice_action": "writing",
           "outcome_type": "clarification"
         }
@@ -5532,9 +5622,9 @@
           "theme": "archive",
           "medium": "text",
           "affect": "unsettled",
-          "reflexive_note": "After days of coding it's noce to be back on terra firma drafting the discussion guides that synthesize my professional experience with semi-structured interviewing and the ROI on my oral history coure in January of this year. It's solid.",
+          "reflexive_note": "After days of coding it's nice to be back on terra firma drafting the discussion guides that synthesize my professional experience with semi-structured interviewing and the ROI on my oral history course in January of this year. It's solid.",
           "evidence_link": "Staff DDR DEU Discussion guide; Students DDR DEU Discussion guide",
-          "tags": "oral history; qualitative, discussion guide; semi-strucured interview",
+          "tags": "oral history; qualitative, discussion guide; semi-structured interview",
           "source_type": "writing",
           "source_label": "Oral history discussion guide",
           "practice_action": "writing",
@@ -5547,9 +5637,9 @@
           "theme": "method",
           "medium": "text",
           "affect": "reflective",
-          "reflexive_note": "Really pleased to get back into some litereature critical reading and writing. Some excellent papers on synthetic heritage and ML inference has warranted the claims in my Turin paper.",
+          "reflexive_note": "Really pleased to get back into some literature critical reading and writing. Some excellent papers on synthetic heritage and ML inference has warranted the claims in my Turin paper.",
           "evidence_link": "",
-          "tags": "literature review; retreival augmented inference; zotero; thesis; conference paper",
+          "tags": "literature review; retrieval augmented inference; zotero; thesis; conference paper",
           "source_type": "critique",
           "source_label": "Critical reading and writing for Turin conference paper",
           "practice_action": "writing",
@@ -5789,7 +5879,7 @@
           "theme": "machine learning",
           "medium": "code",
           "affect": "frustrated",
-          "reflexive_note": "Massively painful  heavy lifting on the research instument's source integration, absenses, cross readings and semantic atlas analysis. I now have UMAP, clusters, proximity, anomaly, and metadata overlays as a visual hypothesis space, not as proof. Not bad for the start of Year 2.",
+          "reflexive_note": "Massively painful  heavy lifting on the research instrument's source integration, absences, cross readings and semantic atlas analysis. I now have UMAP, clusters, proximity, anomaly, and metadata overlays as a visual hypothesis space, not as proof. Not bad for the start of Year 2.",
           "evidence_link": "https://innovationdesign.io/source-interrogation",
           "tags": "ML; AI; Qwen; BAAI general embedding",
           "source_type": "machine learning",
@@ -5811,7 +5901,7 @@
           "theme": "machine learning",
           "medium": "code",
           "affect": "frustrated",
-          "reflexive_note": "Massively painful  heavy lifting on the research instument's source integration, absenses, cross readings and semantic atlas analysis. I now have UMAP, clusters, proximity, anomaly, and metadata overlays as a visual hypothesis space, not as proof. Not bad for the start of Year 2.",
+          "reflexive_note": "Massively painful  heavy lifting on the research instrument's source integration, absences, cross readings and semantic atlas analysis. I now have UMAP, clusters, proximity, anomaly, and metadata overlays as a visual hypothesis space, not as proof. Not bad for the start of Year 2.",
           "evidence_link": "https://innovationdesign.io/source-interrogation",
           "tags": "ML; AI; Qwen; BAAI general embedding",
           "source_type": "machine learning",
@@ -5833,9 +5923,9 @@
           "theme": "archive",
           "medium": "text",
           "affect": "unsettled",
-          "reflexive_note": "After days of coding it's noce to be back on terra firma drafting the discussion guides that synthesize my professional experience with semi-structured interviewing and the ROI on my oral history coure in January of this year. It's solid.",
+          "reflexive_note": "After days of coding it's nice to be back on terra firma drafting the discussion guides that synthesize my professional experience with semi-structured interviewing and the ROI on my oral history course in January of this year. It's solid.",
           "evidence_link": "Staff DDR DEU Discussion guide; Students DDR DEU Discussion guide",
-          "tags": "oral history; qualitative, discussion guide; semi-strucured interview",
+          "tags": "oral history; qualitative, discussion guide; semi-structured interview",
           "source_type": "writing",
           "source_label": "Oral history discussion guide",
           "practice_action": "writing",
@@ -5855,7 +5945,7 @@
           "theme": "reflexivity",
           "medium": "code",
           "affect": "frustrated",
-          "reflexive_note": "The dirty dev repo on local commited an old build; hell on earth to fix it, thank heavens I do a daily repo back up on my NAS. Fixed it in about an hour. Wold have lost 2 months work. Never again.",
+          "reflexive_note": "The dirty dev repo on local committed an old build; hell on earth to fix it, thank heavens I do a daily repo back up on my NAS. Fixed it in about an hour. Would have lost 2 months work. Never again.",
           "evidence_link": "",
           "tags": "git; NAS; recovery; backup; relief",
           "source_type": "coding",
@@ -5877,9 +5967,9 @@
           "theme": "method",
           "medium": "text",
           "affect": "reflective",
-          "reflexive_note": "Really pleased to get back into some litereature critical reading and writing. Some excellent papers on synthetic heritage and ML inference has warranted the claims in my Turin paper.",
+          "reflexive_note": "Really pleased to get back into some literature critical reading and writing. Some excellent papers on synthetic heritage and ML inference has warranted the claims in my Turin paper.",
           "evidence_link": "",
-          "tags": "literature review; retreival augmented inference; zotero; thesis; conference paper",
+          "tags": "literature review; retrieval augmented inference; zotero; thesis; conference paper",
           "source_type": "critique",
           "source_label": "Critical reading and writing for Turin conference paper",
           "practice_action": "writing",
@@ -5899,9 +5989,9 @@
           "theme": "data science",
           "medium": "image",
           "affect": "energised",
-          "reflexive_note": "I'm loving exploring the nexus of graphic design, user interaction and data science. The TensorFlow projector poeject is an excellent reference.",
+          "reflexive_note": "I'm loving exploring the nexus of graphic design, user interaction and data science. The TensorFlow projector project is an excellent reference.",
           "evidence_link": "",
-          "tags": "UMAP; embedding projector; semantic atlas; semantic neighbourhoods; comparitive views; temporal and documentary change; critical inquiry",
+          "tags": "UMAP; embedding projector; semantic atlas; semantic neighbourhoods; comparative views; temporal and documentary change; critical inquiry",
           "source_type": "graphic design",
           "source_label": "Design of sassy UMAP visualisations in 3D",
           "practice_action": "testing",
@@ -5923,10 +6013,120 @@
           "affect": "curious",
           "reflexive_note": "Stumbled across the C2PA compliance in a paper this week, my research instrument is about 73% compliant now with selected research outputs are signed as C2PA manifests that record source passages as ingredients and capture the creation action. The resulting manifests are independently checked for validity and hard-binding tamper detection. This tests technical interoperability with the C2PA data model and validation tooling; it does not claim C2PA conformance, certification or media authenticity.",
           "evidence_link": "",
-          "tags": "provenance; standards; compliance; responsible artificial intelligene",
+          "tags": "provenance; standards; compliance; responsible artificial intelligence",
           "source_type": "coding",
           "source_label": "Towards C2PA (Coalition for Content Provenance and Authenticity) compliance",
           "practice_action": "testing",
+          "outcome_type": "clarification"
+        }
+      ]
+    },
+    {
+      "source": "supervision:Thesis opening out",
+      "target": "testing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J086",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "opened",
+          "reflexive_note": "Excellent supervision with Teal Triggs, key take away being I have a 'go' to develop the thesis sequence of chapters based on Patrick Dunleavy's open out model pp.59",
+          "evidence_link": "Supervision transcript",
+          "tags": "supervision; thesis structure; open-out model; Patrick Dunleavy; chapter sequencing",
+          "source_type": "supervision",
+          "source_label": "Thesis opening out",
+          "practice_action": "testing",
+          "outcome_type": "clarification"
+        }
+      ]
+    },
+    {
+      "source": "documenting:Theoretical framework",
+      "target": "reframing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J087",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "method",
+          "medium": "diagram",
+          "affect": "unsettled",
+          "reflexive_note": "Some great insights from Methods of Intent discussion with Wenbo Ai on theory. I feel my framework of critical design historiography, critical archival theory and critical computational approaches will go a long way to passing the confirmation exam",
+          "evidence_link": "PhD theoretical model diagram",
+          "tags": "theoretical framework; critical design historiography; critical archival theory; critical computation; confirmation exam",
+          "source_type": "documenting",
+          "source_label": "Theoretical framework",
+          "practice_action": "reframing",
+          "outcome_type": "insight"
+        }
+      ]
+    },
+    {
+      "source": "graphic design:UMAP projector diagram",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J088",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "visualisation",
+          "medium": "diagram",
+          "affect": "energised",
+          "reflexive_note": "Nice to get back into graphic design and build out the UMAP diagram. And yes, I am still a world class graphic designer.",
+          "evidence_link": "UMAP projector | testamentary traces in play diagram",
+          "tags": "UMAP; visualisation; semantic projection; testamentary traces; graphic design",
+          "source_type": "graphic design",
+          "source_label": "UMAP projector diagram",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "conversation:Oral history confirmation",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J089",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "excited",
+          "reflexive_note": "Delighted that John Wood and Kevin McCartney have agreed to the interview. Wood replied, \"I would be delighted to assist\"; McCartney replied, \"It is good to hear from someone at RCA and DDR in particular\".",
+          "evidence_link": "Email correspondence",
+          "tags": "oral history; interview recruitment; John Wood; Kevin McCartney; DDR testimony",
+          "source_type": "conversation",
+          "source_label": "Oral history confirmation",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "writing:Development of Turin conference presentation",
+      "target": "writing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-W016",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "reflexivity",
+          "medium": "presentation",
+          "affect": "uncertain",
+          "reflexive_note": "I want to present the paper as a McKinsey specialist track consultant x Chrisopher Hitchens. I want to emulate this articulation when I am on stage in preparation for the viva.",
+          "evidence_link": "Presentation deck / rehearsal notes / conference paper",
+          "tags": "conference presentation; public speaking; articulation; viva preparation; research communication",
+          "source_type": "writing",
+          "source_label": "Development of Turin conference presentation",
+          "practice_action": "writing",
           "outcome_type": "clarification"
         }
       ]
@@ -5973,6 +6173,7 @@
       "energised",
       "excited",
       "frustrated",
+      "opened",
       "reflective",
       "uncertain",
       "unsettled"
@@ -8026,7 +8227,7 @@
       "theme": "machine learning",
       "medium": "code",
       "affect": "frustrated",
-      "reflexive_note": "Massively painful  heavy lifting on the research instument's source integration, absenses, cross readings and semantic atlas analysis. I now have UMAP, clusters, proximity, anomaly, and metadata overlays as a visual hypothesis space, not as proof. Not bad for the start of Year 2.",
+      "reflexive_note": "Massively painful  heavy lifting on the research instrument's source integration, absences, cross readings and semantic atlas analysis. I now have UMAP, clusters, proximity, anomaly, and metadata overlays as a visual hypothesis space, not as proof. Not bad for the start of Year 2.",
       "evidence_link": "https://innovationdesign.io/source-interrogation",
       "tags": "ML; AI; Qwen; BAAI general embedding",
       "source_type": "machine learning",
@@ -8041,9 +8242,9 @@
       "theme": "archive",
       "medium": "text",
       "affect": "unsettled",
-      "reflexive_note": "After days of coding it's noce to be back on terra firma drafting the discussion guides that synthesize my professional experience with semi-structured interviewing and the ROI on my oral history coure in January of this year. It's solid.",
+      "reflexive_note": "After days of coding it's nice to be back on terra firma drafting the discussion guides that synthesize my professional experience with semi-structured interviewing and the ROI on my oral history course in January of this year. It's solid.",
       "evidence_link": "Staff DDR DEU Discussion guide; Students DDR DEU Discussion guide",
-      "tags": "oral history; qualitative, discussion guide; semi-strucured interview",
+      "tags": "oral history; qualitative, discussion guide; semi-structured interview",
       "source_type": "writing",
       "source_label": "Oral history discussion guide",
       "practice_action": "writing",
@@ -8056,7 +8257,7 @@
       "theme": "reflexivity",
       "medium": "code",
       "affect": "frustrated",
-      "reflexive_note": "The dirty dev repo on local commited an old build; hell on earth to fix it, thank heavens I do a daily repo back up on my NAS. Fixed it in about an hour. Wold have lost 2 months work. Never again.",
+      "reflexive_note": "The dirty dev repo on local committed an old build; hell on earth to fix it, thank heavens I do a daily repo back up on my NAS. Fixed it in about an hour. Would have lost 2 months work. Never again.",
       "evidence_link": "",
       "tags": "git; NAS; recovery; backup; relief",
       "source_type": "coding",
@@ -8071,9 +8272,9 @@
       "theme": "method",
       "medium": "text",
       "affect": "reflective",
-      "reflexive_note": "Really pleased to get back into some litereature critical reading and writing. Some excellent papers on synthetic heritage and ML inference has warranted the claims in my Turin paper.",
+      "reflexive_note": "Really pleased to get back into some literature critical reading and writing. Some excellent papers on synthetic heritage and ML inference has warranted the claims in my Turin paper.",
       "evidence_link": "",
-      "tags": "literature review; retreival augmented inference; zotero; thesis; conference paper",
+      "tags": "literature review; retrieval augmented inference; zotero; thesis; conference paper",
       "source_type": "critique",
       "source_label": "Critical reading and writing for Turin conference paper",
       "practice_action": "writing",
@@ -8086,9 +8287,9 @@
       "theme": "data science",
       "medium": "image",
       "affect": "energised",
-      "reflexive_note": "I'm loving exploring the nexus of graphic design, user interaction and data science. The TensorFlow projector poeject is an excellent reference.",
+      "reflexive_note": "I'm loving exploring the nexus of graphic design, user interaction and data science. The TensorFlow projector project is an excellent reference.",
       "evidence_link": "",
-      "tags": "UMAP; embedding projector; semantic atlas; semantic neighbourhoods; comparitive views; temporal and documentary change; critical inquiry",
+      "tags": "UMAP; embedding projector; semantic atlas; semantic neighbourhoods; comparative views; temporal and documentary change; critical inquiry",
       "source_type": "graphic design",
       "source_label": "Design of sassy UMAP visualisations in 3D",
       "practice_action": "testing",
@@ -8103,10 +8304,85 @@
       "affect": "curious",
       "reflexive_note": "Stumbled across the C2PA compliance in a paper this week, my research instrument is about 73% compliant now with selected research outputs are signed as C2PA manifests that record source passages as ingredients and capture the creation action. The resulting manifests are independently checked for validity and hard-binding tamper detection. This tests technical interoperability with the C2PA data model and validation tooling; it does not claim C2PA conformance, certification or media authenticity.",
       "evidence_link": "",
-      "tags": "provenance; standards; compliance; responsible artificial intelligene",
+      "tags": "provenance; standards; compliance; responsible artificial intelligence",
       "source_type": "coding",
       "source_label": "Towards C2PA (Coalition for Content Provenance and Authenticity) compliance",
       "practice_action": "testing",
+      "outcome_type": "clarification"
+    },
+    {
+      "id": "Y1-J086",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "reflexivity",
+      "medium": "conversation",
+      "affect": "opened",
+      "reflexive_note": "Excellent supervision with Teal Triggs, key take away being I have a 'go' to develop the thesis sequence of chapters based on Patrick Dunleavy's open out model pp.59",
+      "evidence_link": "Supervision transcript",
+      "tags": "supervision; thesis structure; open-out model; Patrick Dunleavy; chapter sequencing",
+      "source_type": "supervision",
+      "source_label": "Thesis opening out",
+      "practice_action": "testing",
+      "outcome_type": "clarification"
+    },
+    {
+      "id": "Y1-J087",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "method",
+      "medium": "diagram",
+      "affect": "unsettled",
+      "reflexive_note": "Some great insights from Methods of Intent discussion with Wenbo Ai on theory. I feel my framework of critical design historiography, critical archival theory and critical computational approaches will go a long way to passing the confirmation exam",
+      "evidence_link": "PhD theoretical model diagram",
+      "tags": "theoretical framework; critical design historiography; critical archival theory; critical computation; confirmation exam",
+      "source_type": "documenting",
+      "source_label": "Theoretical framework",
+      "practice_action": "reframing",
+      "outcome_type": "insight"
+    },
+    {
+      "id": "Y1-J088",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "visualisation",
+      "medium": "diagram",
+      "affect": "energised",
+      "reflexive_note": "Nice to get back into graphic design and build out the UMAP diagram. And yes, I am still a world class graphic designer.",
+      "evidence_link": "UMAP projector | testamentary traces in play diagram",
+      "tags": "UMAP; visualisation; semantic projection; testamentary traces; graphic design",
+      "source_type": "graphic design",
+      "source_label": "UMAP projector diagram",
+      "practice_action": "documenting",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J089",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "reflexivity",
+      "medium": "conversation",
+      "affect": "excited",
+      "reflexive_note": "Delighted that John Wood and Kevin McCartney have agreed to the interview. Wood replied, \"I would be delighted to assist\"; McCartney replied, \"It is good to hear from someone at RCA and DDR in particular\".",
+      "evidence_link": "Email correspondence",
+      "tags": "oral history; interview recruitment; John Wood; Kevin McCartney; DDR testimony",
+      "source_type": "conversation",
+      "source_label": "Oral history confirmation",
+      "practice_action": "documenting",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-W016",
+      "period": "Year 2 / Term 1",
+      "series": "writing",
+      "theme": "reflexivity",
+      "medium": "presentation",
+      "affect": "uncertain",
+      "reflexive_note": "I want to present the paper as a McKinsey specialist track consultant x Chrisopher Hitchens. I want to emulate this articulation when I am on stage in preparation for the viva.",
+      "evidence_link": "Presentation deck / rehearsal notes / conference paper",
+      "tags": "conference presentation; public speaking; articulation; viva preparation; research communication",
+      "source_type": "writing",
+      "source_label": "Development of Turin conference presentation",
+      "practice_action": "writing",
       "outcome_type": "clarification"
     }
   ],
