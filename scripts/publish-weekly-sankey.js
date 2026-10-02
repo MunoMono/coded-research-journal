@@ -97,10 +97,12 @@ function getUnexpectedChanges(statusLines, allowedPaths) {
 }
 
 function main() {
-  const commitMessage = process.argv.slice(2).join(' ').trim()
+  const args = process.argv.slice(2)
+  const includeAllChanges = args[0] === '--all'
+  const commitMessage = (includeAllChanges ? args.slice(1) : args).join(' ').trim()
 
   if (!commitMessage) {
-    console.error('Usage: npm run publish-weekly-sankey -- "your commit message"')
+    console.error('Usage: npm run publish-weekly-sankey -- [--all] "your commit message"')
     process.exit(1)
   }
 
@@ -111,7 +113,7 @@ function main() {
   const trackedFiles = getTrackedFiles(config)
   const allowedPaths = getAllowedStatusPaths(trackedFiles)
   const initialStatus = getStatusLines()
-  const unexpectedChanges = getUnexpectedChanges(initialStatus, allowedPaths)
+  const unexpectedChanges = includeAllChanges ? [] : getUnexpectedChanges(initialStatus, allowedPaths)
 
   if (unexpectedChanges.length > 0) {
     console.error('Found changes outside the weekly Sankey publish scope:')
@@ -126,8 +128,8 @@ function main() {
   console.log('Building production bundle...')
   run('npm', ['run', 'build'])
 
-  console.log('Staging weekly Sankey files...')
-  run('git', ['add', '--', ...trackedFiles])
+  console.log(includeAllChanges ? 'Staging all changes...' : 'Staging weekly Sankey files...')
+  run('git', includeAllChanges ? ['add', '--all'] : ['add', '--', ...trackedFiles])
 
   const postStageStatus = getStatusLines()
   const stagedScopeChanges = postStageStatus.filter(line => {
@@ -137,7 +139,7 @@ function main() {
       ? pathText.split(' -> ').at(-1)
       : pathText
 
-    return allowedPaths.has(normalizedPath) && status[0] !== ' '
+    return (includeAllChanges || allowedPaths.has(normalizedPath)) && status[0] !== ' '
   })
 
   if (stagedScopeChanges.length === 0) {

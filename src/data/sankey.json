@@ -479,6 +479,18 @@
     },
     {
       "id": "writing:Development of Turin conference presentation"
+    },
+    {
+      "id": "writing:Research ethics application for UAT"
+    },
+    {
+      "id": "critique:ML UAT pain"
+    },
+    {
+      "id": "writing:Critical reading and writing of core literature for Yr 2"
+    },
+    {
+      "id": "graphic design:Design of sassy theoretical framework diagram"
     }
   ],
   "links": [
@@ -551,7 +563,7 @@
     {
       "source": "documenting",
       "target": "clarification",
-      "value": 17,
+      "value": 18,
       "events": [
         {
           "id": "Y1-J002",
@@ -805,6 +817,21 @@
           "tags": "ethics; rights; metadata; stakeholder management",
           "source_type": "conversation",
           "source_label": "V&A agreement meeting",
+          "practice_action": "documenting",
+          "outcome_type": "clarification"
+        },
+        {
+          "id": "Y1-J091",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "image",
+          "affect": "excited",
+          "reflexive_note": "Enjoyed getting back into graphic design",
+          "evidence_link": "Theoretical framework | three lenses with cross cutting critique through which the problem is interpreted",
+          "tags": "theoretical framework; graphic design; visualisation; conceptual model; cross-cutting critique",
+          "source_type": "graphic design",
+          "source_label": "Design of sassy theoretical framework diagram",
           "practice_action": "documenting",
           "outcome_type": "clarification"
         }
@@ -2123,7 +2150,7 @@
     {
       "source": "documenting",
       "target": "insight",
-      "value": 5,
+      "value": 6,
       "events": [
         {
           "id": "Y1-J012",
@@ -2197,6 +2224,21 @@
           "tags": "return visit; archives",
           "source_type": "archival research",
           "source_label": "Return to source material after prototype maturity",
+          "practice_action": "documenting",
+          "outcome_type": "insight"
+        },
+        {
+          "id": "Y1-J090",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "method",
+          "medium": "text",
+          "affect": "unsettled",
+          "reflexive_note": "Interesting to read Walker, John Albert. Design History and the History of Design. Repr. Pluto Pr, 1990; Forty, Adrian. Objects of Desire: Design and Society since 1750. Thames and Hudson, 1992.; and Attfield, Judy, and Pat Kirkham, eds. A View from the Interior: Feminism, Women, and Design. Women�s Press, 1989.",
+          "evidence_link": "Zotero and my reading notes",
+          "tags": "design history; feminist design history; historiography; critical reading; literature review",
+          "source_type": "writing",
+          "source_label": "Critical reading and writing of core literature for Yr 2",
           "practice_action": "documenting",
           "outcome_type": "insight"
         }
@@ -3319,7 +3361,7 @@
     {
       "source": "testing",
       "target": "question",
-      "value": 3,
+      "value": 4,
       "events": [
         {
           "id": "Y1-P014",
@@ -3363,6 +3405,21 @@
           "tags": "active learning; tags",
           "source_type": "machine learning",
           "source_label": "Active learning idea for assisted tagging",
+          "practice_action": "testing",
+          "outcome_type": "question"
+        },
+        {
+          "id": "Y1-W017",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "machine learning",
+          "medium": "code",
+          "affect": "frustrated",
+          "reflexive_note": "Utter pain in the arse and utterly crap first round of UAT, I need to remain more objective and realistic about the constraints of what the LLM can do, just hope the second roud will bear fruit",
+          "evidence_link": "UAT Round 2 evaluation rubric.xls",
+          "tags": "machine learning; UAT evaluation; model limitations; objective assessment; iteration",
+          "source_type": "critique",
+          "source_label": "ML UAT pain",
           "practice_action": "testing",
           "outcome_type": "question"
         }
@@ -6130,6 +6187,116 @@
           "outcome_type": "clarification"
         }
       ]
+    },
+    {
+      "source": "writing:Research ethics application for UAT",
+      "target": "writing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-W017",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "ethics",
+          "medium": "text",
+          "affect": "uncertain",
+          "reflexive_note": "Glad we caught this one. The user testing needs to go through RCA research ethics approval. The submission now is very exgautive with over 40 quesitons, too much.",
+          "evidence_link": "RCA ethics application form GN/22/2026",
+          "tags": "research ethics; UAT governance; participant testing; ethics approval; application scope",
+          "source_type": "writing",
+          "source_label": "Research ethics application for UAT",
+          "practice_action": "writing",
+          "outcome_type": "insight"
+        }
+      ]
+    },
+    {
+      "source": "writing",
+      "target": "insight",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-W017",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "ethics",
+          "medium": "text",
+          "affect": "uncertain",
+          "reflexive_note": "Glad we caught this one. The user testing needs to go through RCA research ethics approval. The submission now is very exgautive with over 40 quesitons, too much.",
+          "evidence_link": "RCA ethics application form GN/22/2026",
+          "tags": "research ethics; UAT governance; participant testing; ethics approval; application scope",
+          "source_type": "writing",
+          "source_label": "Research ethics application for UAT",
+          "practice_action": "writing",
+          "outcome_type": "insight"
+        }
+      ]
+    },
+    {
+      "source": "critique:ML UAT pain",
+      "target": "testing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-W017",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "machine learning",
+          "medium": "code",
+          "affect": "frustrated",
+          "reflexive_note": "Utter pain in the arse and utterly crap first round of UAT, I need to remain more objective and realistic about the constraints of what the LLM can do, just hope the second roud will bear fruit",
+          "evidence_link": "UAT Round 2 evaluation rubric.xls",
+          "tags": "machine learning; UAT evaluation; model limitations; objective assessment; iteration",
+          "source_type": "critique",
+          "source_label": "ML UAT pain",
+          "practice_action": "testing",
+          "outcome_type": "question"
+        }
+      ]
+    },
+    {
+      "source": "writing:Critical reading and writing of core literature for Yr 2",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J090",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "method",
+          "medium": "text",
+          "affect": "unsettled",
+          "reflexive_note": "Interesting to read Walker, John Albert. Design History and the History of Design. Repr. Pluto Pr, 1990; Forty, Adrian. Objects of Desire: Design and Society since 1750. Thames and Hudson, 1992.; and Attfield, Judy, and Pat Kirkham, eds. A View from the Interior: Feminism, Women, and Design. Women�s Press, 1989.",
+          "evidence_link": "Zotero and my reading notes",
+          "tags": "design history; feminist design history; historiography; critical reading; literature review",
+          "source_type": "writing",
+          "source_label": "Critical reading and writing of core literature for Yr 2",
+          "practice_action": "documenting",
+          "outcome_type": "insight"
+        }
+      ]
+    },
+    {
+      "source": "graphic design:Design of sassy theoretical framework diagram",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J091",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "image",
+          "affect": "excited",
+          "reflexive_note": "Enjoyed getting back into graphic design",
+          "evidence_link": "Theoretical framework | three lenses with cross cutting critique through which the problem is interpreted",
+          "tags": "theoretical framework; graphic design; visualisation; conceptual model; cross-cutting critique",
+          "source_type": "graphic design",
+          "source_label": "Design of sassy theoretical framework diagram",
+          "practice_action": "documenting",
+          "outcome_type": "clarification"
+        }
+      ]
     }
   ],
   "filters": {
@@ -8383,6 +8550,66 @@
       "source_type": "writing",
       "source_label": "Development of Turin conference presentation",
       "practice_action": "writing",
+      "outcome_type": "clarification"
+    },
+    {
+      "id": "Y1-W017",
+      "period": "Year 2 / Term 1",
+      "series": "writing",
+      "theme": "ethics",
+      "medium": "text",
+      "affect": "uncertain",
+      "reflexive_note": "Glad we caught this one. The user testing needs to go through RCA research ethics approval. The submission now is very exgautive with over 40 quesitons, too much.",
+      "evidence_link": "RCA ethics application form GN/22/2026",
+      "tags": "research ethics; UAT governance; participant testing; ethics approval; application scope",
+      "source_type": "writing",
+      "source_label": "Research ethics application for UAT",
+      "practice_action": "writing",
+      "outcome_type": "insight"
+    },
+    {
+      "id": "Y1-W017",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "machine learning",
+      "medium": "code",
+      "affect": "frustrated",
+      "reflexive_note": "Utter pain in the arse and utterly crap first round of UAT, I need to remain more objective and realistic about the constraints of what the LLM can do, just hope the second roud will bear fruit",
+      "evidence_link": "UAT Round 2 evaluation rubric.xls",
+      "tags": "machine learning; UAT evaluation; model limitations; objective assessment; iteration",
+      "source_type": "critique",
+      "source_label": "ML UAT pain",
+      "practice_action": "testing",
+      "outcome_type": "question"
+    },
+    {
+      "id": "Y1-J090",
+      "period": "Year 2 / Term 1",
+      "series": "writing",
+      "theme": "method",
+      "medium": "text",
+      "affect": "unsettled",
+      "reflexive_note": "Interesting to read Walker, John Albert. Design History and the History of Design. Repr. Pluto Pr, 1990; Forty, Adrian. Objects of Desire: Design and Society since 1750. Thames and Hudson, 1992.; and Attfield, Judy, and Pat Kirkham, eds. A View from the Interior: Feminism, Women, and Design. Women�s Press, 1989.",
+      "evidence_link": "Zotero and my reading notes",
+      "tags": "design history; feminist design history; historiography; critical reading; literature review",
+      "source_type": "writing",
+      "source_label": "Critical reading and writing of core literature for Yr 2",
+      "practice_action": "documenting",
+      "outcome_type": "insight"
+    },
+    {
+      "id": "Y1-J091",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "graphic design",
+      "medium": "image",
+      "affect": "excited",
+      "reflexive_note": "Enjoyed getting back into graphic design",
+      "evidence_link": "Theoretical framework | three lenses with cross cutting critique through which the problem is interpreted",
+      "tags": "theoretical framework; graphic design; visualisation; conceptual model; cross-cutting critique",
+      "source_type": "graphic design",
+      "source_label": "Design of sassy theoretical framework diagram",
+      "practice_action": "documenting",
       "outcome_type": "clarification"
     }
   ],
