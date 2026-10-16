@@ -491,6 +491,30 @@
     },
     {
       "id": "graphic design:Design of sassy theoretical framework diagram"
+    },
+    {
+      "id": "conversation:DTP biennale identity design"
+    },
+    {
+      "id": "critique:DTP 60 forward looking ML questions"
+    },
+    {
+      "id": "critique:DTP forging relationships with HHCD"
+    },
+    {
+      "id": "conversation:Oral history recruitment tractions"
+    },
+    {
+      "id": "conversation:Lunch with Neil Partkinson and Natasha Tebbs, RCA special collections"
+    },
+    {
+      "id": "graphic design:Design of Biennale identity"
+    },
+    {
+      "id": "machine learning:ML Granite 30B model for research queries"
+    },
+    {
+      "id": "graphic design:Graphic design gestalt engine"
     }
   ],
   "links": [
@@ -563,7 +587,7 @@
     {
       "source": "documenting",
       "target": "clarification",
-      "value": 18,
+      "value": 19,
       "events": [
         {
           "id": "Y1-J002",
@@ -832,6 +856,21 @@
           "tags": "theoretical framework; graphic design; visualisation; conceptual model; cross-cutting critique",
           "source_type": "graphic design",
           "source_label": "Design of sassy theoretical framework diagram",
+          "practice_action": "documenting",
+          "outcome_type": "clarification"
+        },
+        {
+          "id": "Y1-J092",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "conversation",
+          "affect": "opened",
+          "reflexive_note": "Very constructive working lunch with Hala Mansour. Clarification of approver, management of stakeholders and green light to start ideation",
+          "evidence_link": "Figma mood board for identity development",
+          "tags": "visual identity; stakeholder alignment; design governance; creative ideation; collaborative practice",
+          "source_type": "conversation",
+          "source_label": "DTP biennale identity design",
           "practice_action": "documenting",
           "outcome_type": "clarification"
         }
@@ -1995,7 +2034,7 @@
     {
       "source": "mapping",
       "target": "confidence",
-      "value": 1,
+      "value": 2,
       "events": [
         {
           "id": "Y1-J009",
@@ -2009,6 +2048,21 @@
           "tags": "layout; timeline",
           "source_type": "graphic design",
           "source_label": "Poster-style timeline of process",
+          "practice_action": "mapping",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J093",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "reflective",
+          "reflexive_note": "Good check in with Neil and Natasha. Both are willing to help with the research apparatus and instrument UAT recruitment. Nastasha first on board.",
+          "evidence_link": "Follow up email conversations with Neil and Natasha",
+          "tags": "RCA Special Collections, research collaboration, UAT recruitment, research instrumentation, stakeholder engagement",
+          "source_type": "conversation",
+          "source_label": "Lunch with Neil Partkinson and Natasha Tebbs, RCA special collections",
           "practice_action": "mapping",
           "outcome_type": "confidence"
         }
@@ -2234,7 +2288,7 @@
           "theme": "method",
           "medium": "text",
           "affect": "unsettled",
-          "reflexive_note": "Interesting to read Walker, John Albert. Design History and the History of Design. Repr. Pluto Pr, 1990; Forty, Adrian. Objects of Desire: Design and Society since 1750. Thames and Hudson, 1992.; and Attfield, Judy, and Pat Kirkham, eds. A View from the Interior: Feminism, Women, and Design. Women�s Press, 1989.",
+          "reflexive_note": "Interesting to read Walker, John Albert. Design History and the History of Design. Repr. Pluto Pr, 1990; Forty, Adrian. Objects of Desire: Design and Society since 1750. Thames and Hudson, 1992.; and Attfield, Judy, and Pat Kirkham, eds. A View from the Interior: Feminism, Women, and Design. Women's Press, 1989.",
           "evidence_link": "Zotero and my reading notes",
           "tags": "design history; feminist design history; historiography; critical reading; literature review",
           "source_type": "writing",
@@ -2651,7 +2705,7 @@
     {
       "source": "testing",
       "target": "confidence",
-      "value": 4,
+      "value": 5,
       "events": [
         {
           "id": "Y1-J018",
@@ -2710,6 +2764,21 @@
           "tags": "UMAP; embedding projector; semantic atlas; semantic neighbourhoods; comparative views; temporal and documentary change; critical inquiry",
           "source_type": "graphic design",
           "source_label": "Design of sassy UMAP visualisations in 3D",
+          "practice_action": "testing",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J095",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "machine learning",
+          "medium": "code",
+          "affect": "unsettled",
+          "reflexive_note": "After hundreds of hours of pain, it's starting to make some reasonable scholarship claims, evidence and reasoning in the research query answers. Interestingly, the 60 forward facing early stage tests proved very favourable. A case of overengineering the first 50 perhaps.",
+          "evidence_link": "Oolama and Granite 30B on Mac wired into Apple Metal",
+          "tags": "machine learning, model evaluation, evidential reasoning, research queries, methodological refinement",
+          "source_type": "machine learning",
+          "source_label": "ML Granite 30B model for research queries",
           "practice_action": "testing",
           "outcome_type": "confidence"
         }
@@ -2806,7 +2875,7 @@
     {
       "source": "reframing",
       "target": "question",
-      "value": 6,
+      "value": 7,
       "events": [
         {
           "id": "Y1-J019",
@@ -2895,6 +2964,21 @@
           "tags": "rehearsal; narrative; presentation; visualisation; public framing",
           "source_type": "archival research",
           "source_label": "Design of SoC RCA + CVS Royal Holloway presentation",
+          "practice_action": "reframing",
+          "outcome_type": "question"
+        },
+        {
+          "id": "Y1-J092",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "method",
+          "medium": "conversation",
+          "affect": "curious",
+          "reflexive_note": "After the first wave of cold recruitment emails for oral history interviews, I'm relieved and pleased that several people have replied and agreed to participate. So, thank you to Eileen Adams, Judith Wright and Max Henrion.",
+          "evidence_link": "Email correspondence with DDR ex students and staff",
+          "tags": "oral history, interview recruitment, participant engagement, DDR alumni, research participation",
+          "source_type": "conversation",
+          "source_label": "Oral history recruitment tractions",
           "practice_action": "reframing",
           "outcome_type": "question"
         }
@@ -3109,7 +3193,7 @@
     {
       "source": "prototyping",
       "target": "confidence",
-      "value": 9,
+      "value": 11,
       "events": [
         {
           "id": "Y1-J022",
@@ -3243,6 +3327,36 @@
           "tags": "print; poster",
           "source_type": "graphic design",
           "source_label": "Poster draft of sankey for APR",
+          "practice_action": "prototyping",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J094",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "image",
+          "affect": "excited",
+          "reflexive_note": "Work on the Biennale identity went smoothly, I don't judge it. I may be bloody awful as a machine learner, but I'm bloody good at graphic design. n/ice to be back on terra firma with what I do best.",
+          "evidence_link": "Illustrator and Figma files for the mood boards and hand drawn logotype",
+          "tags": "graphic identity, prototyping, creative confidence, disciplinary expertise, design practice",
+          "source_type": "graphic design",
+          "source_label": "Design of Biennale identity",
+          "practice_action": "prototyping",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J096",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "image",
+          "affect": "energised",
+          "reflexive_note": "This sassy little tool will prove its worth and time invested in building it out for the Biennale identity and marcomms. I think I'll make it part of the presentation an release it on GH creative commons. Spread the love of graphic design.",
+          "evidence_link": "GitHub repo",
+          "tags": "generative design, creative coding, design tools, open-source dissemination, graphic identity",
+          "source_type": "graphic design",
+          "source_label": "Graphic design gestalt engine",
           "practice_action": "prototyping",
           "outcome_type": "confidence"
         }
@@ -3415,7 +3529,7 @@
           "theme": "machine learning",
           "medium": "code",
           "affect": "frustrated",
-          "reflexive_note": "Utter pain in the arse and utterly crap first round of UAT, I need to remain more objective and realistic about the constraints of what the LLM can do, just hope the second roud will bear fruit",
+          "reflexive_note": "Utter pain in the arse and utterly crap first round of UAT, I need to remain more objective and realistic about the constraints of what the LLM can do, just hope the second round will bear fruit",
           "evidence_link": "UAT Round 2 evaluation rubric.xls",
           "tags": "machine learning; UAT evaluation; model limitations; objective assessment; iteration",
           "source_type": "critique",
@@ -3648,7 +3762,7 @@
     {
       "source": "documenting",
       "target": "confidence",
-      "value": 10,
+      "value": 11,
       "events": [
         {
           "id": "Y1-J032",
@@ -3797,6 +3911,21 @@
           "tags": "oral history; interview recruitment; John Wood; Kevin McCartney; DDR testimony",
           "source_type": "conversation",
           "source_label": "Oral history confirmation",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J093",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "method",
+          "medium": "text",
+          "affect": "uncertain",
+          "reflexive_note": "Reflecting on the ML UAT, developed 50 forward facing questions which nails commitment to the secondary research question",
+          "evidence_link": "My 60 facing forwards excel file",
+          "tags": "machine learning; critical inquiry; research methodology; future-oriented research; research question alignment",
+          "source_type": "critique",
+          "source_label": "DTP 60 forward looking ML questions",
           "practice_action": "documenting",
           "outcome_type": "confidence"
         }
@@ -4869,7 +4998,7 @@
     {
       "source": "reframing",
       "target": "confidence",
-      "value": 1,
+      "value": 2,
       "events": [
         {
           "id": "Y1-J058",
@@ -4883,6 +5012,21 @@
           "tags": "observable; sankey",
           "source_type": "workshop",
           "source_label": "Observable / D3 gallery review",
+          "practice_action": "reframing",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J094",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "opened",
+          "reflexive_note": "Delighted to receive such a positive email response from Dr Dr Claire Craig, Professor of Inclusive Design in Ageing and Co-Chair Helen Hamlyn Centre for Design",
+          "evidence_link": "Email reply",
+          "tags": "research collaboration; institutional relationships; inclusive design; knowledge exchange; interdisciplinary research",
+          "source_type": "critique",
+          "source_label": "DTP forging relationships with HHCD",
           "practice_action": "reframing",
           "outcome_type": "confidence"
         }
@@ -6200,7 +6344,7 @@
           "theme": "ethics",
           "medium": "text",
           "affect": "uncertain",
-          "reflexive_note": "Glad we caught this one. The user testing needs to go through RCA research ethics approval. The submission now is very exgautive with over 40 quesitons, too much.",
+          "reflexive_note": "Glad we caught this one. The user testing needs to go through RCA research ethics approval. The submission now is very exhaustive with over 40 questions, too much.",
           "evidence_link": "RCA ethics application form GN/22/2026",
           "tags": "research ethics; UAT governance; participant testing; ethics approval; application scope",
           "source_type": "writing",
@@ -6222,7 +6366,7 @@
           "theme": "ethics",
           "medium": "text",
           "affect": "uncertain",
-          "reflexive_note": "Glad we caught this one. The user testing needs to go through RCA research ethics approval. The submission now is very exgautive with over 40 quesitons, too much.",
+          "reflexive_note": "Glad we caught this one. The user testing needs to go through RCA research ethics approval. The submission now is very exhaustive with over 40 questions, too much.",
           "evidence_link": "RCA ethics application form GN/22/2026",
           "tags": "research ethics; UAT governance; participant testing; ethics approval; application scope",
           "source_type": "writing",
@@ -6244,7 +6388,7 @@
           "theme": "machine learning",
           "medium": "code",
           "affect": "frustrated",
-          "reflexive_note": "Utter pain in the arse and utterly crap first round of UAT, I need to remain more objective and realistic about the constraints of what the LLM can do, just hope the second roud will bear fruit",
+          "reflexive_note": "Utter pain in the arse and utterly crap first round of UAT, I need to remain more objective and realistic about the constraints of what the LLM can do, just hope the second round will bear fruit",
           "evidence_link": "UAT Round 2 evaluation rubric.xls",
           "tags": "machine learning; UAT evaluation; model limitations; objective assessment; iteration",
           "source_type": "critique",
@@ -6266,7 +6410,7 @@
           "theme": "method",
           "medium": "text",
           "affect": "unsettled",
-          "reflexive_note": "Interesting to read Walker, John Albert. Design History and the History of Design. Repr. Pluto Pr, 1990; Forty, Adrian. Objects of Desire: Design and Society since 1750. Thames and Hudson, 1992.; and Attfield, Judy, and Pat Kirkham, eds. A View from the Interior: Feminism, Women, and Design. Women�s Press, 1989.",
+          "reflexive_note": "Interesting to read Walker, John Albert. Design History and the History of Design. Repr. Pluto Pr, 1990; Forty, Adrian. Objects of Desire: Design and Society since 1750. Thames and Hudson, 1992.; and Attfield, Judy, and Pat Kirkham, eds. A View from the Interior: Feminism, Women, and Design. Women's Press, 1989.",
           "evidence_link": "Zotero and my reading notes",
           "tags": "design history; feminist design history; historiography; critical reading; literature review",
           "source_type": "writing",
@@ -6295,6 +6439,182 @@
           "source_label": "Design of sassy theoretical framework diagram",
           "practice_action": "documenting",
           "outcome_type": "clarification"
+        }
+      ]
+    },
+    {
+      "source": "conversation:DTP biennale identity design",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J092",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "conversation",
+          "affect": "opened",
+          "reflexive_note": "Very constructive working lunch with Hala Mansour. Clarification of approver, management of stakeholders and green light to start ideation",
+          "evidence_link": "Figma mood board for identity development",
+          "tags": "visual identity; stakeholder alignment; design governance; creative ideation; collaborative practice",
+          "source_type": "conversation",
+          "source_label": "DTP biennale identity design",
+          "practice_action": "documenting",
+          "outcome_type": "clarification"
+        }
+      ]
+    },
+    {
+      "source": "critique:DTP 60 forward looking ML questions",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J093",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "method",
+          "medium": "text",
+          "affect": "uncertain",
+          "reflexive_note": "Reflecting on the ML UAT, developed 50 forward facing questions which nails commitment to the secondary research question",
+          "evidence_link": "My 60 facing forwards excel file",
+          "tags": "machine learning; critical inquiry; research methodology; future-oriented research; research question alignment",
+          "source_type": "critique",
+          "source_label": "DTP 60 forward looking ML questions",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "critique:DTP forging relationships with HHCD",
+      "target": "reframing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J094",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "opened",
+          "reflexive_note": "Delighted to receive such a positive email response from Dr Dr Claire Craig, Professor of Inclusive Design in Ageing and Co-Chair Helen Hamlyn Centre for Design",
+          "evidence_link": "Email reply",
+          "tags": "research collaboration; institutional relationships; inclusive design; knowledge exchange; interdisciplinary research",
+          "source_type": "critique",
+          "source_label": "DTP forging relationships with HHCD",
+          "practice_action": "reframing",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "conversation:Oral history recruitment tractions",
+      "target": "reframing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J092",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "method",
+          "medium": "conversation",
+          "affect": "curious",
+          "reflexive_note": "After the first wave of cold recruitment emails for oral history interviews, I'm relieved and pleased that several people have replied and agreed to participate. So, thank you to Eileen Adams, Judith Wright and Max Henrion.",
+          "evidence_link": "Email correspondence with DDR ex students and staff",
+          "tags": "oral history, interview recruitment, participant engagement, DDR alumni, research participation",
+          "source_type": "conversation",
+          "source_label": "Oral history recruitment tractions",
+          "practice_action": "reframing",
+          "outcome_type": "question"
+        }
+      ]
+    },
+    {
+      "source": "conversation:Lunch with Neil Partkinson and Natasha Tebbs, RCA special collections",
+      "target": "mapping",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J093",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "conversation",
+          "affect": "reflective",
+          "reflexive_note": "Good check in with Neil and Natasha. Both are willing to help with the research apparatus and instrument UAT recruitment. Nastasha first on board.",
+          "evidence_link": "Follow up email conversations with Neil and Natasha",
+          "tags": "RCA Special Collections, research collaboration, UAT recruitment, research instrumentation, stakeholder engagement",
+          "source_type": "conversation",
+          "source_label": "Lunch with Neil Partkinson and Natasha Tebbs, RCA special collections",
+          "practice_action": "mapping",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "graphic design:Design of Biennale identity",
+      "target": "prototyping",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J094",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "image",
+          "affect": "excited",
+          "reflexive_note": "Work on the Biennale identity went smoothly, I don't judge it. I may be bloody awful as a machine learner, but I'm bloody good at graphic design. n/ice to be back on terra firma with what I do best.",
+          "evidence_link": "Illustrator and Figma files for the mood boards and hand drawn logotype",
+          "tags": "graphic identity, prototyping, creative confidence, disciplinary expertise, design practice",
+          "source_type": "graphic design",
+          "source_label": "Design of Biennale identity",
+          "practice_action": "prototyping",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "machine learning:ML Granite 30B model for research queries",
+      "target": "testing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J095",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "machine learning",
+          "medium": "code",
+          "affect": "unsettled",
+          "reflexive_note": "After hundreds of hours of pain, it's starting to make some reasonable scholarship claims, evidence and reasoning in the research query answers. Interestingly, the 60 forward facing early stage tests proved very favourable. A case of overengineering the first 50 perhaps.",
+          "evidence_link": "Oolama and Granite 30B on Mac wired into Apple Metal",
+          "tags": "machine learning, model evaluation, evidential reasoning, research queries, methodological refinement",
+          "source_type": "machine learning",
+          "source_label": "ML Granite 30B model for research queries",
+          "practice_action": "testing",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "graphic design:Graphic design gestalt engine",
+      "target": "prototyping",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J096",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "image",
+          "affect": "energised",
+          "reflexive_note": "This sassy little tool will prove its worth and time invested in building it out for the Biennale identity and marcomms. I think I'll make it part of the presentation an release it on GH creative commons. Spread the love of graphic design.",
+          "evidence_link": "GitHub repo",
+          "tags": "generative design, creative coding, design tools, open-source dissemination, graphic identity",
+          "source_type": "graphic design",
+          "source_label": "Graphic design gestalt engine",
+          "practice_action": "prototyping",
+          "outcome_type": "confidence"
         }
       ]
     }
@@ -8559,7 +8879,7 @@
       "theme": "ethics",
       "medium": "text",
       "affect": "uncertain",
-      "reflexive_note": "Glad we caught this one. The user testing needs to go through RCA research ethics approval. The submission now is very exgautive with over 40 quesitons, too much.",
+      "reflexive_note": "Glad we caught this one. The user testing needs to go through RCA research ethics approval. The submission now is very exhaustive with over 40 questions, too much.",
       "evidence_link": "RCA ethics application form GN/22/2026",
       "tags": "research ethics; UAT governance; participant testing; ethics approval; application scope",
       "source_type": "writing",
@@ -8574,7 +8894,7 @@
       "theme": "machine learning",
       "medium": "code",
       "affect": "frustrated",
-      "reflexive_note": "Utter pain in the arse and utterly crap first round of UAT, I need to remain more objective and realistic about the constraints of what the LLM can do, just hope the second roud will bear fruit",
+      "reflexive_note": "Utter pain in the arse and utterly crap first round of UAT, I need to remain more objective and realistic about the constraints of what the LLM can do, just hope the second round will bear fruit",
       "evidence_link": "UAT Round 2 evaluation rubric.xls",
       "tags": "machine learning; UAT evaluation; model limitations; objective assessment; iteration",
       "source_type": "critique",
@@ -8589,7 +8909,7 @@
       "theme": "method",
       "medium": "text",
       "affect": "unsettled",
-      "reflexive_note": "Interesting to read Walker, John Albert. Design History and the History of Design. Repr. Pluto Pr, 1990; Forty, Adrian. Objects of Desire: Design and Society since 1750. Thames and Hudson, 1992.; and Attfield, Judy, and Pat Kirkham, eds. A View from the Interior: Feminism, Women, and Design. Women�s Press, 1989.",
+      "reflexive_note": "Interesting to read Walker, John Albert. Design History and the History of Design. Repr. Pluto Pr, 1990; Forty, Adrian. Objects of Desire: Design and Society since 1750. Thames and Hudson, 1992.; and Attfield, Judy, and Pat Kirkham, eds. A View from the Interior: Feminism, Women, and Design. Women's Press, 1989.",
       "evidence_link": "Zotero and my reading notes",
       "tags": "design history; feminist design history; historiography; critical reading; literature review",
       "source_type": "writing",
@@ -8611,6 +8931,126 @@
       "source_label": "Design of sassy theoretical framework diagram",
       "practice_action": "documenting",
       "outcome_type": "clarification"
+    },
+    {
+      "id": "Y1-J092",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "graphic design",
+      "medium": "conversation",
+      "affect": "opened",
+      "reflexive_note": "Very constructive working lunch with Hala Mansour. Clarification of approver, management of stakeholders and green light to start ideation",
+      "evidence_link": "Figma mood board for identity development",
+      "tags": "visual identity; stakeholder alignment; design governance; creative ideation; collaborative practice",
+      "source_type": "conversation",
+      "source_label": "DTP biennale identity design",
+      "practice_action": "documenting",
+      "outcome_type": "clarification"
+    },
+    {
+      "id": "Y1-J093",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "method",
+      "medium": "text",
+      "affect": "uncertain",
+      "reflexive_note": "Reflecting on the ML UAT, developed 50 forward facing questions which nails commitment to the secondary research question",
+      "evidence_link": "My 60 facing forwards excel file",
+      "tags": "machine learning; critical inquiry; research methodology; future-oriented research; research question alignment",
+      "source_type": "critique",
+      "source_label": "DTP 60 forward looking ML questions",
+      "practice_action": "documenting",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J094",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "reflexivity",
+      "medium": "conversation",
+      "affect": "opened",
+      "reflexive_note": "Delighted to receive such a positive email response from Dr Dr Claire Craig, Professor of Inclusive Design in Ageing and Co-Chair Helen Hamlyn Centre for Design",
+      "evidence_link": "Email reply",
+      "tags": "research collaboration; institutional relationships; inclusive design; knowledge exchange; interdisciplinary research",
+      "source_type": "critique",
+      "source_label": "DTP forging relationships with HHCD",
+      "practice_action": "reframing",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J092",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "method",
+      "medium": "conversation",
+      "affect": "curious",
+      "reflexive_note": "After the first wave of cold recruitment emails for oral history interviews, I'm relieved and pleased that several people have replied and agreed to participate. So, thank you to Eileen Adams, Judith Wright and Max Henrion.",
+      "evidence_link": "Email correspondence with DDR ex students and staff",
+      "tags": "oral history, interview recruitment, participant engagement, DDR alumni, research participation",
+      "source_type": "conversation",
+      "source_label": "Oral history recruitment tractions",
+      "practice_action": "reframing",
+      "outcome_type": "question"
+    },
+    {
+      "id": "Y1-J093",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "reflexivity",
+      "medium": "conversation",
+      "affect": "reflective",
+      "reflexive_note": "Good check in with Neil and Natasha. Both are willing to help with the research apparatus and instrument UAT recruitment. Nastasha first on board.",
+      "evidence_link": "Follow up email conversations with Neil and Natasha",
+      "tags": "RCA Special Collections, research collaboration, UAT recruitment, research instrumentation, stakeholder engagement",
+      "source_type": "conversation",
+      "source_label": "Lunch with Neil Partkinson and Natasha Tebbs, RCA special collections",
+      "practice_action": "mapping",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J094",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "graphic design",
+      "medium": "image",
+      "affect": "excited",
+      "reflexive_note": "Work on the Biennale identity went smoothly, I don't judge it. I may be bloody awful as a machine learner, but I'm bloody good at graphic design. n/ice to be back on terra firma with what I do best.",
+      "evidence_link": "Illustrator and Figma files for the mood boards and hand drawn logotype",
+      "tags": "graphic identity, prototyping, creative confidence, disciplinary expertise, design practice",
+      "source_type": "graphic design",
+      "source_label": "Design of Biennale identity",
+      "practice_action": "prototyping",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J095",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "machine learning",
+      "medium": "code",
+      "affect": "unsettled",
+      "reflexive_note": "After hundreds of hours of pain, it's starting to make some reasonable scholarship claims, evidence and reasoning in the research query answers. Interestingly, the 60 forward facing early stage tests proved very favourable. A case of overengineering the first 50 perhaps.",
+      "evidence_link": "Oolama and Granite 30B on Mac wired into Apple Metal",
+      "tags": "machine learning, model evaluation, evidential reasoning, research queries, methodological refinement",
+      "source_type": "machine learning",
+      "source_label": "ML Granite 30B model for research queries",
+      "practice_action": "testing",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J096",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "graphic design",
+      "medium": "image",
+      "affect": "energised",
+      "reflexive_note": "This sassy little tool will prove its worth and time invested in building it out for the Biennale identity and marcomms. I think I'll make it part of the presentation an release it on GH creative commons. Spread the love of graphic design.",
+      "evidence_link": "GitHub repo",
+      "tags": "generative design, creative coding, design tools, open-source dissemination, graphic identity",
+      "source_type": "graphic design",
+      "source_label": "Graphic design gestalt engine",
+      "practice_action": "prototyping",
+      "outcome_type": "confidence"
     }
   ],
   "lookups": [
