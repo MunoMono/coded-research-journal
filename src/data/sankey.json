@@ -515,6 +515,9 @@
     },
     {
       "id": "graphic design:Graphic design gestalt engine"
+    },
+    {
+      "id": "writing:Biennale identity proposal shipped to approvers"
     }
   ],
   "links": [
@@ -587,7 +590,7 @@
     {
       "source": "documenting",
       "target": "clarification",
-      "value": 19,
+      "value": 20,
       "events": [
         {
           "id": "Y1-J002",
@@ -871,6 +874,21 @@
           "tags": "visual identity; stakeholder alignment; design governance; creative ideation; collaborative practice",
           "source_type": "conversation",
           "source_label": "DTP biennale identity design",
+          "practice_action": "documenting",
+          "outcome_type": "clarification"
+        },
+        {
+          "id": "Y1-J098",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "code",
+          "affect": "reflective",
+          "reflexive_note": "The GitHub repo is now public facing with a README and cc license. Goof to go, shipped. Hopefully it will inspire someone.",
+          "evidence_link": "GitHub repo",
+          "tags": "graphic design, generative design, open source, creative commons",
+          "source_type": "graphic design",
+          "source_label": "Graphic design gestalt engine",
           "practice_action": "documenting",
           "outcome_type": "clarification"
         }
@@ -1580,7 +1598,7 @@
     {
       "source": "documenting",
       "target": "question",
-      "value": 7,
+      "value": 8,
       "events": [
         {
           "id": "Y1-J007",
@@ -1684,6 +1702,21 @@
           "tags": "ML; AI; SoW; RAG; LLM; UMAP; core positioning",
           "source_type": "writing",
           "source_label": "AI/ML research inquiry instruments Sow (Statement of Work)",
+          "practice_action": "documenting",
+          "outcome_type": "question"
+        },
+        {
+          "id": "Y1-W018",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "writing",
+          "medium": "presentation",
+          "affect": "curious",
+          "reflexive_note": "Biennale identity proposal written and hopefully will be well received by approvers. Either I've nailes it, or way off the mark. I think it's mint.",
+          "evidence_link": "Biennale identity development.pdf",
+          "tags": "biennale, identity, graphic design, stakeholder approval",
+          "source_type": "writing",
+          "source_label": "Biennale identity proposal shipped to approvers",
           "practice_action": "documenting",
           "outcome_type": "question"
         }
@@ -6617,6 +6650,50 @@
           "outcome_type": "confidence"
         }
       ]
+    },
+    {
+      "source": "writing:Biennale identity proposal shipped to approvers",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-W018",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "writing",
+          "medium": "presentation",
+          "affect": "curious",
+          "reflexive_note": "Biennale identity proposal written and hopefully will be well received by approvers. Either I've nailes it, or way off the mark. I think it's mint.",
+          "evidence_link": "Biennale identity development.pdf",
+          "tags": "biennale, identity, graphic design, stakeholder approval",
+          "source_type": "writing",
+          "source_label": "Biennale identity proposal shipped to approvers",
+          "practice_action": "documenting",
+          "outcome_type": "question"
+        }
+      ]
+    },
+    {
+      "source": "graphic design:Graphic design gestalt engine",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J098",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "code",
+          "affect": "reflective",
+          "reflexive_note": "The GitHub repo is now public facing with a README and cc license. Goof to go, shipped. Hopefully it will inspire someone.",
+          "evidence_link": "GitHub repo",
+          "tags": "graphic design, generative design, open source, creative commons",
+          "source_type": "graphic design",
+          "source_label": "Graphic design gestalt engine",
+          "practice_action": "documenting",
+          "outcome_type": "clarification"
+        }
+      ]
     }
   ],
   "filters": {
@@ -9051,6 +9128,36 @@
       "source_label": "Graphic design gestalt engine",
       "practice_action": "prototyping",
       "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-W018",
+      "period": "Year 2 / Term 1",
+      "series": "writing",
+      "theme": "writing",
+      "medium": "presentation",
+      "affect": "curious",
+      "reflexive_note": "Biennale identity proposal written and hopefully will be well received by approvers. Either I've nailes it, or way off the mark. I think it's mint.",
+      "evidence_link": "Biennale identity development.pdf",
+      "tags": "biennale, identity, graphic design, stakeholder approval",
+      "source_type": "writing",
+      "source_label": "Biennale identity proposal shipped to approvers",
+      "practice_action": "documenting",
+      "outcome_type": "question"
+    },
+    {
+      "id": "Y1-J098",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "graphic design",
+      "medium": "code",
+      "affect": "reflective",
+      "reflexive_note": "The GitHub repo is now public facing with a README and cc license. Goof to go, shipped. Hopefully it will inspire someone.",
+      "evidence_link": "GitHub repo",
+      "tags": "graphic design, generative design, open source, creative commons",
+      "source_type": "graphic design",
+      "source_label": "Graphic design gestalt engine",
+      "practice_action": "documenting",
+      "outcome_type": "clarification"
     }
   ],
   "lookups": [
