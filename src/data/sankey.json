@@ -518,6 +518,15 @@
     },
     {
       "id": "writing:Biennale identity proposal shipped to approvers"
+    },
+    {
+      "id": "critique:Turin conference presentation"
+    },
+    {
+      "id": "archival research:V&A DDR archive burst"
+    },
+    {
+      "id": "graphic design:Biennale identity approval"
     }
   ],
   "links": [
@@ -1712,8 +1721,8 @@
           "theme": "writing",
           "medium": "presentation",
           "affect": "curious",
-          "reflexive_note": "Biennale identity proposal written and hopefully will be well received by approvers. Either I've nailes it, or way off the mark. I think it's mint.",
-          "evidence_link": "Biennale identity development.pdf",
+          "reflexive_note": "Biennale identity proposal written and hopefully will be well received by approvers. Either I've nailed it, or way off the mark. I think it's mint.",
+          "evidence_link": "Biennale identity development",
           "tags": "biennale, identity, graphic design, stakeholder approval",
           "source_type": "writing",
           "source_label": "Biennale identity proposal shipped to approvers",
@@ -2237,7 +2246,7 @@
     {
       "source": "documenting",
       "target": "insight",
-      "value": 6,
+      "value": 7,
       "events": [
         {
           "id": "Y1-J012",
@@ -2326,6 +2335,21 @@
           "tags": "design history; feminist design history; historiography; critical reading; literature review",
           "source_type": "writing",
           "source_label": "Critical reading and writing of core literature for Yr 2",
+          "practice_action": "documenting",
+          "outcome_type": "insight"
+        },
+        {
+          "id": "Y1-J100",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "archive",
+          "medium": "text",
+          "affect": "curious",
+          "reflexive_note": "Commencing the first three day archive 'burst'�lots of really juicy DDR archive material scanned in ready to OCR and metadata tagging.",
+          "evidence_link": "100 scanned pdf documents",
+          "tags": "Archival research; DDR collections; digitisation; OCR; metadata enrichment",
+          "source_type": "archival research",
+          "source_label": "V&A DDR archive burst",
           "practice_action": "documenting",
           "outcome_type": "insight"
         }
@@ -3795,7 +3819,7 @@
     {
       "source": "documenting",
       "target": "confidence",
-      "value": 11,
+      "value": 13,
       "events": [
         {
           "id": "Y1-J032",
@@ -3959,6 +3983,36 @@
           "tags": "machine learning; critical inquiry; research methodology; future-oriented research; research question alignment",
           "source_type": "critique",
           "source_label": "DTP 60 forward looking ML questions",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J099",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "presentation",
+          "affect": "energised",
+          "reflexive_note": "Smashed my Turin presentation! It was widely acknowledged to be the best conference presentation and  the best panel. I have found my on stage persona and speaking voice. Beyond my imagination, went so well!",
+          "evidence_link": "Turin presentation deck and notes, LinkedIn post",
+          "tags": "Conference presentation; scholarly dissemination; public speaking; professional confidence; researcher identity",
+          "source_type": "critique",
+          "source_label": "Turin conference presentation",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J101",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "presentation",
+          "affect": "excited",
+          "reflexive_note": "Delighted and relieved to have pushed through approval of the Biennale identity. No nay sayers in the committee meeting. The creative direction was unanimously approved. Phew.",
+          "evidence_link": "Biennale presentation to the team",
+          "tags": "Visual identity; graphic design; creative direction; stakeholder approval; design leadership",
+          "source_type": "graphic design",
+          "source_label": "Biennale identity approval",
           "practice_action": "documenting",
           "outcome_type": "confidence"
         }
@@ -6663,8 +6717,8 @@
           "theme": "writing",
           "medium": "presentation",
           "affect": "curious",
-          "reflexive_note": "Biennale identity proposal written and hopefully will be well received by approvers. Either I've nailes it, or way off the mark. I think it's mint.",
-          "evidence_link": "Biennale identity development.pdf",
+          "reflexive_note": "Biennale identity proposal written and hopefully will be well received by approvers. Either I've nailed it, or way off the mark. I think it's mint.",
+          "evidence_link": "Biennale identity development",
           "tags": "biennale, identity, graphic design, stakeholder approval",
           "source_type": "writing",
           "source_label": "Biennale identity proposal shipped to approvers",
@@ -6692,6 +6746,72 @@
           "source_label": "Graphic design gestalt engine",
           "practice_action": "documenting",
           "outcome_type": "clarification"
+        }
+      ]
+    },
+    {
+      "source": "critique:Turin conference presentation",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J099",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "presentation",
+          "affect": "energised",
+          "reflexive_note": "Smashed my Turin presentation! It was widely acknowledged to be the best conference presentation and  the best panel. I have found my on stage persona and speaking voice. Beyond my imagination, went so well!",
+          "evidence_link": "Turin presentation deck and notes, LinkedIn post",
+          "tags": "Conference presentation; scholarly dissemination; public speaking; professional confidence; researcher identity",
+          "source_type": "critique",
+          "source_label": "Turin conference presentation",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "archival research:V&A DDR archive burst",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J100",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "archive",
+          "medium": "text",
+          "affect": "curious",
+          "reflexive_note": "Commencing the first three day archive 'burst'�lots of really juicy DDR archive material scanned in ready to OCR and metadata tagging.",
+          "evidence_link": "100 scanned pdf documents",
+          "tags": "Archival research; DDR collections; digitisation; OCR; metadata enrichment",
+          "source_type": "archival research",
+          "source_label": "V&A DDR archive burst",
+          "practice_action": "documenting",
+          "outcome_type": "insight"
+        }
+      ]
+    },
+    {
+      "source": "graphic design:Biennale identity approval",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J101",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "presentation",
+          "affect": "excited",
+          "reflexive_note": "Delighted and relieved to have pushed through approval of the Biennale identity. No nay sayers in the committee meeting. The creative direction was unanimously approved. Phew.",
+          "evidence_link": "Biennale presentation to the team",
+          "tags": "Visual identity; graphic design; creative direction; stakeholder approval; design leadership",
+          "source_type": "graphic design",
+          "source_label": "Biennale identity approval",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
         }
       ]
     }
@@ -9136,8 +9256,8 @@
       "theme": "writing",
       "medium": "presentation",
       "affect": "curious",
-      "reflexive_note": "Biennale identity proposal written and hopefully will be well received by approvers. Either I've nailes it, or way off the mark. I think it's mint.",
-      "evidence_link": "Biennale identity development.pdf",
+      "reflexive_note": "Biennale identity proposal written and hopefully will be well received by approvers. Either I've nailed it, or way off the mark. I think it's mint.",
+      "evidence_link": "Biennale identity development",
       "tags": "biennale, identity, graphic design, stakeholder approval",
       "source_type": "writing",
       "source_label": "Biennale identity proposal shipped to approvers",
@@ -9158,6 +9278,51 @@
       "source_label": "Graphic design gestalt engine",
       "practice_action": "documenting",
       "outcome_type": "clarification"
+    },
+    {
+      "id": "Y1-J099",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "reflexivity",
+      "medium": "presentation",
+      "affect": "energised",
+      "reflexive_note": "Smashed my Turin presentation! It was widely acknowledged to be the best conference presentation and  the best panel. I have found my on stage persona and speaking voice. Beyond my imagination, went so well!",
+      "evidence_link": "Turin presentation deck and notes, LinkedIn post",
+      "tags": "Conference presentation; scholarly dissemination; public speaking; professional confidence; researcher identity",
+      "source_type": "critique",
+      "source_label": "Turin conference presentation",
+      "practice_action": "documenting",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J100",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "archive",
+      "medium": "text",
+      "affect": "curious",
+      "reflexive_note": "Commencing the first three day archive 'burst'�lots of really juicy DDR archive material scanned in ready to OCR and metadata tagging.",
+      "evidence_link": "100 scanned pdf documents",
+      "tags": "Archival research; DDR collections; digitisation; OCR; metadata enrichment",
+      "source_type": "archival research",
+      "source_label": "V&A DDR archive burst",
+      "practice_action": "documenting",
+      "outcome_type": "insight"
+    },
+    {
+      "id": "Y1-J101",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "graphic design",
+      "medium": "presentation",
+      "affect": "excited",
+      "reflexive_note": "Delighted and relieved to have pushed through approval of the Biennale identity. No nay sayers in the committee meeting. The creative direction was unanimously approved. Phew.",
+      "evidence_link": "Biennale presentation to the team",
+      "tags": "Visual identity; graphic design; creative direction; stakeholder approval; design leadership",
+      "source_type": "graphic design",
+      "source_label": "Biennale identity approval",
+      "practice_action": "documenting",
+      "outcome_type": "confidence"
     }
   ],
   "lookups": [
