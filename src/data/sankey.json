@@ -527,6 +527,18 @@
     },
     {
       "id": "graphic design:Biennale identity approval"
+    },
+    {
+      "id": "writing:One pager profile to Claire Craig, HHCD"
+    },
+    {
+      "id": "graphic design:Biennale identity development and D&AD and TTDC consideration"
+    },
+    {
+      "id": "archival research:Cataloging DDR archive documents"
+    },
+    {
+      "id": "conversation:John Wood oral history"
     }
   ],
   "links": [
@@ -863,7 +875,7 @@
           "theme": "graphic design",
           "medium": "image",
           "affect": "excited",
-          "reflexive_note": "Enjoyed getting back into graphic design",
+          "reflexive_note": "Enjoyed getting back into graphic design.",
           "evidence_link": "Theoretical framework | three lenses with cross cutting critique through which the problem is interpreted",
           "tags": "theoretical framework; graphic design; visualisation; conceptual model; cross-cutting critique",
           "source_type": "graphic design",
@@ -2246,7 +2258,7 @@
     {
       "source": "documenting",
       "target": "insight",
-      "value": 7,
+      "value": 8,
       "events": [
         {
           "id": "Y1-J012",
@@ -2347,9 +2359,24 @@
           "affect": "curious",
           "reflexive_note": "Commencing the first three day archive 'burst'�lots of really juicy DDR archive material scanned in ready to OCR and metadata tagging.",
           "evidence_link": "100 scanned pdf documents",
-          "tags": "Archival research; DDR collections; digitisation; OCR; metadata enrichment",
+          "tags": "archival research; DDR collections; digitisation; OCR; metadata enrichment",
           "source_type": "archival research",
           "source_label": "V&A DDR archive burst",
+          "practice_action": "documenting",
+          "outcome_type": "insight"
+        },
+        {
+          "id": "Y1-J105",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "method",
+          "medium": "conversation",
+          "affect": "curious",
+          "reflexive_note": "First oral history interview with the wonderful John Wood in the RCA special collections reading room. Audio capture was perfect using my pro podcast kit. John, delightful and empathetic as always, bless him.",
+          "evidence_link": "Oral history audio recording",
+          "tags": "oral history; situated knowledge; qualitative interviewing; testimonial evidence; research relationships",
+          "source_type": "conversation",
+          "source_label": "John Wood oral history",
           "practice_action": "documenting",
           "outcome_type": "insight"
         }
@@ -2932,7 +2959,7 @@
     {
       "source": "reframing",
       "target": "question",
-      "value": 7,
+      "value": 8,
       "events": [
         {
           "id": "Y1-J019",
@@ -3036,6 +3063,21 @@
           "tags": "oral history, interview recruitment, participant engagement, DDR alumni, research participation",
           "source_type": "conversation",
           "source_label": "Oral history recruitment tractions",
+          "practice_action": "reframing",
+          "outcome_type": "question"
+        },
+        {
+          "id": "Y1-W019",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "reflexivity",
+          "medium": "presentation",
+          "affect": "curious",
+          "reflexive_note": "Prepared a one pager profile of myself, positiog as a design, innovation and social impact specialist track expert. HHCD would be insane not to take me, but RCA is not rationale.",
+          "evidence_link": "Graham Newan profile pdf",
+          "tags": "professional positioning; design leadership; social impact; institutional engagement; career reflexivity",
+          "source_type": "writing",
+          "source_label": "One pager profile to Claire Craig, HHCD",
           "practice_action": "reframing",
           "outcome_type": "question"
         }
@@ -3250,7 +3292,7 @@
     {
       "source": "prototyping",
       "target": "confidence",
-      "value": 11,
+      "value": 12,
       "events": [
         {
           "id": "Y1-J022",
@@ -3414,6 +3456,21 @@
           "tags": "generative design, creative coding, design tools, open-source dissemination, graphic identity",
           "source_type": "graphic design",
           "source_label": "Graphic design gestalt engine",
+          "practice_action": "prototyping",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J103",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "image",
+          "affect": "energised",
+          "reflexive_note": "Biennale identity master artwork created in Figma. I stand as good a chanve as anyone else to get D&AD and TTDC for this work, I need the support and sponsorship of RCA. Will continue to produce this work to the highest professional level for award submissions.",
+          "evidence_link": "Figma design mater folder and files",
+          "tags": "visual identity; design excellence; professional recognition; creative confidence; institutional sponsorship",
+          "source_type": "graphic design",
+          "source_label": "Biennale identity development and D&AD and TTDC consideration",
           "practice_action": "prototyping",
           "outcome_type": "confidence"
         }
@@ -3978,7 +4035,7 @@
           "theme": "method",
           "medium": "text",
           "affect": "uncertain",
-          "reflexive_note": "Reflecting on the ML UAT, developed 50 forward facing questions which nails commitment to the secondary research question",
+          "reflexive_note": "Reflecting on the ML UAT, developed 50 forward facing questions which nails commitment to the secondary research question.",
           "evidence_link": "My 60 facing forwards excel file",
           "tags": "machine learning; critical inquiry; research methodology; future-oriented research; research question alignment",
           "source_type": "critique",
@@ -4010,7 +4067,7 @@
           "affect": "excited",
           "reflexive_note": "Delighted and relieved to have pushed through approval of the Biennale identity. No nay sayers in the committee meeting. The creative direction was unanimously approved. Phew.",
           "evidence_link": "Biennale presentation to the team",
-          "tags": "Visual identity; graphic design; creative direction; stakeholder approval; design leadership",
+          "tags": "visual identity; graphic design; creative direction; stakeholder approval; design leadership",
           "source_type": "graphic design",
           "source_label": "Biennale identity approval",
           "practice_action": "documenting",
@@ -4659,7 +4716,7 @@
     {
       "source": "mapping",
       "target": "clarification",
-      "value": 3,
+      "value": 4,
       "events": [
         {
           "id": "Y1-P036",
@@ -4703,6 +4760,21 @@
           "tags": "feminism; missingness; archives; RAG; UMAP; methodology",
           "source_type": "reading",
           "source_label": "Levelling up of strands, feminism, missingness in archives, RAG and UMAP",
+          "practice_action": "mapping",
+          "outcome_type": "clarification"
+        },
+        {
+          "id": "Y1-J104",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "archive",
+          "medium": "text",
+          "affect": "reflective",
+          "reflexive_note": "Working through the archive materials from the V&A burst. Hand cataloging every document for archive metadata as the source of truth. 170 documents, OCR'ing in batches with ABBY.",
+          "evidence_link": "Metadata Excel sheet as source of truth for digital archive ingestion",
+          "tags": "archival metadata; documentary provenance; digitisation; source integrity; archival methodology",
+          "source_type": "archival research",
+          "source_label": "Cataloging DDR archive documents",
           "practice_action": "mapping",
           "outcome_type": "clarification"
         }
@@ -5109,7 +5181,7 @@
           "theme": "reflexivity",
           "medium": "conversation",
           "affect": "opened",
-          "reflexive_note": "Delighted to receive such a positive email response from Dr Dr Claire Craig, Professor of Inclusive Design in Ageing and Co-Chair Helen Hamlyn Centre for Design",
+          "reflexive_note": "Delighted to receive such a positive email response from Dr Dr Claire Craig, Professor of Inclusive Design in Ageing and Co-Chair Helen Hamlyn Centre for Design.",
           "evidence_link": "Email reply",
           "tags": "research collaboration; institutional relationships; inclusive design; knowledge exchange; interdisciplinary research",
           "source_type": "critique",
@@ -6519,7 +6591,7 @@
           "theme": "graphic design",
           "medium": "image",
           "affect": "excited",
-          "reflexive_note": "Enjoyed getting back into graphic design",
+          "reflexive_note": "Enjoyed getting back into graphic design.",
           "evidence_link": "Theoretical framework | three lenses with cross cutting critique through which the problem is interpreted",
           "tags": "theoretical framework; graphic design; visualisation; conceptual model; cross-cutting critique",
           "source_type": "graphic design",
@@ -6563,7 +6635,7 @@
           "theme": "method",
           "medium": "text",
           "affect": "uncertain",
-          "reflexive_note": "Reflecting on the ML UAT, developed 50 forward facing questions which nails commitment to the secondary research question",
+          "reflexive_note": "Reflecting on the ML UAT, developed 50 forward facing questions which nails commitment to the secondary research question.",
           "evidence_link": "My 60 facing forwards excel file",
           "tags": "machine learning; critical inquiry; research methodology; future-oriented research; research question alignment",
           "source_type": "critique",
@@ -6585,7 +6657,7 @@
           "theme": "reflexivity",
           "medium": "conversation",
           "affect": "opened",
-          "reflexive_note": "Delighted to receive such a positive email response from Dr Dr Claire Craig, Professor of Inclusive Design in Ageing and Co-Chair Helen Hamlyn Centre for Design",
+          "reflexive_note": "Delighted to receive such a positive email response from Dr Dr Claire Craig, Professor of Inclusive Design in Ageing and Co-Chair Helen Hamlyn Centre for Design.",
           "evidence_link": "Email reply",
           "tags": "research collaboration; institutional relationships; inclusive design; knowledge exchange; interdisciplinary research",
           "source_type": "critique",
@@ -6785,7 +6857,7 @@
           "affect": "curious",
           "reflexive_note": "Commencing the first three day archive 'burst'�lots of really juicy DDR archive material scanned in ready to OCR and metadata tagging.",
           "evidence_link": "100 scanned pdf documents",
-          "tags": "Archival research; DDR collections; digitisation; OCR; metadata enrichment",
+          "tags": "archival research; DDR collections; digitisation; OCR; metadata enrichment",
           "source_type": "archival research",
           "source_label": "V&A DDR archive burst",
           "practice_action": "documenting",
@@ -6807,11 +6879,99 @@
           "affect": "excited",
           "reflexive_note": "Delighted and relieved to have pushed through approval of the Biennale identity. No nay sayers in the committee meeting. The creative direction was unanimously approved. Phew.",
           "evidence_link": "Biennale presentation to the team",
-          "tags": "Visual identity; graphic design; creative direction; stakeholder approval; design leadership",
+          "tags": "visual identity; graphic design; creative direction; stakeholder approval; design leadership",
           "source_type": "graphic design",
           "source_label": "Biennale identity approval",
           "practice_action": "documenting",
           "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "writing:One pager profile to Claire Craig, HHCD",
+      "target": "reframing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-W019",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "reflexivity",
+          "medium": "presentation",
+          "affect": "curious",
+          "reflexive_note": "Prepared a one pager profile of myself, positiog as a design, innovation and social impact specialist track expert. HHCD would be insane not to take me, but RCA is not rationale.",
+          "evidence_link": "Graham Newan profile pdf",
+          "tags": "professional positioning; design leadership; social impact; institutional engagement; career reflexivity",
+          "source_type": "writing",
+          "source_label": "One pager profile to Claire Craig, HHCD",
+          "practice_action": "reframing",
+          "outcome_type": "question"
+        }
+      ]
+    },
+    {
+      "source": "graphic design:Biennale identity development and D&AD and TTDC consideration",
+      "target": "prototyping",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J103",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "graphic design",
+          "medium": "image",
+          "affect": "energised",
+          "reflexive_note": "Biennale identity master artwork created in Figma. I stand as good a chanve as anyone else to get D&AD and TTDC for this work, I need the support and sponsorship of RCA. Will continue to produce this work to the highest professional level for award submissions.",
+          "evidence_link": "Figma design mater folder and files",
+          "tags": "visual identity; design excellence; professional recognition; creative confidence; institutional sponsorship",
+          "source_type": "graphic design",
+          "source_label": "Biennale identity development and D&AD and TTDC consideration",
+          "practice_action": "prototyping",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "archival research:Cataloging DDR archive documents",
+      "target": "mapping",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J104",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "archive",
+          "medium": "text",
+          "affect": "reflective",
+          "reflexive_note": "Working through the archive materials from the V&A burst. Hand cataloging every document for archive metadata as the source of truth. 170 documents, OCR'ing in batches with ABBY.",
+          "evidence_link": "Metadata Excel sheet as source of truth for digital archive ingestion",
+          "tags": "archival metadata; documentary provenance; digitisation; source integrity; archival methodology",
+          "source_type": "archival research",
+          "source_label": "Cataloging DDR archive documents",
+          "practice_action": "mapping",
+          "outcome_type": "clarification"
+        }
+      ]
+    },
+    {
+      "source": "conversation:John Wood oral history",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J105",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "method",
+          "medium": "conversation",
+          "affect": "curious",
+          "reflexive_note": "First oral history interview with the wonderful John Wood in the RCA special collections reading room. Audio capture was perfect using my pro podcast kit. John, delightful and empathetic as always, bless him.",
+          "evidence_link": "Oral history audio recording",
+          "tags": "oral history; situated knowledge; qualitative interviewing; testimonial evidence; research relationships",
+          "source_type": "conversation",
+          "source_label": "John Wood oral history",
+          "practice_action": "documenting",
+          "outcome_type": "insight"
         }
       ]
     }
@@ -9121,7 +9281,7 @@
       "theme": "graphic design",
       "medium": "image",
       "affect": "excited",
-      "reflexive_note": "Enjoyed getting back into graphic design",
+      "reflexive_note": "Enjoyed getting back into graphic design.",
       "evidence_link": "Theoretical framework | three lenses with cross cutting critique through which the problem is interpreted",
       "tags": "theoretical framework; graphic design; visualisation; conceptual model; cross-cutting critique",
       "source_type": "graphic design",
@@ -9151,7 +9311,7 @@
       "theme": "method",
       "medium": "text",
       "affect": "uncertain",
-      "reflexive_note": "Reflecting on the ML UAT, developed 50 forward facing questions which nails commitment to the secondary research question",
+      "reflexive_note": "Reflecting on the ML UAT, developed 50 forward facing questions which nails commitment to the secondary research question.",
       "evidence_link": "My 60 facing forwards excel file",
       "tags": "machine learning; critical inquiry; research methodology; future-oriented research; research question alignment",
       "source_type": "critique",
@@ -9166,7 +9326,7 @@
       "theme": "reflexivity",
       "medium": "conversation",
       "affect": "opened",
-      "reflexive_note": "Delighted to receive such a positive email response from Dr Dr Claire Craig, Professor of Inclusive Design in Ageing and Co-Chair Helen Hamlyn Centre for Design",
+      "reflexive_note": "Delighted to receive such a positive email response from Dr Dr Claire Craig, Professor of Inclusive Design in Ageing and Co-Chair Helen Hamlyn Centre for Design.",
       "evidence_link": "Email reply",
       "tags": "research collaboration; institutional relationships; inclusive design; knowledge exchange; interdisciplinary research",
       "source_type": "critique",
@@ -9303,7 +9463,7 @@
       "affect": "curious",
       "reflexive_note": "Commencing the first three day archive 'burst'�lots of really juicy DDR archive material scanned in ready to OCR and metadata tagging.",
       "evidence_link": "100 scanned pdf documents",
-      "tags": "Archival research; DDR collections; digitisation; OCR; metadata enrichment",
+      "tags": "archival research; DDR collections; digitisation; OCR; metadata enrichment",
       "source_type": "archival research",
       "source_label": "V&A DDR archive burst",
       "practice_action": "documenting",
@@ -9318,11 +9478,71 @@
       "affect": "excited",
       "reflexive_note": "Delighted and relieved to have pushed through approval of the Biennale identity. No nay sayers in the committee meeting. The creative direction was unanimously approved. Phew.",
       "evidence_link": "Biennale presentation to the team",
-      "tags": "Visual identity; graphic design; creative direction; stakeholder approval; design leadership",
+      "tags": "visual identity; graphic design; creative direction; stakeholder approval; design leadership",
       "source_type": "graphic design",
       "source_label": "Biennale identity approval",
       "practice_action": "documenting",
       "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-W019",
+      "period": "Year 2 / Term 1",
+      "series": "writing",
+      "theme": "reflexivity",
+      "medium": "presentation",
+      "affect": "curious",
+      "reflexive_note": "Prepared a one pager profile of myself, positiog as a design, innovation and social impact specialist track expert. HHCD would be insane not to take me, but RCA is not rationale.",
+      "evidence_link": "Graham Newan profile pdf",
+      "tags": "professional positioning; design leadership; social impact; institutional engagement; career reflexivity",
+      "source_type": "writing",
+      "source_label": "One pager profile to Claire Craig, HHCD",
+      "practice_action": "reframing",
+      "outcome_type": "question"
+    },
+    {
+      "id": "Y1-J103",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "graphic design",
+      "medium": "image",
+      "affect": "energised",
+      "reflexive_note": "Biennale identity master artwork created in Figma. I stand as good a chanve as anyone else to get D&AD and TTDC for this work, I need the support and sponsorship of RCA. Will continue to produce this work to the highest professional level for award submissions.",
+      "evidence_link": "Figma design mater folder and files",
+      "tags": "visual identity; design excellence; professional recognition; creative confidence; institutional sponsorship",
+      "source_type": "graphic design",
+      "source_label": "Biennale identity development and D&AD and TTDC consideration",
+      "practice_action": "prototyping",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J104",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "archive",
+      "medium": "text",
+      "affect": "reflective",
+      "reflexive_note": "Working through the archive materials from the V&A burst. Hand cataloging every document for archive metadata as the source of truth. 170 documents, OCR'ing in batches with ABBY.",
+      "evidence_link": "Metadata Excel sheet as source of truth for digital archive ingestion",
+      "tags": "archival metadata; documentary provenance; digitisation; source integrity; archival methodology",
+      "source_type": "archival research",
+      "source_label": "Cataloging DDR archive documents",
+      "practice_action": "mapping",
+      "outcome_type": "clarification"
+    },
+    {
+      "id": "Y1-J105",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "method",
+      "medium": "conversation",
+      "affect": "curious",
+      "reflexive_note": "First oral history interview with the wonderful John Wood in the RCA special collections reading room. Audio capture was perfect using my pro podcast kit. John, delightful and empathetic as always, bless him.",
+      "evidence_link": "Oral history audio recording",
+      "tags": "oral history; situated knowledge; qualitative interviewing; testimonial evidence; research relationships",
+      "source_type": "conversation",
+      "source_label": "John Wood oral history",
+      "practice_action": "documenting",
+      "outcome_type": "insight"
     }
   ],
   "lookups": [
