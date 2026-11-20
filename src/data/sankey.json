@@ -539,6 +539,21 @@
     },
     {
       "id": "conversation:John Wood oral history"
+    },
+    {
+      "id": "conversation:Feedback from Biennale presentation to full committee"
+    },
+    {
+      "id": "conversation:Eileen Adams oral history interview"
+    },
+    {
+      "id": "conversation:Max Henrion oral history interview"
+    },
+    {
+      "id": "writing:Writing and producting basics for user evaluation"
+    },
+    {
+      "id": "writing:Invitation to pitch to industry press"
     }
   ],
   "links": [
@@ -2258,7 +2273,7 @@
     {
       "source": "documenting",
       "target": "insight",
-      "value": 8,
+      "value": 10,
       "events": [
         {
           "id": "Y1-J012",
@@ -2377,6 +2392,36 @@
           "tags": "oral history; situated knowledge; qualitative interviewing; testimonial evidence; research relationships",
           "source_type": "conversation",
           "source_label": "John Wood oral history",
+          "practice_action": "documenting",
+          "outcome_type": "insight"
+        },
+        {
+          "id": "Y1-J107",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "archive",
+          "medium": "conversation",
+          "affect": "excited",
+          "reflexive_note": "Wonderful oral history interview with my new best friend in Clapham. Eileen was incredible to interview. She prepared notes. Listening to her  read out  her private diary entry of Jocelyn Stevens antics announcing the DEU closure was a very special moment.",
+          "evidence_link": "Oral history audio recording",
+          "tags": "oral history; Eileen Adams; Design Education Unit; institutional closure; personal testimony",
+          "source_type": "conversation",
+          "source_label": "Eileen Adams oral history interview",
+          "practice_action": "documenting",
+          "outcome_type": "insight"
+        },
+        {
+          "id": "Y1-J108",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "archive",
+          "medium": "conversation",
+          "affect": "curious",
+          "reflexive_note": "Great interview with Max Henrion. Techically difficult to capture the audio, glad I had time to prepare for it in advance. I wish Max well.",
+          "evidence_link": "Oral history audio recording",
+          "tags": "oral history; Max Henrion; interview methodology; audio documentation; technical preparation",
+          "source_type": "conversation",
+          "source_label": "Max Henrion oral history interview",
           "practice_action": "documenting",
           "outcome_type": "insight"
         }
@@ -3876,7 +3921,7 @@
     {
       "source": "documenting",
       "target": "confidence",
-      "value": 13,
+      "value": 14,
       "events": [
         {
           "id": "Y1-J032",
@@ -4070,6 +4115,21 @@
           "tags": "visual identity; graphic design; creative direction; stakeholder approval; design leadership",
           "source_type": "graphic design",
           "source_label": "Biennale identity approval",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        },
+        {
+          "id": "Y1-J106",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "presentation",
+          "affect": "energised",
+          "reflexive_note": "Unexpected to receive extremely positive feedback of the identity from everyone on the call, chaired by Hala Mansour. I was expecially touched by Ashley Hall's kind feedback and comments.",
+          "evidence_link": "Biennale preentation to committee and script",
+          "tags": "biennale identity; stakeholder feedback; design leadership; peer recognition; research communication",
+          "source_type": "conversation",
+          "source_label": "Feedback from Biennale presentation to full committee",
           "practice_action": "documenting",
           "outcome_type": "confidence"
         }
@@ -5326,7 +5386,7 @@
     {
       "source": "writing",
       "target": "clarification",
-      "value": 5,
+      "value": 6,
       "events": [
         {
           "id": "Y1-W005",
@@ -5400,6 +5460,21 @@
           "tags": "conference presentation; public speaking; articulation; viva preparation; research communication",
           "source_type": "writing",
           "source_label": "Development of Turin conference presentation",
+          "practice_action": "writing",
+          "outcome_type": "clarification"
+        },
+        {
+          "id": "Y1-W019",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "method",
+          "medium": "code",
+          "affect": "curious",
+          "reflexive_note": "Started to build this out, glad it's underway as it's a substantial piece of work. I have given my oral history interiewees VIP guest access to the ddr archive in recognition of them giving up their time. Workflow established for future user evaluation documentation set up now, all good.",
+          "evidence_link": "User evaluation repo on GitHub and VIP inviation boilerplate",
+          "tags": "user evaluation; research apparatus; documentation workflow; archival access; participant engagement",
+          "source_type": "writing",
+          "source_label": "Writing and producting basics for user evaluation",
           "practice_action": "writing",
           "outcome_type": "clarification"
         }
@@ -6972,6 +7047,138 @@
           "source_label": "John Wood oral history",
           "practice_action": "documenting",
           "outcome_type": "insight"
+        }
+      ]
+    },
+    {
+      "source": "conversation:Feedback from Biennale presentation to full committee",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J106",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "reflexivity",
+          "medium": "presentation",
+          "affect": "energised",
+          "reflexive_note": "Unexpected to receive extremely positive feedback of the identity from everyone on the call, chaired by Hala Mansour. I was expecially touched by Ashley Hall's kind feedback and comments.",
+          "evidence_link": "Biennale preentation to committee and script",
+          "tags": "biennale identity; stakeholder feedback; design leadership; peer recognition; research communication",
+          "source_type": "conversation",
+          "source_label": "Feedback from Biennale presentation to full committee",
+          "practice_action": "documenting",
+          "outcome_type": "confidence"
+        }
+      ]
+    },
+    {
+      "source": "conversation:Eileen Adams oral history interview",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J107",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "archive",
+          "medium": "conversation",
+          "affect": "excited",
+          "reflexive_note": "Wonderful oral history interview with my new best friend in Clapham. Eileen was incredible to interview. She prepared notes. Listening to her  read out  her private diary entry of Jocelyn Stevens antics announcing the DEU closure was a very special moment.",
+          "evidence_link": "Oral history audio recording",
+          "tags": "oral history; Eileen Adams; Design Education Unit; institutional closure; personal testimony",
+          "source_type": "conversation",
+          "source_label": "Eileen Adams oral history interview",
+          "practice_action": "documenting",
+          "outcome_type": "insight"
+        }
+      ]
+    },
+    {
+      "source": "conversation:Max Henrion oral history interview",
+      "target": "documenting",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-J108",
+          "period": "Year 2 / Term 1",
+          "series": "journal",
+          "theme": "archive",
+          "medium": "conversation",
+          "affect": "curious",
+          "reflexive_note": "Great interview with Max Henrion. Techically difficult to capture the audio, glad I had time to prepare for it in advance. I wish Max well.",
+          "evidence_link": "Oral history audio recording",
+          "tags": "oral history; Max Henrion; interview methodology; audio documentation; technical preparation",
+          "source_type": "conversation",
+          "source_label": "Max Henrion oral history interview",
+          "practice_action": "documenting",
+          "outcome_type": "insight"
+        }
+      ]
+    },
+    {
+      "source": "writing:Writing and producting basics for user evaluation",
+      "target": "writing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-W019",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "method",
+          "medium": "code",
+          "affect": "curious",
+          "reflexive_note": "Started to build this out, glad it's underway as it's a substantial piece of work. I have given my oral history interiewees VIP guest access to the ddr archive in recognition of them giving up their time. Workflow established for future user evaluation documentation set up now, all good.",
+          "evidence_link": "User evaluation repo on GitHub and VIP inviation boilerplate",
+          "tags": "user evaluation; research apparatus; documentation workflow; archival access; participant engagement",
+          "source_type": "writing",
+          "source_label": "Writing and producting basics for user evaluation",
+          "practice_action": "writing",
+          "outcome_type": "clarification"
+        }
+      ]
+    },
+    {
+      "source": "writing:Invitation to pitch to industry press",
+      "target": "writing",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-W020",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "graphic design",
+          "medium": "text",
+          "affect": "uncertain",
+          "reflexive_note": "Invited by Faye Hoogendoorn, RCA Senior PR & Communications Officer to pitch the identity story to creative press such as It's Nice That and Creative Review. Obviouslty I'd give a kidney to get something published and may support the D&AD entry request.",
+          "evidence_link": "Draft statement and supporting images",
+          "tags": "design publicity; creative press; research dissemination; professional recognition",
+          "source_type": "writing",
+          "source_label": "Invitation to pitch to industry press",
+          "practice_action": "writing",
+          "outcome_type": "question"
+        }
+      ]
+    },
+    {
+      "source": "writing",
+      "target": "question",
+      "value": 1,
+      "events": [
+        {
+          "id": "Y1-W020",
+          "period": "Year 2 / Term 1",
+          "series": "writing",
+          "theme": "graphic design",
+          "medium": "text",
+          "affect": "uncertain",
+          "reflexive_note": "Invited by Faye Hoogendoorn, RCA Senior PR & Communications Officer to pitch the identity story to creative press such as It's Nice That and Creative Review. Obviouslty I'd give a kidney to get something published and may support the D&AD entry request.",
+          "evidence_link": "Draft statement and supporting images",
+          "tags": "design publicity; creative press; research dissemination; professional recognition",
+          "source_type": "writing",
+          "source_label": "Invitation to pitch to industry press",
+          "practice_action": "writing",
+          "outcome_type": "question"
         }
       ]
     }
@@ -9543,6 +9750,81 @@
       "source_label": "John Wood oral history",
       "practice_action": "documenting",
       "outcome_type": "insight"
+    },
+    {
+      "id": "Y1-J106",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "reflexivity",
+      "medium": "presentation",
+      "affect": "energised",
+      "reflexive_note": "Unexpected to receive extremely positive feedback of the identity from everyone on the call, chaired by Hala Mansour. I was expecially touched by Ashley Hall's kind feedback and comments.",
+      "evidence_link": "Biennale preentation to committee and script",
+      "tags": "biennale identity; stakeholder feedback; design leadership; peer recognition; research communication",
+      "source_type": "conversation",
+      "source_label": "Feedback from Biennale presentation to full committee",
+      "practice_action": "documenting",
+      "outcome_type": "confidence"
+    },
+    {
+      "id": "Y1-J107",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "archive",
+      "medium": "conversation",
+      "affect": "excited",
+      "reflexive_note": "Wonderful oral history interview with my new best friend in Clapham. Eileen was incredible to interview. She prepared notes. Listening to her  read out  her private diary entry of Jocelyn Stevens antics announcing the DEU closure was a very special moment.",
+      "evidence_link": "Oral history audio recording",
+      "tags": "oral history; Eileen Adams; Design Education Unit; institutional closure; personal testimony",
+      "source_type": "conversation",
+      "source_label": "Eileen Adams oral history interview",
+      "practice_action": "documenting",
+      "outcome_type": "insight"
+    },
+    {
+      "id": "Y1-J108",
+      "period": "Year 2 / Term 1",
+      "series": "journal",
+      "theme": "archive",
+      "medium": "conversation",
+      "affect": "curious",
+      "reflexive_note": "Great interview with Max Henrion. Techically difficult to capture the audio, glad I had time to prepare for it in advance. I wish Max well.",
+      "evidence_link": "Oral history audio recording",
+      "tags": "oral history; Max Henrion; interview methodology; audio documentation; technical preparation",
+      "source_type": "conversation",
+      "source_label": "Max Henrion oral history interview",
+      "practice_action": "documenting",
+      "outcome_type": "insight"
+    },
+    {
+      "id": "Y1-W019",
+      "period": "Year 2 / Term 1",
+      "series": "writing",
+      "theme": "method",
+      "medium": "code",
+      "affect": "curious",
+      "reflexive_note": "Started to build this out, glad it's underway as it's a substantial piece of work. I have given my oral history interiewees VIP guest access to the ddr archive in recognition of them giving up their time. Workflow established for future user evaluation documentation set up now, all good.",
+      "evidence_link": "User evaluation repo on GitHub and VIP inviation boilerplate",
+      "tags": "user evaluation; research apparatus; documentation workflow; archival access; participant engagement",
+      "source_type": "writing",
+      "source_label": "Writing and producting basics for user evaluation",
+      "practice_action": "writing",
+      "outcome_type": "clarification"
+    },
+    {
+      "id": "Y1-W020",
+      "period": "Year 2 / Term 1",
+      "series": "writing",
+      "theme": "graphic design",
+      "medium": "text",
+      "affect": "uncertain",
+      "reflexive_note": "Invited by Faye Hoogendoorn, RCA Senior PR & Communications Officer to pitch the identity story to creative press such as It's Nice That and Creative Review. Obviouslty I'd give a kidney to get something published and may support the D&AD entry request.",
+      "evidence_link": "Draft statement and supporting images",
+      "tags": "design publicity; creative press; research dissemination; professional recognition",
+      "source_type": "writing",
+      "source_label": "Invitation to pitch to industry press",
+      "practice_action": "writing",
+      "outcome_type": "question"
     }
   ],
   "lookups": [
